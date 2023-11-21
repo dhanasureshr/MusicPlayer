@@ -1,0 +1,1 @@
+F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\build\intermediates\cxx\Debug\5vx4i2m6\obj\arm64-v8a

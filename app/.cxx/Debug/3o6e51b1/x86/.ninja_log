@@ -1,0 +1,18 @@
+# ninja log v5
+2	201	7222005254057311	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	68222aa997ee29bc
+40	765	7222005259715498	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	54fa6c05ebe55d60
+23	1408	7222005265943378	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	158fe3d5ea7764c
+1410	2076	7222005272366953	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/x86/libPlayerExample.so	967c81fc102787f9
+90	1730	7222370280603316	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	158fe3d5ea7764c
+7	185	7222370448118623	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	68222aa997ee29bc
+186	993	7222370455589688	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/x86/libPlayerExample.so	967c81fc102787f9
+31	1367	7222426359712831	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	68222aa997ee29bc
+7	1164	7222427170689159	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	68222aa997ee29bc
+1166	1728	7222427175988313	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/x86/libPlayerExample.so	967c81fc102787f9
+7	1409	7222452664142747	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	68222aa997ee29bc
+1411	2470	7222452674349901	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/x86/libPlayerExample.so	967c81fc102787f9
+1	20	0	clean	1c4a8a9f2ee455af
+43	731	7222610087149402	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	54fa6c05ebe55d60
+26	1313	7222610092699570	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	68222aa997ee29bc
+7	1325	7222610092739595	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	158fe3d5ea7764c
+1326	1947	7222610098525849	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/x86/libPlayerExample.so	967c81fc102787f9

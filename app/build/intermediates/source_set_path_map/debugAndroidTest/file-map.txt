@@ -1,0 +1,4 @@
+com.superpowered.playerexample.test.app-androidTest-0 F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\build\generated\res\resValues\androidTest\debug
+com.superpowered.playerexample.test.app-mergeDebugAndroidTestResources-1 F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.superpowered.playerexample.test.app-mergeDebugAndroidTestResources-2 F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.superpowered.playerexample.test.app-merged_res-3 F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\build\intermediates\merged_res\debugAndroidTest

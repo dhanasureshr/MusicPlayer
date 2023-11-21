@@ -1,0 +1,24 @@
+# ninja log v5
+20	798	7221878030299632	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	fb0ecce05438afe3
+10	2190	7221966969203476	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	189e6a528d3954a6
+2191	2984	7221966977755536	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/arm64-v8a/libPlayerExample.so	7352f41f5655f1f7
+27	264	7221978950356810	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	ac556945923504ca
+10	1806	7221978965623875	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	189e6a528d3954a6
+1807	2454	7221978971600474	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/arm64-v8a/libPlayerExample.so	f5e0f5903c5295f8
+40	552	7222361306039303	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	ac556945923504ca
+15	1986	7222361320341165	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	189e6a528d3954a6
+1987	2727	7222361326940976	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/arm64-v8a/libPlayerExample.so	f5e0f5903c5295f8
+12	293	7222370419117754	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	ac556945923504ca
+296	1648	7222370432175054	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/arm64-v8a/libPlayerExample.so	f5e0f5903c5295f8
+32	2192	7222426310122649	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	ac556945923504ca
+16	1604	7222427132055364	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	ac556945923504ca
+1606	2246	7222427137950611	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/arm64-v8a/libPlayerExample.so	f5e0f5903c5295f8
+16	1527	7222429728210421	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	ac556945923504ca
+1528	2030	7222429732877232	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/arm64-v8a/libPlayerExample.so	f5e0f5903c5295f8
+15	1288	7222452611009834	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	ac556945923504ca
+1289	2322	7222452620771768	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/arm64-v8a/libPlayerExample.so	f5e0f5903c5295f8
+0	24	0	clean	1c4a8a9f2ee455af
+138	2603	7222610031207538	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	fb0ecce05438afe3
+38	3731	7222610042580349	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	189e6a528d3954a6
+83	3735	7222610042590319	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	ac556945923504ca
+3736	4670	7222610051567156	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/arm64-v8a/libPlayerExample.so	f5e0f5903c5295f8

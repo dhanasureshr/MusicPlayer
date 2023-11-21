@@ -1,0 +1,20 @@
+# ninja log v5
+90	694	7221878086720511	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	c6f99352bc2dff83
+1	1371	7221878092438929	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	34fc4796ec4c870b
+1373	2070	7221878100053863	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/armeabi-v7a/libPlayerExample.so	62608bca012e6ebe
+37	329	7222005216940221	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	e1a934d522d6a62
+15	2723	7222005240710254	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	34fc4796ec4c870b
+2724	3541	7222005248525473	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/armeabi-v7a/libPlayerExample.so	13e50cf95f992c5a
+11	1369	7222370258209647	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	34fc4796ec4c870b
+7	199	7222370436514612	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	e1a934d522d6a62
+200	1045	7222370444617766	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/armeabi-v7a/libPlayerExample.so	13e50cf95f992c5a
+23	1244	7222426336056651	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	e1a934d522d6a62
+7	1168	7222427151673847	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	e1a934d522d6a62
+1169	1760	7222427157305278	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/armeabi-v7a/libPlayerExample.so	13e50cf95f992c5a
+12	1382	7222452638094249	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	e1a934d522d6a62
+1383	2285	7222452646737945	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/armeabi-v7a/libPlayerExample.so	13e50cf95f992c5a
+0	32	0	clean	1c4a8a9f2ee455af
+147	1270	7222610067371991	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	c6f99352bc2dff83
+118	1868	7222610073386662	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	e1a934d522d6a62
+73	1875	7222610073447923	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	34fc4796ec4c870b
+1876	2371	7222610078107437	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/armeabi-v7a/libPlayerExample.so	13e50cf95f992c5a

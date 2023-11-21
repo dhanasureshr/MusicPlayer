@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.superpowered.playerexample.MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/main_page"
+        android:layout_width="match_parent"
+        android:layout_height="600dp" />
+
+    <Button
+        android:id="@+id/playPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_page"
+        android:onClick="PlayerExample_PlayPause"
+        android:text="Play" />
+
+    <Button
+        android:id="@+id/Effects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="63dp"
+        android:layout_below="@+id/main_page"
+        android:layout_toRightOf="@+id/playPause"
+        android:text="Effects" />
+
+    <Button
+        android:id="@+id/favorats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="63dp"
+        android:layout_below="@+id/main_page"
+        android:layout_toRightOf="@+id/Effects"
+        android:text="liked" />
+
+
+</RelativeLayout>

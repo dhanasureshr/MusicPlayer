@@ -1,0 +1,20 @@
+# ninja log v5
+15	549	7221878183709413	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	51b1cdeaf39095d3
+2	1276	7221878191030171	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	40aabc5164d7cc08
+1278	2111	7221878198214140	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/x86_64/libPlayerExample.so	da1527ee5c7f09b5
+97	198	7222005282922254	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	6c3fe778f897ade6
+80	1248	7222005293374074	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	40aabc5164d7cc08
+1248	2204	7222005302325746	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/x86_64/libPlayerExample.so	4edc07f7ce9ee97c
+23	5475	7222359825459169	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	40aabc5164d7cc08
+7	236	7222370460410582	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	6c3fe778f897ade6
+237	1017	7222370467276772	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/x86_64/libPlayerExample.so	4edc07f7ce9ee97c
+35	1338	7222426382718459	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	6c3fe778f897ade6
+7	1388	7222427192200092	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	6c3fe778f897ade6
+1389	1928	7222427196893210	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/x86_64/libPlayerExample.so	4edc07f7ce9ee97c
+79	1542	7222452693548662	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	6c3fe778f897ade6
+1544	2338	7222452700948877	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/x86_64/libPlayerExample.so	4edc07f7ce9ee97c
+1	22	0	clean	1c4a8a9f2ee455af
+122	674	7222610108058007	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	51b1cdeaf39095d3
+8	1331	7222610114619165	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	40aabc5164d7cc08
+75	1335	7222610114619165	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	6c3fe778f897ade6
+1336	2255	7222610123428474	../../../../build/intermediates/cxx/Debug/3o6e51b1/obj/x86_64/libPlayerExample.so	4edc07f7ce9ee97c
