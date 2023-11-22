@@ -2,7 +2,9 @@ package com.superpowered.playerexample;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,6 +29,15 @@ public class Recycle_adapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.song_name.setText(audio_tracks_list.get(position).Track_title);
+        audio_data currentItem = audio_tracks_list.get(position);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //send this path to the audio player to load and play the song
+
+                Toast.makeText(view.getContext(), "Item clicked: " +currentItem.getTrack_path(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

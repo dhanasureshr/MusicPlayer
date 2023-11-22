@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.superpowered.playerexample.app-merged_res-23:/raw_track.mp3.flat",
+        "source": "com.superpowered.playerexample.app-main-25:/raw/track.mp3"
+    },
+    {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-23:\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-25:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
@@ -62,10 +66,6 @@
     {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-23:\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-25:\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "com.superpowered.playerexample.app-merged_res-23:/layout_fragment_play_fragment.xml.flat",
-        "source": "com.superpowered.playerexample.app-main-25:/layout/fragment_play_fragment.xml"
     },
     {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-23:\\drawable_pla.jpg.flat",
