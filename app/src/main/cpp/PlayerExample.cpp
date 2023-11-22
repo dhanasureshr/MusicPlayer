@@ -77,6 +77,14 @@ Java_com_superpowered_playerexample_MainActivity_OpenFileFromAPK(
     // open HLS stream: player->openHLS("http://example.com/stream");
 }
 
+extern "C" JNIEXPORT void
+Java_com_superpowered_playerexample_MainActivity_OpenFileFromPath(JNIEnv *env,jobject obj,jstring path)
+{
+    const char *str = env->GetStringUTFChars(path,0);
+    player->open(str);
+    env->ReleaseStringUTFChars(path,str);
+}
+
 // onUserInterfaceUpdate - Called periodically. Check and react to player events. This can be done in any thread.
 extern "C" JNIEXPORT jboolean
 Java_com_superpowered_playerexample_MainActivity_onUserInterfaceUpdate(JNIEnv *__unused env,

@@ -11,10 +11,11 @@ import android.view.View;
 import android.util.Log;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Recycle_adapter.OnItemClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,20 +78,26 @@ public class MainActivity extends AppCompatActivity {
         int samplerate = Integer.parseInt(samplerateString);
         int buffersize = Integer.parseInt(buffersizeString);
 
+
         // Files under res/raw are not zipped, just copied into the APK.
         // Get the offset and length to know where our file is located.
-        AssetFileDescriptor fd = getResources().openRawResourceFd(R.raw.track);
-        int fileOffset = (int) fd.getStartOffset();
-        int fileLength = (int) fd.getLength();
-        try {
-            fd.getParcelFileDescriptor().close();
-        } catch (IOException e) {
-            Log.e("PlayerExample", "Close error.");
-        }
-        String path = getPackageResourcePath();         // get path to APK package
+       // AssetFileDescriptor fd = getResources().openRawResourceFd(R.raw.track);
+        //int fileOffset = (int) fd.getStartOffset();
+        //int fileLength = (int) fd.getLength();
+        //try {
+         //   fd.getParcelFileDescriptor().close();
+        //} catch (IOException e) {
+         //   Log.e("PlayerExample", "Close error.");
+       // }
+        //String path = getPackageResourcePath();         // get path to APK package
         System.loadLibrary("PlayerExample");    // load native library
         NativeInit(samplerate, buffersize, getCacheDir().getAbsolutePath()); // start audio engine
-        OpenFileFromAPK(path, fileOffset, fileLength);  // open audio file from APK
+       //------------------------- OpenFileFromAPK(path, fileOffset, fileLength);  // open audio file from APK
+
+        //getting the path from the recycler view holder
+
+
+       // OpenFileFromPath(path); // open audio file from path
         // If the application crashes, please disable Instant Run under Build, Execution, Deployment in preferences.
 
         // Update UI every 40 ms until UI_update returns with false.
@@ -147,6 +154,8 @@ public class MainActivity extends AppCompatActivity {
 
     private native void OpenFileFromAPK(String path, int offset, int length);
 
+    private native void OpenFileFromPath(String path);
+
     private native boolean onUserInterfaceUpdate();
 
     private native void TogglePlayback();
@@ -159,4 +168,20 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean playing = false;
     private Handler handler;
+
+    @Override
+    public void onItemClick(String path) {
+        Toast.makeText(this, "Item clicked: " +path, Toast.LENGTH_SHORT).show();
+        OpenFileFromPath(path);
+        PlayerExample_PlayPause();
+    }
+/*
+    @Override
+    public void onTrackclick(String path) {
+        Toast.makeText(this, "Item clicked: " +path, Toast.LENGTH_SHORT).show();
+        OpenFileFromPath(path);
+        PlayerExample_PlayPause();
+    }
+
+ */
 }

@@ -15,6 +15,13 @@ public class Recycle_adapter extends RecyclerView.Adapter<MyViewHolder> {
     Context context;
     ArrayList<audio_data> audio_tracks_list;
 
+    private OnItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.onItemClickListener = listener;
+    }
+
+
     public Recycle_adapter(Context context, ArrayList<audio_data> audio_tracks_list) {
         this.context = context;
         this.audio_tracks_list = audio_tracks_list;
@@ -34,14 +41,27 @@ public class Recycle_adapter extends RecyclerView.Adapter<MyViewHolder> {
             @Override
             public void onClick(View view) {
                 //send this path to the audio player to load and play the song
+                if (onItemClickListener != null) {
+                    onItemClickListener.onItemClick(currentItem.getTrack_path());
+                }
 
-                Toast.makeText(view.getContext(), "Item clicked: " +currentItem.getTrack_path(), Toast.LENGTH_SHORT).show();
+
             }
         });
+
+
+
+
     }
 
     @Override
     public int getItemCount() {
         return audio_tracks_list.size();
     }
+
+    public interface OnItemClickListener {
+        void onItemClick(String path);
+    }
+
+
 }
