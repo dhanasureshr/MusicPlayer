@@ -116,7 +116,7 @@ Java_com_superpowered_playerexample_MainActivity_onUserInterfaceUpdate(JNIEnv *_
     if (player->eofRecently()) {
 
         player->setPosition(0, false, false);
-       // player->play(); // i add this to loop the current song
+        player->play(); // i add this to loop the current song
     }
 
     return (jboolean) player->isPlaying();

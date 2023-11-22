@@ -72,7 +72,7 @@ public class Play_fragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Button pa = view.findViewById(R.id.play_frag);
+        Button pa = view.findViewById(R.id.play_pause);
         pa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
