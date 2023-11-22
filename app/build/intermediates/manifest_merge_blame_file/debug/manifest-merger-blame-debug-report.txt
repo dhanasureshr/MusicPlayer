@@ -63,26 +63,34 @@
 39        </activity>
 40
 41        <provider
-41-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-42            android:name="androidx.startup.InitializationProvider"
-42-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-43            android:authorities="com.superpowered.playerexample.androidx-startup"
-43-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-44            android:exported="false" >
-44-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-45            <meta-data
-45-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-46                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-46-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-47                android:value="androidx.startup" />
-47-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-48            <meta-data
-48-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\62b7cf00c34a2119ee62c390326d994d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-49                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-49-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\62b7cf00c34a2119ee62c390326d994d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-50                android:value="androidx.startup" />
-50-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\62b7cf00c34a2119ee62c390326d994d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-51        </provider>
-52    </application>
-53
-54</manifest>
+41-->[com.squareup.picasso:picasso:2.71828] C:\Users\dhana suresh\.gradle\caches\transforms-3\5b7f1973268175c3d1609a7e5b8b4898\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+42            android:name="com.squareup.picasso.PicassoProvider"
+42-->[com.squareup.picasso:picasso:2.71828] C:\Users\dhana suresh\.gradle\caches\transforms-3\5b7f1973268175c3d1609a7e5b8b4898\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
+43            android:authorities="com.superpowered.playerexample.com.squareup.picasso"
+43-->[com.squareup.picasso:picasso:2.71828] C:\Users\dhana suresh\.gradle\caches\transforms-3\5b7f1973268175c3d1609a7e5b8b4898\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+44            android:exported="false" />
+44-->[com.squareup.picasso:picasso:2.71828] C:\Users\dhana suresh\.gradle\caches\transforms-3\5b7f1973268175c3d1609a7e5b8b4898\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+45        <provider
+45-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+46            android:name="androidx.startup.InitializationProvider"
+46-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+47            android:authorities="com.superpowered.playerexample.androidx-startup"
+47-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+48            android:exported="false" >
+48-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+49            <meta-data
+49-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+50                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+50-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+51                android:value="androidx.startup" />
+51-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+52            <meta-data
+52-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\62b7cf00c34a2119ee62c390326d994d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+53                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+53-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\62b7cf00c34a2119ee62c390326d994d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+54                android:value="androidx.startup" />
+54-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\62b7cf00c34a2119ee62c390326d994d\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+55        </provider>
+56    </application>
+57
+58</manifest>

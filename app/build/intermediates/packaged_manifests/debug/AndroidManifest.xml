@@ -39,6 +39,10 @@
         </activity>
 
         <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.superpowered.playerexample.com.squareup.picasso"
+            android:exported="false" />
+        <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.superpowered.playerexample.androidx-startup"
             android:exported="false" >

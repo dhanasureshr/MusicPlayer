@@ -107,22 +107,34 @@ public class Recycler_fragment extends Fragment {
         ContentResolver contentResolver = getContext().getContentResolver();
         Uri audioUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
         String[] projection = {MediaStore.Audio.Media.TITLE,
-                                MediaStore.Audio.Media.DATA};
+                                MediaStore.Audio.Media.DATA,
+                                MediaStore.Audio.Media.ALBUM,
+                                MediaStore.Audio.Media.ALBUM_ID};
 
+       // Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+        String selection = MediaStore.Audio.Media.IS_MUSIC + "!= 0";
 
-        Cursor cursor = contentResolver.query(audioUri, projection, null, null, null);
+        Cursor cursor = contentResolver.query(audioUri, projection, selection, null, null);
 
         if (cursor != null) {
             while (cursor.moveToNext()) {
                 String title = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
                 String path = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA));
+                String album = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM));
+                long albumId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ID));
 
-                audio_data audioData = new audio_data(title,path);
+                String albumArtUri = getAlbumArtUri(albumId);
+                audio_data audioData = new audio_data(title,path,album,albumArtUri);
                 audio_list.add(audioData);
 
             }
             cursor.close();
         }
         return audio_list;
+    }
+
+    private String getAlbumArtUri(long albumId) {
+        Uri albumArtUri = Uri.parse("content://media/external/audio/albumart/" + albumId);
+        return albumArtUri.toString();
     }
 }

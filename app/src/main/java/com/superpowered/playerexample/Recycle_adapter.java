@@ -9,6 +9,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class Recycle_adapter extends RecyclerView.Adapter<MyViewHolder> {
@@ -37,6 +39,9 @@ public class Recycle_adapter extends RecyclerView.Adapter<MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.song_name.setText(audio_tracks_list.get(position).Track_title);
         audio_data currentItem = audio_tracks_list.get(position);
+
+        Picasso.get().load(currentItem.getAlbumArtUri()).into(holder.Audio_album);
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
