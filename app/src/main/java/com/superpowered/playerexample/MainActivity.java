@@ -3,8 +3,6 @@ package com.superpowered.playerexample;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.content.ContentResolver;
 import android.content.res.AssetFileDescriptor;
 import android.media.AudioManager;
 import android.content.Context;
@@ -22,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //test changes to the code
+
 
         // Get the device's sample rate and buffer size to enable
         // low-latency Android audio output, if available.
