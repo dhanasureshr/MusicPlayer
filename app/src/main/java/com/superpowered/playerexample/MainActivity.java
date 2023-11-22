@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         //check for the storage permission
 
         mPermissionResultLanuncher = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), new ActivityResultCallback<Map<String, Boolean>>() {
@@ -43,10 +44,17 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
                 if(result.get(Manifest.permission.READ_EXTERNAL_STORAGE)!= null)
                 {
                     isStoragepermissiongranted = result.get(Manifest.permission.READ_EXTERNAL_STORAGE);
+                    load_songs_fragment();
                 }
             }
         });
         requestpermisson();
+        if(isStoragepermissiongranted)
+        {
+            load_songs_fragment();
+        }
+
+
 
 
 //------------------------------------------end of permissions
@@ -191,12 +199,17 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     }
     public void load_songs_fragment(){
 
-        //adding songs recycler fragment to the main activity
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        Recycler_fragment rf = new Recycler_fragment();
-        fragmentTransaction.replace(R.id.main_page, rf);
-        fragmentTransaction.commit();
+         //requestpermisson();
+         if(!isStoragepermissiongranted == true) {
+             Toast.makeText(this, "storage permission needed you can accept through App info  " , Toast.LENGTH_SHORT).show();
+             requestpermisson();
+         }
+             //adding songs recycler fragment to the main activity
+             FragmentManager fragmentManager = getSupportFragmentManager();
+             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+             Recycler_fragment rf = new Recycler_fragment();
+             fragmentTransaction.replace(R.id.main_page, rf);
+             fragmentTransaction.commit();
 
     }
 
