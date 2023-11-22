@@ -22,16 +22,17 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/playPause"
+            android:id="@+id/songs"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:onClick="PlayerExample_PlayPause"
+
             android:text="songs" />
 
         <Button
             android:id="@+id/player"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
+
 
             android:text="play" />
 

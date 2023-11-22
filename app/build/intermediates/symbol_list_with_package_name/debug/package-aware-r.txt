@@ -1140,7 +1140,6 @@ id parentRelative
 id path
 id pathRelative
 id percent
-id playPause
 id player
 id pooling_container_listener_holder_tag
 id position
@@ -1179,6 +1178,7 @@ id showTitle
 id sin
 id skipped
 id song_title
+id songs
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -1290,6 +1290,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout custom_dialog
+layout fragment_play_fragment
 layout fragment_recycler_fragment
 layout notification_action
 layout notification_action_tombstone

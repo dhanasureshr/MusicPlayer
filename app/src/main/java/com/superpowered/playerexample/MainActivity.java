@@ -21,6 +21,48 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        Button player_Button = findViewById(R.id.player);
+        Button songs_Button = findViewById(R.id.songs);
+        Button afx_Button = findViewById(R.id.Aufx);
+        Button liked_Button = findViewById(R.id.liked);
+
+        // songs button click event load the songs list by
+        //loading the recycler fragment in the main activity
+        songs_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //adding songs recycler fragment to the main activity
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                Recycler_fragment rf = new Recycler_fragment();
+                fragmentTransaction.replace(R.id.main_page, rf);
+                fragmentTransaction.commit();
+
+            }
+        });
+
+
+
+        //player button click event load the play fragment and
+        //start playing the song by default
+
+        player_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //adding play fragment to the main activity
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+               // Recycler_fragment rf = new Recycler_fragment();
+                Play_fragment pf = new Play_fragment();
+                fragmentTransaction.replace(R.id.main_page, pf);
+                fragmentTransaction.commit();
+
+
+                TogglePlayback();
+            }
+        });
+
+
 
         // Get the device's sample rate and buffer size to enable
         // low-latency Android audio output, if available.
@@ -69,26 +111,20 @@ public class MainActivity extends AppCompatActivity {
         if (playing != p) {
             playing = p;
 
-            Button b = findViewById(R.id.playPause);
-            //b.setText(playing ? "Pause" : "Play");
+
+
+
         }
     }
-
+/*
     // Play/Pause button event.
     public void PlayerExample_PlayPause(View button) {
 
-        //adding fragment to the main activity
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        Recycler_fragment rf = new Recycler_fragment();
-        fragmentTransaction.replace(R.id.main_page, rf);
-        fragmentTransaction.commit();
 
 
         TogglePlayback();
     }
-
+*/
     @Override
     public void onPause() {
         super.onPause();
