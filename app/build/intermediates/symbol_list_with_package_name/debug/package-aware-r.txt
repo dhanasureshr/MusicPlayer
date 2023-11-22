@@ -927,8 +927,8 @@ drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
+id Aufx
 id CTRL
-id Effects
 id FUNCTION
 id META
 id NO_DEBUG
@@ -1039,6 +1039,7 @@ id constraint
 id content
 id contentPanel
 id continuousVelocity
+id control_layout
 id cos
 id currentState
 id custom
@@ -1072,7 +1073,6 @@ id edit_query
 id end
 id expand_activities_button
 id expanded_menu
-id favorats
 id flip
 id forever
 id frag_recycler
@@ -1106,6 +1106,7 @@ id jumpToStart
 id layout
 id left
 id legacy
+id liked
 id line1
 id line3
 id linear

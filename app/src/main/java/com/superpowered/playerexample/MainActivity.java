@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             playing = p;
 
             Button b = findViewById(R.id.playPause);
-            b.setText(playing ? "Pause" : "Play");
+            //b.setText(playing ? "Pause" : "Play");
         }
     }
 

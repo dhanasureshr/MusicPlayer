@@ -10,45 +10,50 @@
     <FrameLayout
         android:id="@+id/main_page"
         android:layout_width="match_parent"
-        android:layout_height="600dp" />
+        android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/playPause"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:id="@+id/control_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_page"
-        android:onClick="PlayerExample_PlayPause"
-        android:text="Play" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/Effects"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/main_page"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="0dp"
-        android:layout_toRightOf="@+id/playPause"
-        android:text="Effects" />
+        <Button
+            android:id="@+id/playPause"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:onClick="PlayerExample_PlayPause"
+            android:text="songs" />
 
-    <Button
-        android:id="@+id/favorats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/main_page"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="2dp"
-        android:layout_toRightOf="@+id/Effects"
-        android:text="liked" />
+        <Button
+            android:id="@+id/player"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
 
-    <Button
-        android:id="@+id/player"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/main_page"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="3dp"
-        android:layout_toRightOf="@+id/favorats"
-        android:text="liked" />
+            android:text="play" />
+
+        <Button
+            android:id="@+id/Aufx"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+
+            android:text="AFX" />
+
+        <Button
+            android:id="@+id/liked"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+
+            android:text="liked" />
+
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/control_layout"/>
+    </LinearLayout>
 
 
 </RelativeLayout>
