@@ -104,8 +104,8 @@ public class Recycler_fragment extends Fragment {
 
         ContentResolver contentResolver = getContext().getContentResolver();
         Uri audioUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
-        String[] projection = {MediaStore.Audio.Media.TITLE};
-        //MediaStore.Audio.Media.DATA};
+        String[] projection = {MediaStore.Audio.Media.TITLE,
+                                MediaStore.Audio.Media.DATA};
 
 
         Cursor cursor = contentResolver.query(audioUri, projection, null, null, null);
@@ -113,9 +113,9 @@ public class Recycler_fragment extends Fragment {
         if (cursor != null) {
             while (cursor.moveToNext()) {
                 String title = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
-                // String path = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA));
+                String path = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA));
 
-                audio_data audioData = new audio_data(title);
+                audio_data audioData = new audio_data(title,path);
                 audio_list.add(audioData);
 
             }
