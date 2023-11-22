@@ -1,8 +1,15 @@
 package com.superpowered.playerexample;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.content.res.AssetFileDescriptor;
 import android.media.AudioManager;
 import android.content.Context;
@@ -14,8 +21,15 @@ import android.os.Handler;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements Recycle_adapter.OnItemClickListener{
+
+    ActivityResultLauncher<String[]> mPermissionResultLanuncher;
+    private boolean isStoragepermissiongranted = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +37,19 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
 
         //check for the storage permission
 
+        mPermissionResultLanuncher = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), new ActivityResultCallback<Map<String, Boolean>>() {
+            @Override
+            public void onActivityResult(Map<String, Boolean> result) {
+                if(result.get(Manifest.permission.READ_EXTERNAL_STORAGE)!= null)
+                {
+                    isStoragepermissiongranted = result.get(Manifest.permission.READ_EXTERNAL_STORAGE);
+                }
+            }
+        });
+        requestpermisson();
 
+
+//------------------------------------------end of permissions
 
         Button player_Button = findViewById(R.id.player);
         Button songs_Button = findViewById(R.id.songs);
@@ -171,6 +197,27 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         Recycler_fragment rf = new Recycler_fragment();
         fragmentTransaction.replace(R.id.main_page, rf);
         fragmentTransaction.commit();
+
+    }
+
+    //request permission method
+    private void requestpermisson()
+    {
+        isStoragepermissiongranted = ContextCompat.checkSelfPermission(
+                this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+
+
+        List<String> permissionRequest = new ArrayList<String>();
+
+        if(!isStoragepermissiongranted)
+        {
+            permissionRequest.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+        }
+
+        if(!permissionRequest.isEmpty())
+        {
+            mPermissionResultLanuncher.launch(permissionRequest.toArray(new String[0]));
+        }
 
     }
 
