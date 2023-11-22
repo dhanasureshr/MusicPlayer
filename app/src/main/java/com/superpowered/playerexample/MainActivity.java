@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //test changes to the code
+
         // Get the device's sample rate and buffer size to enable
         // low-latency Android audio output, if available.
         String samplerateString = null, buffersizeString = null;
