@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
 
 
-                TogglePlayback();
+
             }
         });
 
@@ -116,15 +116,15 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-/*
+
     // Play/Pause button event.
-    public void PlayerExample_PlayPause(View button) {
+    public void PlayerExample_PlayPause() {
 
 
 
         TogglePlayback();
     }
-*/
+
     @Override
     public void onPause() {
         super.onPause();
