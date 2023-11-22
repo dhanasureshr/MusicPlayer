@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //check for the storage permission
+
+
 
         Button player_Button = findViewById(R.id.player);
         Button songs_Button = findViewById(R.id.songs);
@@ -32,13 +35,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         songs_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //adding songs recycler fragment to the main activity
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                Recycler_fragment rf = new Recycler_fragment();
-                fragmentTransaction.replace(R.id.main_page, rf);
-                fragmentTransaction.commit();
-
+                load_songs_fragment();
             }
         });
 
@@ -50,14 +47,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         player_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //adding play fragment to the main activity
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-               // Recycler_fragment rf = new Recycler_fragment();
-                Play_fragment pf = new Play_fragment();
-                fragmentTransaction.replace(R.id.main_page, pf);
-                fragmentTransaction.commit();
-
+            load_play_fragment();
 
 
             }
@@ -159,6 +149,29 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         Toast.makeText(this, "Item clicked: " +path, Toast.LENGTH_SHORT).show();
         OpenFileFromPath(path);
         PlayerExample_PlayPause();
+        load_play_fragment();
+    }
+
+
+    public void load_play_fragment(){
+
+        //adding play fragment to the main activity
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        // Recycler_fragment rf = new Recycler_fragment();
+        Play_fragment pf = new Play_fragment();
+        fragmentTransaction.replace(R.id.main_page, pf);
+        fragmentTransaction.commit();
+    }
+    public void load_songs_fragment(){
+
+        //adding songs recycler fragment to the main activity
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        Recycler_fragment rf = new Recycler_fragment();
+        fragmentTransaction.replace(R.id.main_page, rf);
+        fragmentTransaction.commit();
+
     }
 
 }
