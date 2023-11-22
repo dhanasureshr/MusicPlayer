@@ -1,6 +1,8 @@
 package com.superpowered.playerexample;
 
 import android.content.ContentResolver;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -64,6 +66,48 @@ public class Recycler_fragment extends Fragment {
         return fragment;
     }
 
+    // this is the save the recyclerview view position between fragment changes
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+        if(layoutManager != null)
+        {
+            int firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition();
+            savePositionToSharedPreferences(firstVisibleItemPosition);
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        int savedVisiblePosition = getPositionFromSharedPreferences();
+        LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+        if(layoutManager != null)
+        {
+            layoutManager.scrollToPosition(savedVisiblePosition);
+        }
+    }
+
+     // method to save to shared preferences
+    private void savePositionToSharedPreferences(int position){
+        SharedPreferences preferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt("visible_position",position);
+        editor.apply();
+
+    }
+
+     // method to get the saved position
+
+    private int getPositionFromSharedPreferences(){
+        SharedPreferences preferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
+        return preferences.getInt("visible_position",0);
+
+    }
+
+    //---------------------------------end of managing recycler view position
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,14 +134,19 @@ public class Recycler_fragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
+        if(audio_list.isEmpty())
+        {
 
-        audio_list = getAudio_file();
+            audio_list = getAudio_file();
 
-        recyclerView = view.findViewById(R.id.frag_recycler);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recycleAdpter = new Recycle_adapter(getContext(), audio_list);
-        recycleAdpter.setOnItemClickListener((Recycle_adapter.OnItemClickListener) getContext()); // Set the listener
-        recyclerView.setAdapter(recycleAdpter);
+
+            recyclerView = view.findViewById(R.id.frag_recycler);
+            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+            recycleAdpter = new Recycle_adapter(getContext(), audio_list);
+            recycleAdpter.setOnItemClickListener((Recycle_adapter.OnItemClickListener) getContext()); // Set the listener
+            recyclerView.setAdapter(recycleAdpter);
+        }
+
 
 
     }
