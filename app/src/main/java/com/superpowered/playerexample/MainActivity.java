@@ -135,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         if (playing != p) {
             playing = p;
 
+
         }
     }
 

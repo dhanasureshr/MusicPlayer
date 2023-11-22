@@ -91,6 +91,7 @@ Java_com_superpowered_playerexample_MainActivity_onUserInterfaceUpdate(JNIEnv *_
                                                                        jobject __unused obj) {
     switch (player->getLatestEvent()) {
         case Superpowered::AdvancedAudioPlayer::PlayerEvent_None:
+
         case Superpowered::AdvancedAudioPlayer::PlayerEvent_Opening:
             break; // do nothing
         case Superpowered::AdvancedAudioPlayer::PlayerEvent_Opened:
@@ -108,9 +109,16 @@ Java_com_superpowered_playerexample_MainActivity_onUserInterfaceUpdate(JNIEnv *_
             log_print(ANDROID_LOG_ERROR, "PlayerExample", "Download finished. Path: %s",
                       player->getFullyDownloadedFilePath());
             break;
+
+
     }
 
-    if (player->eofRecently()) player->setPosition(0, false, false);
+    if (player->eofRecently()) {
+
+        player->setPosition(0, false, false);
+       // player->play(); // i add this to loop the current song
+    }
+
     return (jboolean) player->isPlaying();
 }
 
@@ -119,7 +127,8 @@ extern "C" JNIEXPORT void
 Java_com_superpowered_playerexample_MainActivity_TogglePlayback(JNIEnv *__unused env,
                                                                 jobject __unused obj) {
     player->togglePlayback();
-    Superpowered::CPU::setSustainedPerformanceMode(player->isPlaying()); // prevent dropouts
+    Superpowered::CPU::setSustainedPerformanceMode(player->isPlaying());// prevent dropouts
+
 }
 
 // onBackground - Put audio processing to sleep if no audio is playing.
