@@ -1015,10 +1015,14 @@ int id beginning 0x7f080056
 int id bestChoice 0x7f080057
 int id blocking 0x7f080058
 int id bottom 0x7f080059
+int id bottom_liner 0x7f080143
 int id bounce 0x7f08005a
 int id bounceBoth 0x7f08005b
 int id bounceEnd 0x7f08005c
 int id bounceStart 0x7f08005d
+int id button 0x7f080144
+int id button2 0x7f080145
+int id button3 0x7f080146
 int id buttonPanel 0x7f08005e
 int id cache_measures 0x7f08005f
 int id callMeasure 0x7f080060
@@ -1070,6 +1074,7 @@ int id easeOut 0x7f08008d
 int id east 0x7f08008e
 int id edit_query 0x7f08008f
 int id end 0x7f080090
+int id ent_time 0x7f080147
 int id expand_activities_button 0x7f080091
 int id expanded_menu 0x7f080092
 int id flip 0x7f080093
@@ -1112,6 +1117,7 @@ int id linear 0x7f0800b7
 int id listMode 0x7f0800b8
 int id list_item 0x7f0800b9
 int id main_page 0x7f0800ba
+int id main_track_seek_bar 0x7f080148
 int id match_constraint 0x7f0800bb
 int id match_parent 0x7f0800bc
 int id message 0x7f0800bd
@@ -1121,6 +1127,7 @@ int id multiply 0x7f0800c0
 int id never 0x7f0800c1
 int id neverCompleteToEnd 0x7f0800c2
 int id neverCompleteToStart 0x7f0800c3
+int id next_song 0x7f080149
 int id noState 0x7f0800c4
 int id none 0x7f0800c5
 int id normal 0x7f0800c6
@@ -1139,11 +1146,13 @@ int id parentRelative 0x7f0800d2
 int id path 0x7f0800d3
 int id pathRelative 0x7f0800d4
 int id percent 0x7f0800d5
-int id play_frag 0x7f0800d6
+int id play_pause 0x7f08014a
 int id player 0x7f0800d7
+int id player_album 0x7f08014b
 int id pooling_container_listener_holder_tag 0x7f0800d8
 int id position 0x7f0800d9
 int id postLayout 0x7f0800da
+int id previous_song 0x7f08014c
 int id progress_circular 0x7f0800db
 int id progress_horizontal 0x7f0800dc
 int id radio 0x7f0800dd
@@ -1168,6 +1177,8 @@ int id search_mag_icon 0x7f0800ef
 int id search_plate 0x7f0800f0
 int id search_src_text 0x7f0800f1
 int id search_voice_btn 0x7f0800f2
+int id seek_bar_divider 0x7f08014d
+int id seekbar_layout 0x7f08014e
 int id select_dialog_listview 0x7f0800f3
 int id sharedValueSet 0x7f0800f4
 int id sharedValueUnset 0x7f0800f5
@@ -1177,6 +1188,7 @@ int id showHome 0x7f0800f8
 int id showTitle 0x7f0800f9
 int id sin 0x7f0800fa
 int id skipped 0x7f0800fb
+int id song_name 0x7f08014f
 int id song_title 0x7f0800fc
 int id songs 0x7f0800fd
 int id south 0x7f0800fe
@@ -1195,6 +1207,7 @@ int id standard 0x7f08010a
 int id start 0x7f08010b
 int id startHorizontal 0x7f08010c
 int id startVertical 0x7f08010d
+int id start_time 0x7f080150
 int id staticLayout 0x7f08010e
 int id staticPostLayout 0x7f08010f
 int id stop 0x7f080110
@@ -1224,8 +1237,10 @@ int id title 0x7f080127
 int id titleDividerNoCustom 0x7f080128
 int id title_template 0x7f080129
 int id toggle 0x7f08012a
+int id tools_layout 0x7f080151
 int id top 0x7f08012b
 int id topPanel 0x7f08012c
+int id top_liner 0x7f080152
 int id transitionToEnd 0x7f08012d
 int id transitionToStart 0x7f08012e
 int id triangle 0x7f08012f

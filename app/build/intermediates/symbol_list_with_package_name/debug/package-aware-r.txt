@@ -1016,10 +1016,14 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottom_liner
 id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id button
+id button2
+id button3
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -1071,6 +1075,7 @@ id easeOut
 id east
 id edit_query
 id end
+id ent_time
 id expand_activities_button
 id expanded_menu
 id flip
@@ -1113,6 +1118,7 @@ id linear
 id listMode
 id list_item
 id main_page
+id main_track_seek_bar
 id match_constraint
 id match_parent
 id message
@@ -1122,6 +1128,7 @@ id multiply
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id next_song
 id noState
 id none
 id normal
@@ -1140,11 +1147,13 @@ id parentRelative
 id path
 id pathRelative
 id percent
-id play_frag
+id play_pause
 id player
+id player_album
 id pooling_container_listener_holder_tag
 id position
 id postLayout
+id previous_song
 id progress_circular
 id progress_horizontal
 id radio
@@ -1169,6 +1178,8 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id seek_bar_divider
+id seekbar_layout
 id select_dialog_listview
 id sharedValueSet
 id sharedValueUnset
@@ -1178,6 +1189,7 @@ id showHome
 id showTitle
 id sin
 id skipped
+id song_name
 id song_title
 id songs
 id south
@@ -1196,6 +1208,7 @@ id standard
 id start
 id startHorizontal
 id startVertical
+id start_time
 id staticLayout
 id staticPostLayout
 id stop
@@ -1225,8 +1238,10 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id tools_layout
 id top
 id topPanel
+id top_liner
 id transitionToEnd
 id transitionToStart
 id triangle
