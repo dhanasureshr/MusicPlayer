@@ -24,8 +24,9 @@
         android:id="@+id/Effects"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="63dp"
         android:layout_below="@+id/main_page"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="0dp"
         android:layout_toRightOf="@+id/playPause"
         android:text="Effects" />
 
@@ -33,9 +34,20 @@
         android:id="@+id/favorats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="63dp"
         android:layout_below="@+id/main_page"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="2dp"
         android:layout_toRightOf="@+id/Effects"
+        android:text="liked" />
+
+    <Button
+        android:id="@+id/player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_page"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/favorats"
         android:text="liked" />
 
 
