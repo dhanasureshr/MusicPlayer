@@ -49,9 +49,6 @@ public class Recycle_adapter extends RecyclerView.Adapter<MyViewHolder> {
             }
         });
 
-
-
-
     }
 
     @Override

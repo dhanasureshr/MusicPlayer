@@ -89,17 +89,10 @@ public class Recycler_fragment extends Fragment {
 
         audio_list = getAudio_file();
 
-
         recyclerView = view.findViewById(R.id.frag_recycler);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
-
         recycleAdpter = new Recycle_adapter(getContext(), audio_list);
-
         recycleAdpter.setOnItemClickListener((Recycle_adapter.OnItemClickListener) getContext()); // Set the listener
-
-
         recyclerView.setAdapter(recycleAdpter);
 
 
