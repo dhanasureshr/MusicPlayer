@@ -44,12 +44,17 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
                 if(result.get(Manifest.permission.READ_EXTERNAL_STORAGE)!= null)
                 {
                     isStoragepermissiongranted = result.get(Manifest.permission.READ_EXTERNAL_STORAGE);
-                    load_songs_fragment();
+                    if(isStoragepermissiongranted)
+                    {
+                        load_songs_fragment();
+                    }
                 }
             }
         });
-        requestpermisson();
-        if(isStoragepermissiongranted)
+
+            requestpermisson();
+
+         if(isStoragepermissiongranted)
         {
             load_songs_fragment();
         }
@@ -117,11 +122,11 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
             @Override
             public void run() {
                 UI_update();
-                handler.postDelayed(this, 40);
+                handler.postDelayed(this, 400);
             }
         };
         handler = new Handler();
-        handler.postDelayed(runnable, 40);
+        handler.postDelayed(runnable, 400);
     }
 
 
@@ -200,7 +205,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     public void load_songs_fragment(){
 
          //requestpermisson();
-         if(!isStoragepermissiongranted == true) {
+         if(!isStoragepermissiongranted) {
              Toast.makeText(this, "storage permission needed you can accept through App info  " , Toast.LENGTH_SHORT).show();
              requestpermisson();
          }
