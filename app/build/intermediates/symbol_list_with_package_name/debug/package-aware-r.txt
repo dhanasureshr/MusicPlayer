@@ -1140,6 +1140,7 @@ id path
 id pathRelative
 id percent
 id playPause
+id player
 id pooling_container_listener_holder_tag
 id position
 id postLayout

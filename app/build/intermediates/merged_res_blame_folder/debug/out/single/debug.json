@@ -40,10 +40,6 @@
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-25:\\drawable\\pau.png"
     },
     {
-        "merged": "com.superpowered.playerexample.app-merged_res-23:/layout_track_holder.xml.flat",
-        "source": "com.superpowered.playerexample.app-main-25:/layout/track_holder.xml"
-    },
-    {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-23:\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-25:\\mipmap-xxxhdpi\\ic_launcher.png"
     },

@@ -1139,6 +1139,7 @@ int id path 0x7f0800d2
 int id pathRelative 0x7f0800d3
 int id percent 0x7f0800d4
 int id playPause 0x7f0800d5
+int id player 0x7f080140
 int id pooling_container_listener_holder_tag 0x7f0800d6
 int id position 0x7f0800d7
 int id postLayout 0x7f0800d8
