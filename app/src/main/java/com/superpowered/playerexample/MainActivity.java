@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.res.AssetFileDescriptor;
 import android.media.AudioManager;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+     //his.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         //check for the storage permission
 
         mPermissionResultLanuncher = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), new ActivityResultCallback<Map<String, Boolean>>() {
