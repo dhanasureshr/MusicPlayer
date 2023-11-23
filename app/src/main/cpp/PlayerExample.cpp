@@ -159,9 +159,20 @@ Java_com_superpowered_playerexample_MainActivity_Cleanup(JNIEnv *__unused env,
 
 
 
-extern "C"
-JNIEXPORT jdouble JNICALL
-Java_com_superpowered_playerexample_Play_1fragment_getcurrentposition(JNIEnv *env, jobject thiz) {
 
-    return  player->getDisplayPositionMs();
+extern "C"
+JNIEXPORT jint JNICALL
+Java_com_superpowered_playerexample_Play_1fragment_getCurrentPosition(JNIEnv *env, jobject thiz) {
+    return player->getDisplayPositionMs();
+}
+extern "C"
+JNIEXPORT jint JNICALL
+Java_com_superpowered_playerexample_Play_1fragment_getDuration(JNIEnv *env, jobject thiz) {
+    return  player->getDurationMs();
+}
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_superpowered_playerexample_Play_1fragment_setPosition(JNIEnv *env, jobject thiz,
+                                                               jint position) {
+    player->setPosition(position, false, false, false, false);
 }
