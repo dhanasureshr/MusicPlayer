@@ -56,6 +56,10 @@ public class Play_fragment extends Fragment {
 
     private SeekBar player_controller;
 
+    private final int SEEK_DELAY = 150;
+
+    private final Handler seekHandler = new Handler();
+
 
     // Handler for updating ui
     private  final Handler handler = new Handler();
@@ -164,13 +168,19 @@ public class Play_fragment extends Fragment {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 if(b)
                 {
+                    seekHandler.removeCallbacksAndMessages(null);
+
+                    seekHandler.postDelayed(()->{
                     setPosition(progress);
+                },SEEK_DELAY);
+
                 }
 
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
+
 
             }
 
