@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
 import com.superpowered.playerexample.MainActivity;
 
 /**
@@ -27,6 +29,8 @@ public class Play_fragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+
 
     public Play_fragment() {
         // Required empty public constructor
@@ -67,21 +71,30 @@ public class Play_fragment extends Fragment {
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_play_fragment, container, false);
+
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Button pa = view.findViewById(R.id.play_pause);
-        pa.setOnClickListener(new View.OnClickListener() {
+        MainActivity mainActivity = new MainActivity();
+
+        Button play_pause = view.findViewById(R.id.play_pause);
+        TextView song_duration = view.findViewById(R.id.start_time);
+        String round = String.format("%.0f",getcurrentposition());
+        song_duration.setText(round);
+        play_pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               MainActivity m = new MainActivity();
-               m.PlayerExample_PlayPause();
+
+               mainActivity.PlayerExample_PlayPause();
             }
         });
     }
 
+
+    private native double getcurrentposition();
 
 
 }

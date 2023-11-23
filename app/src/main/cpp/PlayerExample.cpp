@@ -115,8 +115,12 @@ Java_com_superpowered_playerexample_MainActivity_onUserInterfaceUpdate(JNIEnv *_
 
     if (player->eofRecently()) {
 
+        //this code is for looping the current track in a continues loop
+        player->pause();
         player->setPosition(0, false, false);
-        player->play(); // i add this to loop the current song
+        player->play();
+       // player->play(); // i add this to loop the current song
+
     }
 
     return (jboolean) player->isPlaying();
@@ -151,4 +155,13 @@ Java_com_superpowered_playerexample_MainActivity_Cleanup(JNIEnv *__unused env,
                                                          jobject __unused obj) {
     delete audioIO;
     delete player;
+}
+
+
+
+extern "C"
+JNIEXPORT jdouble JNICALL
+Java_com_superpowered_playerexample_Play_1fragment_getcurrentposition(JNIEnv *env, jobject thiz) {
+
+    return  player->getDisplayPositionMs();
 }

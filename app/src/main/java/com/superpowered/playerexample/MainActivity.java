@@ -18,6 +18,7 @@ import android.view.View;
 import android.util.Log;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -68,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         Button songs_Button = findViewById(R.id.songs);
         Button afx_Button = findViewById(R.id.Aufx);
         Button liked_Button = findViewById(R.id.liked);
+
+
 
         // songs button click event load the songs list by
         //loading the recycler fragment in the main activity
@@ -122,11 +125,11 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
             @Override
             public void run() {
                 UI_update();
-                handler.postDelayed(this, 400);
+                handler.postDelayed(this, 40);
             }
         };
         handler = new Handler();
-        handler.postDelayed(runnable, 400);
+        handler.postDelayed(runnable, 40);
     }
 
 
@@ -180,6 +183,8 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     private native void onBackground();
 
     private native void Cleanup();
+
+
 
     private boolean playing = false;
     private Handler handler;
