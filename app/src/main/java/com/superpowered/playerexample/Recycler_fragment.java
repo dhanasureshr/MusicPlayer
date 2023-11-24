@@ -176,7 +176,7 @@ public class Recycler_fragment extends Fragment {
 
         Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
         String selection = MediaStore.Audio.Media.IS_MUSIC + "!= 0";
-      //  String sortOrder = MediaStore.Audio.Media.TITLE + "ASC";
+
 
        try(Cursor cursor = contentResolver.query(uri, projection, selection, null,null)) {
 
