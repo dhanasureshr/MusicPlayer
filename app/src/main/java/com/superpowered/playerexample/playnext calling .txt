@@ -1,0 +1,13 @@
+// Assuming you have an instance of PlayerListManager somewhere in your Java code
+PlayerListManager playerListManager = new PlayerListManager();
+
+// Assuming playNextList is a List<String> containing the file paths
+List<String> playNextList = new ArrayList<>();
+playNextList.add("path/to/next/song1.mp3");
+playNextList.add("path/to/next/song2.mp3");
+
+// Convert List<String> to String[]
+String[] playNextArray = playNextList.toArray(new String[0]);
+
+// Call the nativePlayNext function
+playerListManager.nativePlayNext(playNextArray);

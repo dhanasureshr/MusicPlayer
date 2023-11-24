@@ -15,6 +15,8 @@
 #include <vector>
 #include <algorithm>
 #include <random>
+#include <deque>
+#include <map>
 
 
 #define log_print __android_log_print
@@ -23,6 +25,8 @@ static SuperpoweredAndroidAudioIO *audioIO;
 static Superpowered::AdvancedAudioPlayer *player = nullptr;
 static std::vector<std::string> playlist;
 static std::vector<std::string> shuffledPlaylist;
+
+
 
 
 // This is called periodically by the audio engine.
@@ -43,6 +47,11 @@ static bool audioProcessing(
 
 
 class SuperpoweredPlayer {
+private:
+
+    std::map<std::string, int> pathToIndexMap;  // Add this declaration
+
+
 
 public:
 
@@ -93,6 +102,29 @@ public:
         Superpowered::CPU::setSustainedPerformanceMode(player->isPlaying());// prevent dropouts
 
     }
+
+    // Function to play the next song in the playNextList
+    void playNext(const std::vector<std::string>& playNextList) {
+        if (!playNextList.empty()) {
+            const std::string& nextFilePath = playNextList[0]; // Access the first element
+            auto iter = pathToIndexMap.find(nextFilePath);
+
+            if (iter != pathToIndexMap.end()) {
+                int index = iter->second;
+                play(index);  // Assuming nativePlay is a member function in your class
+            } else {
+                // Handle the case where the index is not found in pathToIndexMap
+                // Log an error, skip the item, or take appropriate action.
+                log_print(ANDROID_LOG_ERROR, "SuperpoweredPlayer", "Error: Index not found for file path: %s", nextFilePath.c_str());
+            }
+        } else {
+            // Handle the case where playNextList is empty
+            // Log an error, skip the item, or take appropriate action.
+            log_print(ANDROID_LOG_ERROR, "SuperpoweredPlayer", "Error: playNextList is empty.");
+        }
+    }
+
+
 
     void pause() {
         // Implement pause logic
@@ -159,6 +191,40 @@ public:
     {
         delete player;
         delete audioIO;
+    }
+
+    void shufflePlaylist(std::deque<std::string>& playlist) {
+        std::random_device rd;
+        std::mt19937 g(rd());
+        std::shuffle(playlist.begin(), playlist.end(), g);
+    }
+
+
+// Add this function to update the native CPP vectors
+    void addToPlaylist(const char* filePath) {
+        // Add the file path to the regular playlist
+        playlist.push_back(filePath);
+
+        // If shuffle is enabled, update the shuffled playlist
+        if (shuffledPlaylist.size() != playlist.size()) {
+            try {
+            // Convert the vector to a deque for random access
+            std::deque<std::string> dequePlaylist(shuffledPlaylist.begin(), shuffledPlaylist.end());
+
+            // Shuffle the deque
+            std::random_device rd;
+            std::mt19937 g(rd());
+            std::shuffle(dequePlaylist.begin(), dequePlaylist.end(), g);
+
+            // Convert the shuffled deque back to the vector
+            shuffledPlaylist.assign(dequePlaylist.begin(), dequePlaylist.end());
+            } catch (const std::exception& e) {
+                // Handle the exception, e.g., log the error or perform cleanup
+                // For example, you can use Android logging:
+                __android_log_print(ANDROID_LOG_ERROR, "YourTag", "Error during playlist shuffling: %s", e.what());
+            }
+
+        }
     }
 
 
@@ -228,33 +294,24 @@ superpoweredPlayer->setPlayHeadPosition(position);
 extern "C" JNIEXPORT void JNICALL
 Java_com_superpowered_playerexample_PlayerListManager_nativeSetShuffle(JNIEnv *env, jobject instance, jboolean enable) {
     if (enable) {
-        shuffledPlaylist = playlist;
-        std::random_device rd;
-        std::mt19937 g(rd());
-        std::shuffle(shuffledPlaylist.begin(), shuffledPlaylist.end(), g);
+        // Convert the vector to a deque for random access
+        std::deque<std::string> dequePlaylist(playlist.begin(), playlist.end());
+        superpoweredPlayer->shufflePlaylist(dequePlaylist);//shufflePlaylist(dequePlaylist);
+        // Convert the deque back to the vector
+        shuffledPlaylist.assign(dequePlaylist.begin(), dequePlaylist.end());
     } else {
         shuffledPlaylist = playlist;
     }
 }
-extern "C" JNIEXPORT void JNICALL
-Java_com_superpowered_playerexample_PlayerListManager_nativeuPlay(JNIEnv *env, jobject instance, jint index) {
 
-}
 
 
 extern "C" JNIEXPORT void JNICALL
 Java_com_superpowered_playerexample_PlayerListManager_nativeAddSongToPlaylist(JNIEnv *env, jobject instance, jstring filePath_) {
     const char *filePath = env->GetStringUTFChars(filePath_, 0);
 
-    playlist.push_back(filePath);
+    superpoweredPlayer->addToPlaylist(filePath);
 
-    // If shuffle is enabled, update the shuffled playlist
-    if (shuffledPlaylist.size() != playlist.size()) {
-        shuffledPlaylist = playlist;
-        std::random_device rd;
-        std::mt19937 g(rd());
-        std::shuffle(shuffledPlaylist.begin(), shuffledPlaylist.end(), g);
-    }
 
     env->ReleaseStringUTFChars(filePath_, filePath);
 }
@@ -280,3 +337,19 @@ superpoweredPlayer->cleanResourses();
 }
 
 
+extern "C" JNIEXPORT void JNICALL
+Java_com_superpowered_playerexample_PlayerListManager_nativePlayNext(JNIEnv *env, jobject instance, jobjectArray playNextList) {
+    // Convert jobjectArray to std::vector<std::string>
+    std::vector<std::string> cppPlayNextList;
+    jsize length = env->GetArrayLength(playNextList);
+    for (jsize i = 0; i < length; ++i) {
+        jstring str = (jstring)env->GetObjectArrayElement(playNextList, i);
+        const char *filePath = env->GetStringUTFChars(str, 0);
+        cppPlayNextList.push_back(filePath);
+        env->ReleaseStringUTFChars(str, filePath);
+        env->DeleteLocalRef(str);
+    }
+
+    // Call the playNext function in your SuperpoweredPlayer instance
+    superpoweredPlayer->playNext(cppPlayNextList);
+}

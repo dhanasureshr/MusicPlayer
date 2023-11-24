@@ -39,6 +39,9 @@ public class PlayerListManager {
 
     private native void Cleanup();
 
+    private native void nativePlayNext(String[] playNextList);
+    private native void nativeAddSongToPlaylist(String path);
+
 
 
     private List<String> defaultPlaylist;
@@ -58,6 +61,16 @@ public class PlayerListManager {
         uniquePaths.add(filePath);
         defaultPlaylist.add(filePath);
         pathToIndexMap.put(filePath,newIndex);
+
+        // Call native method to add the file path to the native CPP vector
+        try{
+            nativeAddSongToPlaylist(filePath);
+        }catch (Exception e)
+        {
+// Handle the exception, e.g., log the error or show a user-friendly message
+            e.printStackTrace();
+        }
+
     }
 
     public void addToPlayNextList(String filePath) {
@@ -65,6 +78,14 @@ public class PlayerListManager {
         uniquePaths.add(filePath);
         playNextList.add(filePath);
         pathToIndexMap.put(filePath,newIndex);
+        try{
+            nativeAddSongToPlaylist(filePath);
+        }catch (Exception e)
+        {
+// Handle the exception, e.g., log the error or show a user-friendly message
+            e.printStackTrace();
+        }
+        // Call native method to add the file path to the native CPP vector
 
     }
 
@@ -73,6 +94,15 @@ public class PlayerListManager {
         uniquePaths.add(filePath);
         likedPlaylist.add(filePath);
         pathToIndexMap.put(filePath,newIndex);
+        try{
+            nativeAddSongToPlaylist(filePath);
+        }catch (Exception e)
+        {
+// Handle the exception, e.g., log the error or show a user-friendly message
+            e.printStackTrace();
+        }
+        // Call native method to add the file path to the native CPP vector
+
     }
 
     public void playDefaultPlaylist() {
