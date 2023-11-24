@@ -37,17 +37,17 @@ public class Recycle_adapter extends RecyclerView.Adapter<MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.song_name.setText(audio_tracks_list.get(position).Track_title);
+        holder.song_name.setText(audio_tracks_list.get(position).title);
         audio_data currentItem = audio_tracks_list.get(position);
 
-        Picasso.get().load(currentItem.getAlbumArtUri()).into(holder.Audio_album);
+        Picasso.get().load(currentItem.getAlbumArtURI()).into(holder.Audio_album);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //send this path to the audio player to load and play the song
                 if (onItemClickListener != null) {
-                    onItemClickListener.onItemClick(currentItem.getTrack_path());
+                    onItemClickListener.onItemClick(currentItem.getData(),currentItem.getTitle());
                 }
 
 
@@ -62,7 +62,7 @@ public class Recycle_adapter extends RecyclerView.Adapter<MyViewHolder> {
     }
 
     public interface OnItemClickListener {
-        void onItemClick(String path);
+        void onItemClick(String path,String song_name);
     }
 
 

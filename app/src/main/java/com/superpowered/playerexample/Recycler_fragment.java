@@ -17,6 +17,7 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -137,6 +138,7 @@ public class Recycler_fragment extends Fragment {
         if(audio_list.isEmpty())
         {
 
+
             audio_list = getAudio_file();
 
 
@@ -145,6 +147,8 @@ public class Recycler_fragment extends Fragment {
             recycleAdpter = new Recycle_adapter(getContext(), audio_list);
             recycleAdpter.setOnItemClickListener((Recycle_adapter.OnItemClickListener) getContext()); // Set the listener
             recyclerView.setAdapter(recycleAdpter);
+
+
         }
 
 
@@ -154,33 +158,75 @@ public class Recycler_fragment extends Fragment {
     private ArrayList<audio_data> getAudio_file() {
 
         ContentResolver contentResolver = getContext().getContentResolver();
-        Uri audioUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
-        String[] projection = {MediaStore.Audio.Media.TITLE,
-                                MediaStore.Audio.Media.DATA,
-                                MediaStore.Audio.Media.ALBUM,
-                                MediaStore.Audio.Media.ALBUM_ID};
 
-       // Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+        String[] projection = {MediaStore.Audio.Media._ID,
+                MediaStore.Audio.Media.TITLE,
+                MediaStore.Audio.Media.ARTIST,
+                MediaStore.Audio.Media.ALBUM,
+                MediaStore.Audio.Media.DATA,
+                MediaStore.Audio.Media.DURATION,
+                MediaStore.Audio.Media.SIZE,
+                MediaStore.Audio.Media.MIME_TYPE,
+                MediaStore.Audio.Media.TRACK,
+                MediaStore.Audio.Media.YEAR,
+                MediaStore.Audio.Media.GENRE,
+                MediaStore.Audio.Media.COMPOSER,
+                MediaStore.Audio.Media.ALBUM_ARTIST,
+                MediaStore.Audio.Media.ALBUM_ID};
+
+        Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
         String selection = MediaStore.Audio.Media.IS_MUSIC + "!= 0";
+      //  String sortOrder = MediaStore.Audio.Media.TITLE + "ASC";
 
-        Cursor cursor = contentResolver.query(audioUri, projection, selection, null, null);
+       try(Cursor cursor = contentResolver.query(uri, projection, selection, null,null)) {
 
-        if (cursor != null) {
-            while (cursor.moveToNext()) {
+           if (cursor != null) {
+               while (cursor.moveToNext()) {
+                /*
                 String title = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
                 String path = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA));
                 String album = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM));
                 long albumId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ID));
-
                 String albumArtUri = getAlbumArtUri(albumId);
+
                 audio_data audioData = new audio_data(title,path,album,albumArtUri);
                 audio_list.add(audioData);
 
-            }
-            cursor.close();
-        }
+                */
+
+                   long id = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media._ID));
+                   String title = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
+                   String artist = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST));
+                   String album = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM));
+                   String Data = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA));
+                   int duration = cursor.getInt(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DURATION));
+                   long size = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.SIZE));
+                   String mimeType = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.MIME_TYPE));
+                   int trackNumber = cursor.getInt(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TRACK));
+                   int year = cursor.getInt(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.YEAR));
+                   String genre = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.GENRE));
+                   String composer = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.COMPOSER));
+                   String albumArtist = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ARTIST));
+                   long albumId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ID));
+                   String albumArtUri = getAlbumArtUri(albumId);
+
+                   audio_data audioData = new audio_data(id, title, artist, album, Data, duration, size, mimeType, trackNumber, year, genre, composer, albumArtist, albumArtUri);
+                   audio_list.add(audioData);
+
+               }
+
+           }
+
+       } catch (Exception e)
+       {
+           Toast.makeText(getContext(), "AudioContentResolver error retriving " +e.getMessage(), Toast.LENGTH_SHORT).show();
+       }
+
+         //cursor.close(); // because try and catch i need not to this explecetly
+
         return audio_list;
     }
+
 
     private String getAlbumArtUri(long albumId) {
         Uri albumArtUri = Uri.parse("content://media/external/audio/albumart/" + albumId);

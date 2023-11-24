@@ -176,3 +176,4 @@ Java_com_superpowered_playerexample_Play_1fragment_setPosition(JNIEnv *env, jobj
                                                                jint position) {
     player->setPosition(position, false, false, false, false);
 }
+

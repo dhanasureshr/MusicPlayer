@@ -153,6 +153,8 @@ public class Play_fragment extends Fragment {
 
         play_end_time = view.findViewById(R.id.ent_time);
 
+        
+
         //button click event handler
         play_pause.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,7 +164,7 @@ public class Play_fragment extends Fragment {
             }
         });
 
-
+        // player seekbar seek handler
         player_controller.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {

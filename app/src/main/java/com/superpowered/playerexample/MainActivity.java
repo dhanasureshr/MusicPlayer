@@ -191,8 +191,9 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     private Handler handler;
 
     @Override
-    public void onItemClick(String path) {
-        Toast.makeText(this, "playing " +path, Toast.LENGTH_SHORT).show();
+    public void onItemClick(String path,String title) {
+        Toast.makeText(this, "playing " +title, Toast.LENGTH_SHORT).show();
+
         OpenFileFromPath(path);
         PlayerExample_PlayPause();
         //load_play_fragment(); // if you enable this on clicking on item it will load the play fragment by default
