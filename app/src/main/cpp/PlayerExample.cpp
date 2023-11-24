@@ -38,12 +38,13 @@ Java_com_superpowered_playerexample_MainActivity_NativeInit(JNIEnv *env, jobject
                                                             jstring tempPath) {
     Superpowered::Initialize("ExampleLicenseKey-WillExpire-OnNextUpdate");
 
+    /*
     // setting the temp folder for progressive downloads or HLS playback
     // not needed for local file playback
     const char *str = env->GetStringUTFChars(tempPath, 0);
     Superpowered::AdvancedAudioPlayer::setTempFolder(str);
     env->ReleaseStringUTFChars(tempPath, str);
-
+*/
     // creating the player
     player = new Superpowered::AdvancedAudioPlayer((unsigned int) samplerate, 0);
 
@@ -102,13 +103,7 @@ Java_com_superpowered_playerexample_MainActivity_onUserInterfaceUpdate(JNIEnv *_
                       Superpowered::AdvancedAudioPlayer::statusCodeToString(openError));
         }
             break;
-        case Superpowered::AdvancedAudioPlayer::PlayerEvent_ConnectionLost:
-            log_print(ANDROID_LOG_ERROR, "PlayerExample", "Network download failed.");
-            break;
-        case Superpowered::AdvancedAudioPlayer::PlayerEvent_ProgressiveDownloadFinished:
-            log_print(ANDROID_LOG_ERROR, "PlayerExample", "Download finished. Path: %s",
-                      player->getFullyDownloadedFilePath());
-            break;
+
 
 
     }

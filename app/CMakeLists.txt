@@ -11,7 +11,7 @@ add_library(
         PlayerExample
         SHARED
         src/main/cpp/PlayerExample.cpp
-
+        src/main/cpp/PlayerListManager.cpp
 
         ${PATH_TO_SUPERPOWERED}/OpenSource/SuperpoweredAndroidAudioIO.cpp
 )
