@@ -6,6 +6,11 @@
 },
 {
   "directory": "F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/.cxx/Debug/5vx4i2m6/armeabi-v7a",
+  "command": "C:\\Users\\DHANAS~1\\AppData\\Local\\Android\\Sdk\\ndk\\231~1.777\\TOOLCH~1\\llvm\\prebuilt\\WINDOW~1\\bin\\CLANG_~1.EXE --target=armv7-none-linux-androideabi24 --sysroot=\"C:/Users/dhana suresh/AppData/Local/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot\" -DPlayerExample_EXPORTS -IF:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/src/main/cpp -fsigned-char -IF:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\..\\..\\..\\Superpowered -g  -fno-limit-debug-info -fPIC -o CMakeFiles\\PlayerExample.dir\\src\\main\\cpp\\PlayerListManager.cpp.o -c F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\src\\main\\cpp\\PlayerListManager.cpp",
+  "file": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\src\\main\\cpp\\PlayerListManager.cpp"
+},
+{
+  "directory": "F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/.cxx/Debug/5vx4i2m6/armeabi-v7a",
   "command": "C:\\Users\\DHANAS~1\\AppData\\Local\\Android\\Sdk\\ndk\\231~1.777\\TOOLCH~1\\llvm\\prebuilt\\WINDOW~1\\bin\\CLANG_~1.EXE --target=armv7-none-linux-androideabi24 --sysroot=\"C:/Users/dhana suresh/AppData/Local/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot\" -DPlayerExample_EXPORTS -IF:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/src/main/cpp -fsigned-char -IF:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\..\\..\\..\\Superpowered -g  -fno-limit-debug-info -fPIC -o CMakeFiles\\PlayerExample.dir\\F_\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Superpowered\\OpenSource\\SuperpoweredAndroidAudioIO.cpp.o -c F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Superpowered\\OpenSource\\SuperpoweredAndroidAudioIO.cpp",
   "file": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Superpowered\\OpenSource\\SuperpoweredAndroidAudioIO.cpp"
 }

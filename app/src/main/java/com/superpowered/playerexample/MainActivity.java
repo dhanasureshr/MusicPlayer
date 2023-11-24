@@ -332,15 +332,6 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
             popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
                 @Override
                 public void onDismiss() {
-
-                }
-            });
-
-            // Set up any other views or interactions within the popupView
-            Button closePopupButton = popupView.findViewById(R.id.accept_button);
-            closePopupButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
                     // Dismiss the popup window when the close button is clicked
                     isStoragepermissiongranted = ContextCompat.checkSelfPermission(
                             getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
@@ -349,6 +340,15 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
                         openAppInfoSettings(getApplicationContext(),Storage_permission_request_code);
 
                     }
+                }
+            });
+
+            // Set up any other views or interactions within the popupView
+            Button closePopupButton = popupView.findViewById(R.id.accept_button);
+            closePopupButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
 
                     popupWindow.dismiss();
                 }

@@ -126,6 +126,7 @@ extern "C" JNIEXPORT void
 Java_com_superpowered_playerexample_MainActivity_TogglePlayback(JNIEnv *__unused env,
                                                                 jobject __unused obj) {
     player->togglePlayback();
+    
     Superpowered::CPU::setSustainedPerformanceMode(player->isPlaying());// prevent dropouts
 
 }

@@ -1,17 +1,8 @@
 # ninja log v5
 14	630	7222648147833444	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	4731725608c6a272
-10	1536	7222670428139838	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	ee9b0992c1dc9a2b
-5	914	7222736848102365	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	4039cbb2d431eef7
-915	1544	7222736855391605	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	14f8c3ac79457e7a
-75	1240	7223194529624266	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	4039cbb2d431eef7
-1241	2134	7223194538258893	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	14f8c3ac79457e7a
-9	1256	7223388646140764	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	4039cbb2d431eef7
-1270	2576	7223388658414663	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	14f8c3ac79457e7a
-75	1203	7223689955405762	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	4039cbb2d431eef7
-1205	2185	7223689964665795	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	14f8c3ac79457e7a
-20	838	7224232086591445	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	4039cbb2d431eef7
-839	1334	7224232091445299	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	14f8c3ac79457e7a
-11	1225	7224397746983220	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	4039cbb2d431eef7
-1226	2201	7224397756171388	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	14f8c3ac79457e7a
 10	1125	7224970800635680	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	4039cbb2d431eef7
+10	1536	7222670428139838	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	ee9b0992c1dc9a2b
 1126	2362	7224970812526067	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	14f8c3ac79457e7a
+8	651	7225494119204832	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	4039cbb2d431eef7
+16	1127	7225494123919335	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerListManager.cpp.o	cce57a66e15f4ccb
+1128	1648	7225494128941247	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	b0a046188dba4820
