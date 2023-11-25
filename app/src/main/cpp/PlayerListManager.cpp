@@ -69,13 +69,12 @@ public:
         );
     }
     ~SuperpoweredPlayer() {
-
         // Cleanup and release resources
         cleanResourses();
     }
+
     void play(int index) {
         // Implement playback logic using SuperpoweredAdvancedAudioPlayer
-        // Example: SuperpoweredPlayer->open(filePath); SuperpoweredPlayer->play(true);
         std::lock_guard<std::mutex> lock(playerMutex);
 
         if (player != nullptr && index >= 0 && index < shuffledPlaylist.size()) {
@@ -83,7 +82,7 @@ public:
 
             player->play();
         }
-        //player->togglePlayback();
+
         Superpowered::CPU::setSustainedPerformanceMode(player->isPlaying());// prevent dropouts
     }
     // Function to play the next song in the playNextList
@@ -99,6 +98,7 @@ public:
                 // Handle the case where the index is not found in pathToIndexMap
                 // Log an error, skip the item, or take appropriate action.
                 log_print(ANDROID_LOG_ERROR, "SuperpoweredPlayer", "Error: Index not found for file path: %s", nextFilePath.c_str());
+
             }
         } else {
             // Handle the case where playNextList is empty
@@ -111,36 +111,25 @@ public:
 
     void pause() {
         // Implement pause logic
-        // Example: SuperpoweredPlayer->pause();
         player->pause();
     }
 
     void stop() {
         // Implement stop logic
-        // Example: SuperpoweredPlayer->pause(); SuperpoweredPlayer->seek(0);
+        player->seek(0);
+
     }
 
     bool isPlaying() {
         // Implement isPlaying logic
-        // Example: return SuperpoweredPlayer->isPlaying();
+        if(player->isPlaying())
+        {
+            return true;
+        }
         return false;
     }
 
-    void setLoopPoints(int startMs, int endMs) {
-        // Implement setting loop points
-        // Example: SuperpoweredPlayer->setStartPositionInMs(startMs);
-        //          SuperpoweredPlayer->setEndPositionInMs(endMs);
-    }
 
-    void startLoop() {
-        // Implement starting the loop
-        //player->togglePlayback(true);
-    }
-
-    void stopLoop() {
-        // Implement stopping the loop
-        // Example: SuperpoweredPlayer->togglePlayback(false);
-    }
 
     int getPlayHeadCurrentPosition()
     {
@@ -240,21 +229,6 @@ Java_com_superpowered_playerexample_PlayerListManager_nativeIsPlaying(JNIEnv *en
     return static_cast<jboolean>(superpoweredPlayer->isPlaying());
 }
 
-extern "C" JNIEXPORT void JNICALL
-Java_com_superpowered_playerexample_PlayerListManager_nativeSetLoopPoints(JNIEnv *env, jobject instance, jint startMs, jint endMs) {
-    superpoweredPlayer->setLoopPoints(startMs, endMs);
-}
-
-extern "C" JNIEXPORT void JNICALL
-Java_com_superpowered_playerexample_PlayerListManager_nativeStartLoop(JNIEnv *env, jobject instance) {
-    superpoweredPlayer->startLoop();
-}
-
-extern "C" JNIEXPORT void JNICALL
-Java_com_superpowered_playerexample_PlayerListManager_nativeStopLoop(JNIEnv *env, jobject instance) {
-    superpoweredPlayer->stopLoop();
-}
-
 extern "C" JNIEXPORT jint JNICALL
 Java_com_superpowered_playerexample_PlayerListManager_getCurrentPosition(JNIEnv *env, jobject thiz) {
     return superpoweredPlayer->getPlayHeadCurrentPosition();
@@ -343,6 +317,10 @@ Java_com_superpowered_playerexample_PlayerListManager_onUserInterfaceUpdate(JNIE
             log_print(ANDROID_LOG_ERROR, "PlayerExample", "Open error %i: %s", openError,
                       Superpowered::AdvancedAudioPlayer::statusCodeToString(openError));
         }
+            break;
+        case Superpowered::AdvancedAudioPlayer::PlayerEvent_ConnectionLost:
+            break;
+        case Superpowered::AdvancedAudioPlayer::PlayerEvent_ProgressiveDownloadFinished:
             break;
     }
     if (player->eofRecently()) {

@@ -16,9 +16,6 @@ public class PlayerListManager {
     private native void nativePause();
     private native void nativeStop();
     private native boolean nativeIsPlaying();
-    private native void nativeSetLoopPoints(int startMs, int endMs);
-    private native void nativeStartLoop();
-    private native void nativeStopLoop();
     private native int getCurrentPosition();
     private native int getDuration();
     private native void setPosition(int position);
@@ -150,17 +147,6 @@ public class PlayerListManager {
         return nativeIsPlaying();
     }
 
-    public void setLoopPoints(int startMs, int endMs) {
-        nativeSetLoopPoints(startMs, endMs);
-    }
-
-    public void startLoop() {
-        nativeStartLoop();
-    }
-
-    public void stopLoop() {
-        nativeStopLoop();
-    }
 
     public int getPlayheadcurrentposition()
     {

@@ -4,6 +4,10 @@
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-25:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-23:\\drawable_dd.png.flat",
+        "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-25:\\drawable\\dd.png"
+    },
+    {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-23:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-25:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
@@ -36,8 +40,16 @@
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-25:\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "com.superpowered.playerexample.app-merged_res-23:/layout_fragment_recycler_fragment.xml.flat",
+        "source": "com.superpowered.playerexample.app-main-25:/layout/fragment_recycler_fragment.xml"
+    },
+    {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-23:\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-25:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-23:\\drawable_rectangle.png.flat",
+        "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-25:\\drawable\\rectangle.png"
     },
     {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-23:\\layout_track_holder.xml.flat",
@@ -66,10 +78,6 @@
     {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-23:\\drawable_pau.png.flat",
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-25:\\drawable\\pau.png"
-    },
-    {
-        "merged": "com.superpowered.playerexample.app-merged_res-23:/layout_storagage_permission_popup.xml.flat",
-        "source": "com.superpowered.playerexample.app-main-25:/layout/storagage_permission_popup.xml"
     },
     {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-23:\\raw_track.mp3.flat",

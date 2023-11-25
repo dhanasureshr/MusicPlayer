@@ -1,22 +1,22 @@
-com.superpowered.playerexample.app-activity-1.6.0-0 C:\Users\dhana suresh\.gradle\caches\transforms-3\07e9bb5cbaedcc48e2bc82d6d4b2974a\transformed\activity-1.6.0\res
-com.superpowered.playerexample.app-savedstate-1.2.0-1 C:\Users\dhana suresh\.gradle\caches\transforms-3\0cb433f61650ef1277452b9333d323e9\transformed\savedstate-1.2.0\res
-com.superpowered.playerexample.app-startup-runtime-1.1.1-2 C:\Users\dhana suresh\.gradle\caches\transforms-3\238209a1a12c9009989d74bd36857b62\transformed\startup-runtime-1.1.1\res
-com.superpowered.playerexample.app-customview-poolingcontainer-1.0.0-3 C:\Users\dhana suresh\.gradle\caches\transforms-3\356a61ea3ea6282bbd4d0f4a24e05bb1\transformed\customview-poolingcontainer-1.0.0\res
-com.superpowered.playerexample.app-lifecycle-runtime-2.5.1-4 C:\Users\dhana suresh\.gradle\caches\transforms-3\3eecb87c375d07be77c0e6320ca2a1dd\transformed\lifecycle-runtime-2.5.1\res
-com.superpowered.playerexample.app-lifecycle-viewmodel-2.5.1-5 C:\Users\dhana suresh\.gradle\caches\transforms-3\3fe748d39103a4a29182950ad1f54261\transformed\lifecycle-viewmodel-2.5.1\res
-com.superpowered.playerexample.app-lifecycle-viewmodel-savedstate-2.5.1-6 C:\Users\dhana suresh\.gradle\caches\transforms-3\4e97aab90327ca404ad8d612948eb30a\transformed\lifecycle-viewmodel-savedstate-2.5.1\res
-com.superpowered.playerexample.app-core-1.9.0-7 C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\res
-com.superpowered.playerexample.app-lifecycle-process-2.4.1-8 C:\Users\dhana suresh\.gradle\caches\transforms-3\62b7cf00c34a2119ee62c390326d994d\transformed\lifecycle-process-2.4.1\res
-com.superpowered.playerexample.app-appcompat-1.6.1-9 C:\Users\dhana suresh\.gradle\caches\transforms-3\636fe5f1319118333643bf6dca29e378\transformed\appcompat-1.6.1\res
-com.superpowered.playerexample.app-constraintlayout-2.1.4-10 C:\Users\dhana suresh\.gradle\caches\transforms-3\6c63bafc2a4237618f85a073f48b9cda\transformed\constraintlayout-2.1.4\res
-com.superpowered.playerexample.app-emoji2-views-helper-1.2.0-11 C:\Users\dhana suresh\.gradle\caches\transforms-3\6d7b4acabeda9818751e436122607324\transformed\emoji2-views-helper-1.2.0\res
-com.superpowered.playerexample.app-annotation-experimental-1.3.0-12 C:\Users\dhana suresh\.gradle\caches\transforms-3\6f9e4b934423dffb7670d825108f1d31\transformed\annotation-experimental-1.3.0\res
-com.superpowered.playerexample.app-fragment-1.3.6-13 C:\Users\dhana suresh\.gradle\caches\transforms-3\760388c9f2ccf33c426f6a8b356ba368\transformed\fragment-1.3.6\res
-com.superpowered.playerexample.app-recyclerview-1.3.2-14 C:\Users\dhana suresh\.gradle\caches\transforms-3\87faa02a339d5c7efb8f176b129d0f4c\transformed\recyclerview-1.3.2\res
-com.superpowered.playerexample.app-emoji2-1.2.0-15 C:\Users\dhana suresh\.gradle\caches\transforms-3\9d13f2821db83ff8741569fc495dc1fe\transformed\emoji2-1.2.0\res
-com.superpowered.playerexample.app-lifecycle-livedata-core-2.5.1-16 C:\Users\dhana suresh\.gradle\caches\transforms-3\a7e9d0701992eb18998edb2fb08e3757\transformed\lifecycle-livedata-core-2.5.1\res
-com.superpowered.playerexample.app-core-ktx-1.9.0-17 C:\Users\dhana suresh\.gradle\caches\transforms-3\c45ef310f5cc5dcf4351d675adafe48e\transformed\core-ktx-1.9.0\res
-com.superpowered.playerexample.app-appcompat-resources-1.6.1-18 C:\Users\dhana suresh\.gradle\caches\transforms-3\effb1a5fd4607ee684df657355cf87f4\transformed\appcompat-resources-1.6.1\res
+com.superpowered.playerexample.app-jetified-activity-1.6.0-0 C:\Users\dhana suresh\.gradle\caches\transforms-3\31ccee81103eaa6355ddc317dc7840d4\transformed\jetified-activity-1.6.0\res
+com.superpowered.playerexample.app-lifecycle-runtime-2.5.1-1 C:\Users\dhana suresh\.gradle\caches\transforms-3\3eecb87c375d07be77c0e6320ca2a1dd\transformed\lifecycle-runtime-2.5.1\res
+com.superpowered.playerexample.app-lifecycle-viewmodel-2.5.1-2 C:\Users\dhana suresh\.gradle\caches\transforms-3\3fe748d39103a4a29182950ad1f54261\transformed\lifecycle-viewmodel-2.5.1\res
+com.superpowered.playerexample.app-jetified-lifecycle-viewmodel-savedstate-2.5.1-3 C:\Users\dhana suresh\.gradle\caches\transforms-3\43afa6ab6a7e5d5ca4699814e61f42da\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.1\res
+com.superpowered.playerexample.app-core-1.9.0-4 C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\res
+com.superpowered.playerexample.app-appcompat-1.6.1-5 C:\Users\dhana suresh\.gradle\caches\transforms-3\636fe5f1319118333643bf6dca29e378\transformed\appcompat-1.6.1\res
+com.superpowered.playerexample.app-jetified-savedstate-1.2.0-6 C:\Users\dhana suresh\.gradle\caches\transforms-3\6573ba2d6dda0c309b673aae4f9059f5\transformed\jetified-savedstate-1.2.0\res
+com.superpowered.playerexample.app-jetified-lifecycle-process-2.4.1-7 C:\Users\dhana suresh\.gradle\caches\transforms-3\6ab5c7abe37118c6be29ff10ab6a8cb5\transformed\jetified-lifecycle-process-2.4.1\res
+com.superpowered.playerexample.app-constraintlayout-2.1.4-8 C:\Users\dhana suresh\.gradle\caches\transforms-3\6c63bafc2a4237618f85a073f48b9cda\transformed\constraintlayout-2.1.4\res
+com.superpowered.playerexample.app-fragment-1.3.6-9 C:\Users\dhana suresh\.gradle\caches\transforms-3\760388c9f2ccf33c426f6a8b356ba368\transformed\fragment-1.3.6\res
+com.superpowered.playerexample.app-jetified-emoji2-1.2.0-10 C:\Users\dhana suresh\.gradle\caches\transforms-3\7a68a716661406a29647e354a1cc8e67\transformed\jetified-emoji2-1.2.0\res
+com.superpowered.playerexample.app-recyclerview-1.3.2-11 C:\Users\dhana suresh\.gradle\caches\transforms-3\87faa02a339d5c7efb8f176b129d0f4c\transformed\recyclerview-1.3.2\res
+com.superpowered.playerexample.app-jetified-customview-poolingcontainer-1.0.0-12 C:\Users\dhana suresh\.gradle\caches\transforms-3\8be6eccc0ed61a6e7f5021cdb164ff00\transformed\jetified-customview-poolingcontainer-1.0.0\res
+com.superpowered.playerexample.app-jetified-core-ktx-1.9.0-13 C:\Users\dhana suresh\.gradle\caches\transforms-3\91c8cd42bf580691d81cb86f9c16cdd9\transformed\jetified-core-ktx-1.9.0\res
+com.superpowered.playerexample.app-jetified-appcompat-resources-1.6.1-14 C:\Users\dhana suresh\.gradle\caches\transforms-3\94aa25937f831ab541a551571f71ce70\transformed\jetified-appcompat-resources-1.6.1\res
+com.superpowered.playerexample.app-jetified-annotation-experimental-1.3.0-15 C:\Users\dhana suresh\.gradle\caches\transforms-3\98e383af3350dd4d2781ae9acd95b6c8\transformed\jetified-annotation-experimental-1.3.0\res
+com.superpowered.playerexample.app-jetified-emoji2-views-helper-1.2.0-16 C:\Users\dhana suresh\.gradle\caches\transforms-3\9ed69e42941a83019b4b6a750e3dcbfa\transformed\jetified-emoji2-views-helper-1.2.0\res
+com.superpowered.playerexample.app-jetified-startup-runtime-1.1.1-17 C:\Users\dhana suresh\.gradle\caches\transforms-3\a314c7420baceecdf9b2dbfd8c776c24\transformed\jetified-startup-runtime-1.1.1\res
+com.superpowered.playerexample.app-lifecycle-livedata-core-2.5.1-18 C:\Users\dhana suresh\.gradle\caches\transforms-3\a7e9d0701992eb18998edb2fb08e3757\transformed\lifecycle-livedata-core-2.5.1\res
 com.superpowered.playerexample.app-pngs-19 F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\build\generated\res\pngs\debug
 com.superpowered.playerexample.app-resValues-20 F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\build\generated\res\resValues\debug
 com.superpowered.playerexample.app-mergeDebugResources-21 F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir

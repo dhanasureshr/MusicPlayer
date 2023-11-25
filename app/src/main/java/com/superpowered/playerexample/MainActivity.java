@@ -1,5 +1,4 @@
 package com.superpowered.playerexample;
-import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +6,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -24,7 +24,6 @@ import android.widget.PopupWindow;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 public class MainActivity extends AppCompatActivity implements Recycle_adapter.OnItemClickListener{
     public PlayerListManager playerListManager;  // Declare the PlayerListManager instance
     ActivityResultLauncher<String[]> mPermissionResultLanuncher;
@@ -54,18 +53,15 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         playerListManager.initializesuperpowered(samplerate, buffersize);
 
         //check for the storage permission
-        mPermissionResultLanuncher = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), new ActivityResultCallback<Map<String, Boolean>>() {
-            @Override
-            public void onActivityResult(Map<String, Boolean> result) {
-                if(result.get(Manifest.permission.READ_EXTERNAL_STORAGE)!= null)
+        mPermissionResultLanuncher = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), result -> {
+            if(result.get(Manifest.permission.READ_EXTERNAL_STORAGE)!= null)
+            {
+                isStoragepermissiongranted = Boolean.TRUE.equals(result.get(Manifest.permission.READ_EXTERNAL_STORAGE));
+                if(isStoragepermissiongranted)
                 {
-                    isStoragepermissiongranted = result.get(Manifest.permission.READ_EXTERNAL_STORAGE);
-                    if(isStoragepermissiongranted)
-                    {
-                        load_songs_fragment();
-                    }else{
-                        showPopupWindow(MainActivity.this.findViewById(R.id.songs));
-                    }
+                    load_songs_fragment();
+                }else{
+                    showPopupWindow(MainActivity.this.findViewById(R.id.songs));
                 }
             }
         });
@@ -74,12 +70,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
  //------------------------------------------end of permissions
 
         Button songs_Button = findViewById(R.id.songs);
-        songs_Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                    load_songs_fragment();
-            }
-        });
+        songs_Button.setOnClickListener(view -> load_songs_fragment());
         // Update UI every 40 ms until UI_update returns with false.
         Runnable runnable = new Runnable() {
             @Override
@@ -115,16 +106,6 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
 
     }
 
-    // Functions implemented in the native library.
-    private native void NativeInit(int samplerate, int buffersize, String tempPath);
-
-    private native void OpenFileFromAPK(String path, int offset, int length);
-
-    private native void OpenFileFromPath(String path);
-
-    private native boolean onUserInterfaceUpdate();
-
-    private native void TogglePlayback();
     private boolean playing = false;
     private Handler handler;
     @Override
@@ -133,6 +114,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         playerListManager.OpenFileFromPath(path);
         playerListManager.toggle_playback();
     }
+    /*
     public void load_play_fragment(){
         //adding play fragment to the main activity
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -142,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         fragmentTransaction.replace(R.id.main_page, pf);
         fragmentTransaction.commit();
     }
+    */
     public void load_songs_fragment(){
              //adding songs recycler fragment to the main activity
              FragmentManager fragmentManager = getSupportFragmentManager();
@@ -156,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     {
         isStoragepermissiongranted = ContextCompat.checkSelfPermission(
                 this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
-        List<String> permissionRequest = new ArrayList<String>();
+        List<String> permissionRequest = new ArrayList<>();
         if(!isStoragepermissiongranted)
         {
             permissionRequest.add(Manifest.permission.READ_EXTERNAL_STORAGE);
@@ -194,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         try {
             // Create a LayoutInflater object to inflate the popup_layout.xml
             LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View popupView = inflater.inflate(R.layout.storagage_permission_popup, null);
+            @SuppressLint("InflateParams") View popupView = inflater.inflate(R.layout.storagage_permission_popup, null);
             // Specify the width and height of the popup window
             int width = ViewGroup.LayoutParams.WRAP_CONTENT;
             int height = ViewGroup.LayoutParams.WRAP_CONTENT;
@@ -205,25 +188,17 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
             // Show the popup window at the center of the screen, you can adjust the location
             popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
             // Set a dismiss listener for the popup window
-            popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
-                @Override
-                public void onDismiss() {
-                    // Dismiss the popup window when the close button is clicked
-                    isStoragepermissiongranted = ContextCompat.checkSelfPermission(
-                            getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
-                    if(!isStoragepermissiongranted){
-                        openAppInfoSettings(getApplicationContext());
-                    }
+            popupWindow.setOnDismissListener(() -> {
+                // Dismiss the popup window when the close button is clicked
+                isStoragepermissiongranted = ContextCompat.checkSelfPermission(
+                        getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+                if(!isStoragepermissiongranted){
+                    openAppInfoSettings(getApplicationContext());
                 }
             });
             // Set up any other views or interactions within the popupView
             Button closePopupButton = popupView.findViewById(R.id.accept_button);
-            closePopupButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    popupWindow.dismiss();
-                }
-            });
+            closePopupButton.setOnClickListener(v -> popupWindow.dismiss());
         } catch (Exception e) {
             // Handle exceptions related to creating or showing the PopupWindow
             Toast.makeText(this, "error"+e.getMessage(), Toast.LENGTH_LONG).show();
