@@ -104,8 +104,6 @@ Java_com_superpowered_playerexample_MainActivity_onUserInterfaceUpdate(JNIEnv *_
         }
             break;
 
-
-
     }
 
     if (player->eofRecently()) {

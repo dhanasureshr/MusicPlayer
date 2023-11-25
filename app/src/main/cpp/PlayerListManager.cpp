@@ -21,23 +21,12 @@
 #include <string>
 #include <android/log.h>
 #include <OpenSource/SuperpoweredAndroidAudioIO.h>
-
-
 #define log_print __android_log_print
-
-
 static SuperpoweredAndroidAudioIO *audioIO;
 static Superpowered::AdvancedAudioPlayer *player;
-
 static std::vector<std::string> playlist;
 static std::vector<std::string> shuffledPlaylist;
-
-
-
 std::mutex playerMutex;
-
-
-
 // This is called periodically by the audio engine.
 static bool audioProcessing(
         void *__unused clientdata, // custom pointer
@@ -47,34 +36,24 @@ static bool audioProcessing(
 ) {
     player->outputSamplerate = (unsigned int) samplerate;
     float playerOutput[numberOfFrames * 2];
-
     if (player->processStereo(playerOutput, false, (unsigned int) numberOfFrames)) {
         Superpowered::FloatToShortInt(playerOutput, audio, (unsigned int) numberOfFrames);
         return true;
     } else return false;
 }
-
 class SuperpoweredPlayer {
 private:
-
     std::map<std::string, int> pathToIndexMap;  // Add this declaration
-
-
 public:
-
-
     SuperpoweredPlayer(int sampleRate, int bufferSize) {
-
         Superpowered::Initialize("ExampleLicenseKey-WillExpire-OnNextUpdate");
-
         /*
         // setting the temp folder for progressive downloads or HLS playback
         // not needed for local file playback
         const char *str = env->GetStringUTFChars(tempPath, 0);
         Superpowered::AdvancedAudioPlayer::setTempFolder(str);
         env->ReleaseStringUTFChars(tempPath, str);
-    */
-
+        */
         // creating the player
         player = new Superpowered::AdvancedAudioPlayer((unsigned int) sampleRate, 0);
 
@@ -88,19 +67,12 @@ public:
                 -1,                             // inputStreamType (-1 = default)
                 SL_ANDROID_STREAM_MEDIA         // outputStreamType (-1 = default)
         );
-
     }
-
-
     ~SuperpoweredPlayer() {
 
         // Cleanup and release resources
         cleanResourses();
     }
-
-
-
-
     void play(int index) {
         // Implement playback logic using SuperpoweredAdvancedAudioPlayer
         // Example: SuperpoweredPlayer->open(filePath); SuperpoweredPlayer->play(true);
@@ -111,12 +83,9 @@ public:
 
             player->play();
         }
-
         //player->togglePlayback();
         Superpowered::CPU::setSustainedPerformanceMode(player->isPlaying());// prevent dropouts
-
     }
-
     // Function to play the next song in the playNextList
     void playNext(const std::vector<std::string>& playNextList) {
         if (!playNextList.empty()) {
@@ -173,8 +142,6 @@ public:
         // Example: SuperpoweredPlayer->togglePlayback(false);
     }
 
-
-
     int getPlayHeadCurrentPosition()
     {
         return player->getDisplayPositionMs();
@@ -209,33 +176,30 @@ public:
         delete audioIO;
     }
 
-
-
+    void toggle_play()
+    {
+        player->togglePlayback();
+        Superpowered::CPU::setSustainedPerformanceMode(player->isPlaying());
+    }
     void shufflePlaylist(std::deque<std::string>& playlist) {
         std::random_device rd;
         std::mt19937 g(rd());
         std::shuffle(playlist.begin(), playlist.end(), g);
     }
-
-
 // Add this function to update the native CPP vectors
     void addToPlaylist(const char* filePath) {
         // Add the file path to the regular playlist
         std::lock_guard<std::mutex> lock(playerMutex);
-
         playlist.push_back(filePath);
-
         // If shuffle is enabled, update the shuffled playlist
         if (shuffledPlaylist.size() != playlist.size()) {
             try {
             // Convert the vector to a deque for random access
             std::deque<std::string> dequePlaylist(shuffledPlaylist.begin(), shuffledPlaylist.end());
-
             // Shuffle the deque
             std::random_device rd;
             std::mt19937 g(rd());
             std::shuffle(dequePlaylist.begin(), dequePlaylist.end(), g);
-
             // Convert the shuffled deque back to the vector
             shuffledPlaylist.assign(dequePlaylist.begin(), dequePlaylist.end());
             } catch (const std::exception& e) {
@@ -243,19 +207,11 @@ public:
                 // For example, you can use Android logging:
                 __android_log_print(ANDROID_LOG_ERROR, "YourTag", "Error during playlist shuffling: %s", e.what());
             }
-
         }
     }
-
-
-
-
-
 };
 
-static SuperpoweredPlayer *superpoweredPlayer;
-
-
+static SuperpoweredPlayer *superpoweredPlayer; // superpowerplayer class is initialized here
 
 extern "C" JNIEXPORT void JNICALL
 Java_com_superpowered_playerexample_PlayerListManager_nativeInit(JNIEnv *env, jobject instance, jint sampleRate, jint bufferSize) {
@@ -314,7 +270,6 @@ superpoweredPlayer->setPlayHeadPosition(position);
 }
 
 //shuffiling logic
-
 extern "C" JNIEXPORT void JNICALL
 Java_com_superpowered_playerexample_PlayerListManager_nativeSetShuffle(JNIEnv *env, jobject instance, jboolean enable) {
     if (enable) {
@@ -328,8 +283,6 @@ Java_com_superpowered_playerexample_PlayerListManager_nativeSetShuffle(JNIEnv *e
     }
 }
 
-
-
 extern "C" JNIEXPORT void JNICALL
 Java_com_superpowered_playerexample_PlayerListManager_nativeAddSongToPlaylist(JNIEnv *env, jobject instance, jstring filePath_) {
     const char *filePath = env->GetStringUTFChars(filePath_, 0);
@@ -339,8 +292,6 @@ Java_com_superpowered_playerexample_PlayerListManager_nativeAddSongToPlaylist(JN
 
     env->ReleaseStringUTFChars(filePath_, filePath);
 }
-
-
 // onBackground - Put audio processing to sleep if no audio is playing.
 extern "C" JNIEXPORT void
 Java_com_superpowered_playerexample_PlayerListManager_onBackground(JNIEnv *__unused env,
@@ -360,7 +311,6 @@ Java_com_superpowered_playerexample_PlayerListManager_Cleanup(JNIEnv *__unused e
 superpoweredPlayer->cleanResourses();
 }
 
-
 extern "C" JNIEXPORT void JNICALL
 Java_com_superpowered_playerexample_PlayerListManager_nativePlayNext(JNIEnv *env, jobject instance, jobjectArray playNextList) {
     // Convert jobjectArray to std::vector<std::string>
@@ -369,19 +319,15 @@ Java_com_superpowered_playerexample_PlayerListManager_nativePlayNext(JNIEnv *env
     for (jsize i = 0; i < length; ++i) {
         jstring str = (jstring)env->GetObjectArrayElement(playNextList, i);
         const char *filePath = env->GetStringUTFChars(str, 0);
-
         if(filePath != nullptr){
-
             cppPlayNextList.push_back(filePath);
             env->ReleaseStringUTFChars(str, filePath);
         }
         env->DeleteLocalRef(str);
     }
-
     // Call the playNext function in your SuperpoweredPlayer instance
     superpoweredPlayer->playNext(cppPlayNextList);
 }
-
 extern "C"
 JNIEXPORT jboolean JNICALL
 Java_com_superpowered_playerexample_PlayerListManager_onUserInterfaceUpdate(JNIEnv *env,jobject thiz) {
@@ -398,16 +344,27 @@ Java_com_superpowered_playerexample_PlayerListManager_onUserInterfaceUpdate(JNIE
                       Superpowered::AdvancedAudioPlayer::statusCodeToString(openError));
         }
             break;
-
-
-
     }
-
     if (player->eofRecently()) {
-
-
-
+        //this code is for looping the current track in a continues loop
+        // this is just temprovory
+        player->pause();
+        player->setPosition(0, false, false);
+        player->play();
     }
-
     return (jboolean) player->isPlaying();
+}
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_superpowered_playerexample_PlayerListManager_openfilefrom_1path(JNIEnv *env, jobject thiz,
+                                                                         jstring path) {
+    const char *str = env->GetStringUTFChars(path,0);
+    player->open(str);
+    env->ReleaseStringUTFChars(path,str);
+}
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_superpowered_playerexample_PlayerListManager_toggle_1playback_1test_1playandpause(
+        JNIEnv *env, jobject thiz) {
+    superpoweredPlayer->toggle_play();
 }

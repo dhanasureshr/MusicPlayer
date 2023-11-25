@@ -14,12 +14,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,17 +38,11 @@ public class Recycler_fragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     public ArrayList<audio_data> audio_list = new ArrayList<>();
-
     public RecyclerView recyclerView;
-
     public Recycle_adapter recycleAdpter;
-
-
     public Recycler_fragment() {
         // Required empty public constructor
-
     }
 
     /**
@@ -68,7 +64,6 @@ public class Recycler_fragment extends Fragment {
     }
 
     // this is the save the recyclerview view position between fragment changes
-
     @Override
     public void onPause() {
         super.onPause();
@@ -79,7 +74,6 @@ public class Recycler_fragment extends Fragment {
             savePositionToSharedPreferences(firstVisibleItemPosition);
         }
     }
-
     @Override
     public void onResume() {
         super.onResume();
@@ -90,24 +84,18 @@ public class Recycler_fragment extends Fragment {
             layoutManager.scrollToPosition(savedVisiblePosition);
         }
     }
-
      // method to save to shared preferences
     private void savePositionToSharedPreferences(int position){
         SharedPreferences preferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putInt("visible_position",position);
         editor.apply();
-
     }
-
      // method to get the saved position
-
     private int getPositionFromSharedPreferences(){
         SharedPreferences preferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
         return preferences.getInt("visible_position",0);
-
     }
-
     //---------------------------------end of managing recycler view position
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -116,49 +104,28 @@ public class Recycler_fragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_recycler_fragment, container, false);
-
-
-
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
         if(audio_list.isEmpty())
         {
-
-
             audio_list = getAudio_file();
-
-
             recyclerView = view.findViewById(R.id.frag_recycler);
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
             recycleAdpter = new Recycle_adapter(getContext(), audio_list);
             recycleAdpter.setOnItemClickListener((Recycle_adapter.OnItemClickListener) getContext()); // Set the listener
             recyclerView.setAdapter(recycleAdpter);
-
-
         }
-
-
-
     }
-
     private ArrayList<audio_data> getAudio_file() {
-
         ContentResolver contentResolver = getContext().getContentResolver();
-
         String[] projection = {MediaStore.Audio.Media._ID,
                 MediaStore.Audio.Media.TITLE,
                 MediaStore.Audio.Media.ARTIST,
@@ -173,27 +140,11 @@ public class Recycler_fragment extends Fragment {
                 MediaStore.Audio.Media.COMPOSER,
                 MediaStore.Audio.Media.ALBUM_ARTIST,
                 MediaStore.Audio.Media.ALBUM_ID};
-
         Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
         String selection = MediaStore.Audio.Media.IS_MUSIC + "!= 0";
-
-
        try(Cursor cursor = contentResolver.query(uri, projection, selection, null,null)) {
-
            if (cursor != null) {
                while (cursor.moveToNext()) {
-                /*
-                String title = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
-                String path = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA));
-                String album = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM));
-                long albumId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ID));
-                String albumArtUri = getAlbumArtUri(albumId);
-
-                audio_data audioData = new audio_data(title,path,album,albumArtUri);
-                audio_list.add(audioData);
-
-                */
-
                    long id = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media._ID));
                    String title = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
                    String artist = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST));
@@ -209,25 +160,16 @@ public class Recycler_fragment extends Fragment {
                    String albumArtist = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ARTIST));
                    long albumId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ID));
                    String albumArtUri = getAlbumArtUri(albumId);
-
                    audio_data audioData = new audio_data(id, title, artist, album, Data, duration, size, mimeType, trackNumber, year, genre, composer, albumArtist, albumArtUri);
                    audio_list.add(audioData);
-
                }
-
            }
-
        } catch (Exception e)
        {
            Toast.makeText(getContext(), "AudioContentResolver error retriving " +e.getMessage(), Toast.LENGTH_SHORT).show();
        }
-
-         //cursor.close(); // because try and catch i need not to this explecetly
-
         return audio_list;
     }
-
-
     private String getAlbumArtUri(long albumId) {
         Uri albumArtUri = Uri.parse("content://media/external/audio/albumart/" + albumId);
         return albumArtUri.toString();

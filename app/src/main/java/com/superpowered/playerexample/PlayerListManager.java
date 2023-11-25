@@ -1,23 +1,16 @@
 package com.superpowered.playerexample;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 public class PlayerListManager {
-
-    int sampleRate,buffersize;
     static {
-
         System.loadLibrary("PlayerListManager");
     }
-
-
     private Map<String, Integer> pathToIndexMap = new HashMap<>();
     private List<String> uniquePaths = new ArrayList<>();
-
-
+    private native void openfilefrom_path(String path);
+    private  native void toggle_playback_test_playandpause();
     private native void nativeInit(int samplerate, int buffersize);
     private native void nativePlay(int index);
     private native void nativePause();
@@ -26,53 +19,32 @@ public class PlayerListManager {
     private native void nativeSetLoopPoints(int startMs, int endMs);
     private native void nativeStartLoop();
     private native void nativeStopLoop();
-
     private native int getCurrentPosition();
-
     private native int getDuration();
-
     private native void setPosition(int position);
-
-
     private native void onForeground();
-
     private native void onBackground();
-
     private native void Cleanup();
-
     private native void nativePlayNext(String[] playNextList);
     private native void nativeAddSongToPlaylist(String path);
-
-
     private native boolean onUserInterfaceUpdate();
-
-
-
     private List<String> defaultPlaylist;
     private List<String> playNextList;
     private List<String> likedPlaylist;
 
     public PlayerListManager() {
-      //  this.sampleRate = s;
-       // this.buffersize = b;
-       // nativeInit(s,b);
         defaultPlaylist = new ArrayList<>();
         playNextList = new ArrayList<>();
         likedPlaylist = new ArrayList<>();
-
     }
     public void initializesuperpowered(int sampleRate, int buffersize){
-
         nativeInit(sampleRate,buffersize);
     }
-
-
     public void addToDefaultPlaylist(String filePath) {
         int newIndex = uniquePaths.size();
         uniquePaths.add(filePath);
         defaultPlaylist.add(filePath);
         pathToIndexMap.put(filePath,newIndex);
-
         // Call native method to add the file path to the native CPP vector
         try{
             nativeAddSongToPlaylist(filePath);
@@ -81,9 +53,7 @@ public class PlayerListManager {
 // Handle the exception, e.g., log the error or show a user-friendly message
             e.printStackTrace();
         }
-
     }
-
     public void addToPlayNextList(String filePath) {
         int newIndex = uniquePaths.size();
         uniquePaths.add(filePath);
@@ -93,13 +63,11 @@ public class PlayerListManager {
             nativeAddSongToPlaylist(filePath);
         }catch (Exception e)
         {
-// Handle the exception, e.g., log the error or show a user-friendly message
+         // Handle the exception, e.g., log the error or show a user-friendly message
             e.printStackTrace();
         }
         // Call native method to add the file path to the native CPP vector
-
     }
-
     public void addToLikedPlaylist(String filePath) {
         int newIndex = uniquePaths.size();
         uniquePaths.add(filePath);
@@ -109,15 +77,11 @@ public class PlayerListManager {
             nativeAddSongToPlaylist(filePath);
         }catch (Exception e)
         {
-// Handle the exception, e.g., log the error or show a user-friendly message
+        // Handle the exception, e.g., log the error or show a user-friendly message
             e.printStackTrace();
         }
         // Call native method to add the file path to the native CPP vector
-
     }
-
-
-
     public void playDefaultPlaylist() {
         for (String filePath : defaultPlaylist) {
             Integer index = pathToIndexMap.get(filePath);
@@ -127,13 +91,9 @@ public class PlayerListManager {
             }else {
                 // Handle the case where the index is null (optional)
                 // Log an error, skip the item, or take appropriate action.
-
-
             }
-
         }
     }
-
     public void playNext() {
         if (!playNextList.isEmpty()) {
             String nextFilePath = playNextList.remove(0);
@@ -160,10 +120,22 @@ public class PlayerListManager {
             }
         }
     }
+    public void playnextPlaylist(String[] playNextList)
+    {
+        nativePlayNext(playNextList);
+    }
 
     public boolean on_plmuiupdate() {
         return onUserInterfaceUpdate();
+    }
 
+    public void toggle_playback(){
+        toggle_playback_test_playandpause();
+    }
+
+    public void OpenFileFromPath(String path)
+    {
+        openfilefrom_path(path);
     }
 
     public void pause() {
@@ -176,7 +148,6 @@ public class PlayerListManager {
 
     public boolean isPlaying() {
         return nativeIsPlaying();
-
     }
 
     public void setLoopPoints(int startMs, int endMs) {
