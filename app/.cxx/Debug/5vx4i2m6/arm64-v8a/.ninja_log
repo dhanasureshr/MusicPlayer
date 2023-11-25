@@ -1,11 +1,7 @@
 # ninja log v5
-16	461	7226150831259503	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	f225ce9dfca5645a
-40	533	7226150832051341	CMakeFiles/PlayerListManager.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	6edf6d2c40a5be3f
-28	2181	7226150848388882	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	69894cfb9d428f32
-2	1098	7226150837633116	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	374bc1d8590bcf94
-1099	1357	7226150839977703	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerExample.so	39aba2ee745bdc9b
-10	364	7226151532353906	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerListManager.so	902eebc293d3a909
-11	2097	7226157438801607	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	69894cfb9d428f32
-2098	2370	7226157441236581	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerListManager.so	902eebc293d3a909
-6	2420	7226207992313059	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	69894cfb9d428f32
-2421	2903	7226207997809622	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerListManager.so	902eebc293d3a909
+35	615	7226366782157663	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	f225ce9dfca5645a
+55	622	7226366782157663	CMakeFiles/PlayerListManager.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	6edf6d2c40a5be3f
+2	1210	7226366788110319	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	374bc1d8590bcf94
+1212	2238	7226366797711112	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerExample.so	39aba2ee745bdc9b
+19	2372	7226366799574928	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	69894cfb9d428f32
+2373	2889	7226366803752900	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerListManager.so	902eebc293d3a909
