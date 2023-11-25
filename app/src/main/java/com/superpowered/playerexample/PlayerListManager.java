@@ -9,8 +9,8 @@ public class PlayerListManager {
 
     int sampleRate,buffersize;
     static {
-        System.loadLibrary("superpoweredplayer");
-        //System.loadLibrary("PlayerListManager");
+
+        System.loadLibrary("PlayerListManager");
     }
 
 
@@ -44,18 +44,28 @@ public class PlayerListManager {
     private native void nativeAddSongToPlaylist(String path);
 
 
+    private native boolean onUserInterfaceUpdate();
+
+
 
     private List<String> defaultPlaylist;
     private List<String> playNextList;
     private List<String> likedPlaylist;
 
     public PlayerListManager() {
-        nativeInit(sampleRate,buffersize);
+      //  this.sampleRate = s;
+       // this.buffersize = b;
+       // nativeInit(s,b);
         defaultPlaylist = new ArrayList<>();
         playNextList = new ArrayList<>();
         likedPlaylist = new ArrayList<>();
 
     }
+    public void initializesuperpowered(int sampleRate, int buffersize){
+
+        nativeInit(sampleRate,buffersize);
+    }
+
 
     public void addToDefaultPlaylist(String filePath) {
         int newIndex = uniquePaths.size();
@@ -106,6 +116,8 @@ public class PlayerListManager {
 
     }
 
+
+
     public void playDefaultPlaylist() {
         for (String filePath : defaultPlaylist) {
             Integer index = pathToIndexMap.get(filePath);
@@ -147,6 +159,11 @@ public class PlayerListManager {
                 // Log an error, skip the item, or take appropriate action.
             }
         }
+    }
+
+    public boolean on_plmuiupdate() {
+        return onUserInterfaceUpdate();
+
     }
 
     public void pause() {

@@ -1,13 +1,11 @@
 # ninja log v5
-2	602	7222625729006467	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	a403e1e330d49207
-9	984	7224495747333257	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	864f5b962123ae4a
-5	2309	7222669769248329	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	ae4d81c083fa3ee3
-985	1272	7224495749990135	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerExample.so	39aba2ee745bdc9b
-39	1564	7225300426331569	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerListManager.cpp.o	83db4a0a748d5d1d
-11	1566	7225300426487831	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	864f5b962123ae4a
-1567	2669	7225300436977186	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerExample.so	9d2c7b561456c1ff
-7	1429	7225350190183964	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerListManager.cpp.o	83db4a0a748d5d1d
-1430	2084	7225350195688917	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerExample.so	9d2c7b561456c1ff
-5	963	7225470315445840	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	864f5b962123ae4a
-27	1474	7225470319681671	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerListManager.cpp.o	83db4a0a748d5d1d
-1475	2079	7225470326301184	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerExample.so	9d2c7b561456c1ff
+16	461	7226150831259503	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	f225ce9dfca5645a
+40	533	7226150832051341	CMakeFiles/PlayerListManager.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	6edf6d2c40a5be3f
+28	2181	7226150848388882	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	69894cfb9d428f32
+2	1098	7226150837633116	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	374bc1d8590bcf94
+1099	1357	7226150839977703	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerExample.so	39aba2ee745bdc9b
+10	364	7226151532353906	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerListManager.so	902eebc293d3a909
+11	2097	7226157438801607	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	69894cfb9d428f32
+2098	2370	7226157441236581	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerListManager.so	902eebc293d3a909
+6	2420	7226207992313059	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	69894cfb9d428f32
+2421	2903	7226207997809622	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerListManager.so	902eebc293d3a909

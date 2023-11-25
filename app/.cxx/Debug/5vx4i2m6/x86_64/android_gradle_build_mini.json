@@ -17,6 +17,12 @@
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
+    "PlayerListManager::@6890427a1f51a3e7e1df": {
+      "artifactName": "PlayerListManager",
+      "abi": "x86_64",
+      "output": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\build\\intermediates\\cxx\\Debug\\5vx4i2m6\\obj\\x86_64\\libPlayerListManager.so",
+      "runtimeFiles": []
+    },
     "PlayerExample::@6890427a1f51a3e7e1df": {
       "artifactName": "PlayerExample",
       "abi": "x86_64",

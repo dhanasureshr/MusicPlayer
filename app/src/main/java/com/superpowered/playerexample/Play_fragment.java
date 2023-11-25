@@ -160,7 +160,7 @@ public class Play_fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-               mainActivity.PlayerExample_PlayPause();
+               //mainActivity.PlayerExample_PlayPause();
             }
         });
 

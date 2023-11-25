@@ -1,8 +1,3 @@
 ninja: Entering directory `F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\.cxx\Debug\5vx4i2m6\armeabi-v7a'
-[1/3] Building CXX object CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o
-F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/src/main/cpp/PlayerExample.cpp:93:13: warning: enumeration values 'PlayerEvent_ConnectionLost' and 'PlayerEvent_ProgressiveDownloadFinished' not handled in switch [-Wswitch]
-    switch (player->getLatestEvent()) {
-            ^
-1 warning generated.
-[2/3] Building CXX object CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerListManager.cpp.o
-[3/3] Linking CXX shared library ..\..\..\..\build\intermediates\cxx\Debug\5vx4i2m6\obj\armeabi-v7a\libPlayerExample.so
+[1/2] Building CXX object CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerListManager.cpp.o
+[2/2] Linking CXX shared library ..\..\..\..\build\intermediates\cxx\Debug\5vx4i2m6\obj\armeabi-v7a\libPlayerExample.so

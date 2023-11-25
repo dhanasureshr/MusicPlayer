@@ -241,6 +241,9 @@ PATH_TO_SUPERPOWERED:STRING=F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples
 //Dependencies for the target
 PlayerExample_LIB_DEPENDS:STATIC=general;log;general;android;general;OpenSLES;general;F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/../../../Superpowered/libSuperpoweredAndroidarmeabi-v7a.a;
 
+//Dependencies for the target
+PlayerListManager_LIB_DEPENDS:STATIC=general;log;general;android;general;OpenSLES;general;F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/../../../Superpowered/libSuperpoweredAndroidarmeabi-v7a.a;
+
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/.cxx/Debug/5vx4i2m6/armeabi-v7a
 

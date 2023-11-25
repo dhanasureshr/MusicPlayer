@@ -1,8 +1,16 @@
 # ninja log v5
 14	630	7222648147833444	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	4731725608c6a272
-10	1125	7224970800635680	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	4039cbb2d431eef7
 10	1536	7222670428139838	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	ee9b0992c1dc9a2b
-1126	2362	7224970812526067	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	14f8c3ac79457e7a
 8	651	7225494119204832	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	4039cbb2d431eef7
-16	1127	7225494123919335	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerListManager.cpp.o	cce57a66e15f4ccb
-1128	1648	7225494128941247	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	b0a046188dba4820
+2642	3563	7226103574443219	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	b0a046188dba4820
+8	2641	7226103565795047	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerListManager.cpp.o	cce57a66e15f4ccb
+20	661	7226151799563244	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	36ceead24f23b891
+34	664	7226151799563244	CMakeFiles/PlayerListManager.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	3f6ba8fa8b7cb205
+7	1215	7226151805046417	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	8cddc44e56fdb5ec
+1216	1822	7226151810783061	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	14f8c3ac79457e7a
+48	2289	7226151815653767	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	92c9a4c567199f20
+2290	2757	7226151819939991	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerListManager.so	c2128962e210744c
+9	1983	7226157510538029	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	92c9a4c567199f20
+1984	2248	7226157513038863	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerListManager.so	c2128962e210744c
+5	1510	7226210079741191	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	92c9a4c567199f20
+1511	2084	7226210086327948	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerListManager.so	c2128962e210744c

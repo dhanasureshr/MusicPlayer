@@ -23,6 +23,13 @@
       "artifactName": "PlayerExample",
       "output": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\build\\intermediates\\cxx\\Debug\\5vx4i2m6\\obj\\x86\\libPlayerExample.so",
       "runtimeFiles": []
+    },
+    "PlayerListManager::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "PlayerListManager",
+      "output": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\build\\intermediates\\cxx\\Debug\\5vx4i2m6\\obj\\x86\\libPlayerListManager.so",
+      "runtimeFiles": []
     }
   },
   "toolchains": {

@@ -40,6 +40,8 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements Recycle_adapter.OnItemClickListener{
 
+    private PlayerListManager playerListManager;  // Declare the PlayerListManager instance
+
     ActivityResultLauncher<String[]> mPermissionResultLanuncher;
     private boolean isStoragepermissiongranted = false;
 
@@ -49,6 +51,25 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Get the device's sample rate and buffer size to enable
+        // low-latency Android audio output, if available.
+        String samplerateString = null, buffersizeString = null;
+        AudioManager audioManager = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
+        if (audioManager != null) {
+            samplerateString = audioManager.getProperty(AudioManager.PROPERTY_OUTPUT_SAMPLE_RATE);
+            buffersizeString = audioManager.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER);
+        }
+        if (samplerateString == null) samplerateString = "48000";
+        if (buffersizeString == null) buffersizeString = "480";
+        int samplerate = Integer.parseInt(samplerateString);
+        int buffersize = Integer.parseInt(buffersizeString);
+
+        // Create an instance of PlayerListManager and initialize it
+        System.loadLibrary("PlayerListManager");
+        playerListManager = new PlayerListManager();
+        playerListManager.initializesuperpowered(samplerate, buffersize);
+
 
         //check for the storage permission
 
@@ -60,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
                     isStoragepermissiongranted = result.get(Manifest.permission.READ_EXTERNAL_STORAGE);
                     if(isStoragepermissiongranted)
                     {
+
 
                         load_songs_fragment();
                     }else{
@@ -95,6 +117,13 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         Button afx_Button = findViewById(R.id.Aufx);
         Button liked_Button = findViewById(R.id.liked);
 
+        liked_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // play the list of songs
+            }
+        });
+
 
 
         // songs button click event load the songs list by
@@ -127,24 +156,52 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
 
 
 
-        // Get the device's sample rate and buffer size to enable
-        // low-latency Android audio output, if available.
-        String samplerateString = null, buffersizeString = null;
-        AudioManager audioManager = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
-        if (audioManager != null) {
-            samplerateString = audioManager.getProperty(AudioManager.PROPERTY_OUTPUT_SAMPLE_RATE);
-            buffersizeString = audioManager.getProperty(AudioManager.PROPERTY_OUTPUT_FRAMES_PER_BUFFER);
-        }
-        if (samplerateString == null) samplerateString = "48000";
-        if (buffersizeString == null) buffersizeString = "480";
-        int samplerate = Integer.parseInt(samplerateString);
-        int buffersize = Integer.parseInt(buffersizeString);
+
+/*
+        // Create an instance of PlayerListManager and initialize it
+        System.loadLibrary("PlayerListManager");
+        playerListManager = new PlayerListManager();
+        playerListManager.initializesuperpowered(samplerate, buffersize);
+
+*/
 
 
 
+
+
+
+
+
+
+
+/*
+
+        //old playing engin code
 
         System.loadLibrary("PlayerExample");    // load native library
         NativeInit(samplerate, buffersize, getCacheDir().getAbsolutePath()); // start audio engine
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -164,7 +221,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
 
 
     public void UI_update() {
-        boolean p = onUserInterfaceUpdate();
+        boolean p = playerListManager.on_plmuiupdate();
         if (playing != p) {
             playing = p;
 
@@ -183,18 +240,21 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     @Override
     public void onPause() {
         super.onPause();
-        onBackground();
+        //onBackground();//this is from exampleplayer
+        playerListManager.onPauseapp();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        onForeground();
+       //onForeground(); //this is from exampleplayer
+      playerListManager.onResumeapp();
     }
 
     protected void onDestroy() {
         super.onDestroy();
-        Cleanup();
+      playerListManager.closeapp();
+       // Cleanup(); //this is from exampleplayer
     }
 
     // Functions implemented in the native library.
@@ -223,9 +283,17 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     public void onItemClick(String path,String title) {
         Toast.makeText(this, "playing " +title, Toast.LENGTH_SHORT).show();
 
+     /*   //this is from exampleplayer
+
         OpenFileFromPath(path);
         PlayerExample_PlayPause();
         //load_play_fragment(); // if you enable this on clicking on item it will load the play fragment by default
+
+*/
+
+      playerListManager.addToDefaultPlaylist(path);
+      playerListManager.playDefaultPlaylist();
+
     }
 
 
