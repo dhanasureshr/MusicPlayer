@@ -57,6 +57,7 @@ public:
 
     SuperpoweredPlayer(int sampleRate, int bufferSize) {
 
+
         // Initialize SuperpoweredAdvancedAudioPlayer and other necessary setup
         // Initialize SuperpoweredAdvancedAudioPlayer and other necessary setup
         Superpowered::Initialize("ExampleLicenseKey-WillExpire-OnNextUpdate");
@@ -95,6 +96,7 @@ public:
 
         if (player != nullptr && index >= 0 && index < shuffledPlaylist.size()) {
             player->open(shuffledPlaylist[index].c_str());
+
             player->play();
         }
 
@@ -159,6 +161,8 @@ public:
         // Example: SuperpoweredPlayer->togglePlayback(false);
     }
 
+
+
     int getPlayHeadCurrentPosition()
     {
         return player->getDisplayPositionMs();
@@ -192,6 +196,8 @@ public:
         delete player;
         delete audioIO;
     }
+
+
 
     void shufflePlaylist(std::deque<std::string>& playlist) {
         std::random_device rd;

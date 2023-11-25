@@ -33,6 +33,7 @@ public class PlayerListManager {
 
     private native void setPosition(int position);
 
+
     private native void onForeground();
 
     private native void onBackground();
