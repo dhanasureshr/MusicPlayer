@@ -1147,7 +1147,10 @@ int id parentRelative 0x7f0800d9
 int id path 0x7f0800da
 int id pathRelative 0x7f0800db
 int id percent 0x7f0800dc
+int id play_next 0x7f080156
+int id play_or_pause 0x7f080157
 int id play_pause 0x7f0800dd
+int id play_previous 0x7f080158
 int id player_album 0x7f0800de
 int id pooling_container_listener_holder_tag 0x7f0800df
 int id position 0x7f0800e0

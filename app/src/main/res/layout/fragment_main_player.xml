@@ -58,24 +58,26 @@
                 android:translationX="-307dp">
 
                 <ImageView
+                    android:id="@+id/play_previous"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_marginLeft="19dp"
-
                     android:src="@drawable/previous_control" />
 
                 <ImageView
+                    android:id="@+id/play_or_pause"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_marginLeft="72dp"
                     android:src="@drawable/pause_conrol" />
 
                 <ImageView
+                    android:id="@+id/play_next"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_marginLeft="78dp"
-
-                    android:src="@drawable/next_control" />
+                    android:src="@drawable/next_control"
+                    />
 
             </LinearLayout>
 

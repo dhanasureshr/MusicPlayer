@@ -1148,7 +1148,10 @@ id parentRelative
 id path
 id pathRelative
 id percent
+id play_next
+id play_or_pause
 id play_pause
+id play_previous
 id player_album
 id pooling_container_listener_holder_tag
 id position

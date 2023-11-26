@@ -104,8 +104,8 @@
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.superpowered.playerexample.app-merged_res-24:/layout_fragment_main_player.xml.flat",
-        "source": "com.superpowered.playerexample.app-main-26:/layout/fragment_main_player.xml"
+        "merged": "com.superpowered.playerexample.app-merged_res-24:/layout_activity_main.xml.flat",
+        "source": "com.superpowered.playerexample.app-main-26:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-24:\\drawable_ic_launcher_background.xml.flat",
