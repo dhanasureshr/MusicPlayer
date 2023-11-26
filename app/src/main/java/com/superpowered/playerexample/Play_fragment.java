@@ -19,27 +19,16 @@ import com.superpowered.playerexample.MainActivity;
 
 import java.util.Locale;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Play_fragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Play_fragment extends Fragment {
     static {
         System.loadLibrary("PlayerExample");
     }
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+
+
     private Button play_pause;
     private Button play_previous;
     private Button play_next;
     private Button play_loop;
-    private Button play_like;
     private Button play_loop_list;
     private  TextView play_start_time;
     private  TextView play_end_time;
@@ -64,30 +53,17 @@ public class Play_fragment extends Fragment {
     public Play_fragment() {
         // Required empty public constructor
     }
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Play_fragment.
-     */
+
+
     // TODO: Rename and change types and number of parameters
-    public static Play_fragment newInstance(String param1, String param2) {
+    public static Play_fragment newInstance() {
         Play_fragment fragment = new Play_fragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
         handler.postDelayed(updateSongProgress,0);
     }
     @Override
@@ -107,7 +83,7 @@ public class Play_fragment extends Fragment {
         play_previous = view.findViewById(R.id.previous_song);
         play_next = view.findViewById(R.id.next_song);
         play_loop = view.findViewById(R.id.loop);
-        play_like = view.findViewById(R.id.liked);
+
         play_loop_list = view.findViewById(R.id.loop_view);
         player_controller = view.findViewById(R.id.main_track_controller);
         play_start_time = view.findViewById(R.id.start_time);

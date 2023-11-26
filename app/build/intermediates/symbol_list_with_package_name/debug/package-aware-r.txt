@@ -906,10 +906,9 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
-drawable dd
 drawable ic_launcher_background
 drawable ic_launcher_foreground
-drawable mic
+drawable next_control
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -922,14 +921,13 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable pau
-drawable pla
-drawable rectangle
+drawable path
+drawable pause_conrol
+drawable previous_control
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
-id Aufx
 id CTRL
 id FUNCTION
 id META
@@ -1024,6 +1022,9 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnNext
+id btnPlayPause
+id btnPrevious
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -1043,7 +1044,6 @@ id constraint
 id content
 id contentPanel
 id continuousVelocity
-id control_layout
 id cos
 id currentState
 id custom
@@ -1112,7 +1112,6 @@ id layout
 id left
 id legacy
 id like
-id liked
 id line1
 id line3
 id linear
@@ -1151,7 +1150,6 @@ id path
 id pathRelative
 id percent
 id play_pause
-id player
 id player_album
 id pooling_container_listener_holder_tag
 id position
@@ -1181,6 +1179,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id seekBar
 id seek_bar_divider
 id seekbar_layout
 id select_dialog_listview
@@ -1194,7 +1193,6 @@ id sin
 id skipped
 id song_name
 id song_title
-id songs
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -1236,6 +1234,8 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textViewArtist
+id textViewSongTitle
 id time
 id title
 id titleDividerNoCustom
@@ -1253,6 +1253,7 @@ id uniform
 id up
 id useLogo
 id vertical_only
+id viewPager
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
@@ -1309,8 +1310,12 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout custom_dialog
+layout fragment_main_player
+layout fragment_now_playing
 layout fragment_play_fragment
 layout fragment_recycler_fragment
+layout fragment_song_list
+layout main_music_controls
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -1791,6 +1796,7 @@ styleable Transition android_id autoTransition constraintSetEnd constraintSetSta
 styleable Variant constraints region_heightLessThan region_heightMoreThan region_widthLessThan region_widthMoreThan
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
+styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet

@@ -1,12 +1,15 @@
 package com.superpowered.playerexample;
+import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager2.widget.ViewPager2;
+
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -20,21 +23,74 @@ import android.widget.Button;
 import android.view.View;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.FrameLayout;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 public class MainActivity extends AppCompatActivity implements Recycle_adapter.OnItemClickListener{
     public PlayerListManager playerListManager;  // Declare the PlayerListManager instance
     ActivityResultLauncher<String[]> mPermissionResultLanuncher;
     private boolean isStoragepermissiongranted = false;
+
+    private void handlePageSelection(int position) {
+        // Get the fragment name based on the position
+        String fragmentName = getFragmentName(position);
+
+        if(fragmentName =="Play_fragment" )
+        {
+           // load_songs_fragment();
+        }
+
+        // Display a toast message with the fragment name
+        Toast.makeText(this, "Selected Fragment: " + fragmentName, Toast.LENGTH_SHORT).show();
+    }
+
+    private String getFragmentName(int position) {
+        switch (position) {
+            case 0:
+                return "Play_fragment";
+            case 1:
+                return "SongListFragment";
+            case 2:
+                return "NowPlayingFragment";
+            default:
+                return "MainActivity";
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // code for viewpager begins
+        ViewPager2 viewPager = findViewById(R.id.viewPager);
+        MyPagerAdapter pagerAdapter = new MyPagerAdapter(this); // Pass the activity instance
+        viewPager.setAdapter(pagerAdapter);
+
+        FrameLayout mainPageContainer = findViewById(R.id.main_page);
+
+        // Set the initial fragment (e.g., MainFragment)
+        Fragment initialFragment = pagerAdapter.createFragment(viewPager.getCurrentItem());
+        getSupportFragmentManager().beginTransaction()
+                .replace(mainPageContainer.getId(), initialFragment)
+                .commit();
+
+        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                handlePageSelection(position);
+            }
+        });
+
+
+
+
         // Get the device's sample rate and buffer size to enable
         // low-latency Android audio output, if available.
+
         String samplerateString = null, buffersizeString = null;
         AudioManager audioManager = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
         if (audioManager != null) {
@@ -45,32 +101,37 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         if (buffersizeString == null) buffersizeString = "480";
         int samplerate = Integer.parseInt(samplerateString);
         int buffersize = Integer.parseInt(buffersizeString);
-
         // Create an instance of PlayerListManager and initialize it
         // this initialization of the audio engin must be happen after all the permissions setup
         // and loading the song data from the local storage before it's getting ready to play then initialize the audio engin
         playerListManager = new PlayerListManager();
         playerListManager.initializesuperpowered(samplerate, buffersize);
 
-        //check for the storage permission
-        mPermissionResultLanuncher = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), result -> {
-            if(result.get(Manifest.permission.READ_EXTERNAL_STORAGE)!= null)
-            {
-                isStoragepermissiongranted = Boolean.TRUE.equals(result.get(Manifest.permission.READ_EXTERNAL_STORAGE));
-                if(isStoragepermissiongranted)
+
+
+
+        //check for the storage permission code begins
+        mPermissionResultLanuncher = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), new ActivityResultCallback<Map<String, Boolean>>() {
+            @Override
+            public void onActivityResult(Map<String, Boolean> result) {
+                if(result.get(Manifest.permission.READ_EXTERNAL_STORAGE)!= null)
                 {
-                    load_songs_fragment();
-                }else{
-                    showPopupWindow(MainActivity.this.findViewById(R.id.songs));
+                    isStoragepermissiongranted = Boolean.TRUE.equals(result.get(Manifest.permission.READ_EXTERNAL_STORAGE));
+                    if(isStoragepermissiongranted)
+                    {
+                        load_songs_fragment();
+
+                    }else{
+                        showPopupWindow(MainActivity.this.findViewById(R.id.main_page));
+                    }
                 }
             }
         });
         requestpermisson();
         load_songs_fragment();
+
  //------------------------------------------end of permissions
 
-        Button songs_Button = findViewById(R.id.songs);
-        songs_Button.setOnClickListener(view -> load_songs_fragment());
         // Update UI every 40 ms until UI_update returns with false.
         Runnable runnable = new Runnable() {
             @Override
@@ -113,24 +174,24 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         Toast.makeText(this, "playing " +title, Toast.LENGTH_SHORT).show();
         playerListManager.OpenFileFromPath(path);
         playerListManager.toggle_playback();
+        load_play_fragment();
+
     }
-    /*
     public void load_play_fragment(){
         //adding play fragment to the main activity
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         // Recycler_fragment rf = new Recycler_fragment();
         Play_fragment pf = new Play_fragment();
-        fragmentTransaction.replace(R.id.main_page, pf);
+       // fragmentTransaction.replace(R.id.viewPager, pf);
         fragmentTransaction.commit();
     }
-    */
     public void load_songs_fragment(){
              //adding songs recycler fragment to the main activity
              FragmentManager fragmentManager = getSupportFragmentManager();
              FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
              Recycler_fragment rf = new Recycler_fragment();
-             fragmentTransaction.replace(R.id.main_page, rf);
+             //fragmentTransaction.replace(R.id.main_page, rf);
              fragmentTransaction.commit();
     }
 
@@ -177,7 +238,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         try {
             // Create a LayoutInflater object to inflate the popup_layout.xml
             LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            @SuppressLint("InflateParams") View popupView = inflater.inflate(R.layout.storagage_permission_popup, null);
+            View popupView = inflater.inflate(R.layout.storagage_permission_popup, null);
             // Specify the width and height of the popup window
             int width = ViewGroup.LayoutParams.WRAP_CONTENT;
             int height = ViewGroup.LayoutParams.WRAP_CONTENT;
@@ -188,17 +249,25 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
             // Show the popup window at the center of the screen, you can adjust the location
             popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
             // Set a dismiss listener for the popup window
-            popupWindow.setOnDismissListener(() -> {
-                // Dismiss the popup window when the close button is clicked
-                isStoragepermissiongranted = ContextCompat.checkSelfPermission(
-                        getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
-                if(!isStoragepermissiongranted){
-                    openAppInfoSettings(getApplicationContext());
+            popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+                @Override
+                public void onDismiss() {
+                    // Dismiss the popup window when the close button is clicked
+                    isStoragepermissiongranted = ContextCompat.checkSelfPermission(
+                            getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+                    if(!isStoragepermissiongranted){
+                        openAppInfoSettings(getApplicationContext());
+                    }
                 }
             });
             // Set up any other views or interactions within the popupView
             Button closePopupButton = popupView.findViewById(R.id.accept_button);
-            closePopupButton.setOnClickListener(v -> popupWindow.dismiss());
+            closePopupButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    popupWindow.dismiss();
+                }
+            });
         } catch (Exception e) {
             // Handle exceptions related to creating or showing the PopupWindow
             Toast.makeText(this, "error"+e.getMessage(), Toast.LENGTH_LONG).show();

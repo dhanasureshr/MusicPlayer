@@ -4,59 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.superpowered.playerexample.MainActivity">
 
+    <!-- android:layout_below="@id/your_other_ui_element_id"-->
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp" >
+
+    </androidx.viewpager2.widget.ViewPager2>
 
     <FrameLayout
+
         android:id="@+id/main_page"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"/>
-
-
-
-
-    <LinearLayout
-        android:id="@+id/control_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/songs"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-
-            android:text="songs" />
-
-        <Button
-            android:id="@+id/player"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-
-
-            android:text="play" />
-
-        <Button
-            android:id="@+id/Aufx"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-
-            android:text="AFX" />
-
-        <Button
-            android:id="@+id/liked"
-            android:layout_width="62dp"
-            android:layout_height="wrap_content"
-
-            android:text="liked" />
-
-
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/control_layout"/>
-    </LinearLayout>
+         />
 
 
 </RelativeLayout>

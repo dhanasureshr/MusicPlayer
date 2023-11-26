@@ -7,3 +7,7 @@
 1284	1941	7226360990218377	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerExample.so	14f8c3ac79457e7a
 8	2641	7226103565795047	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerListManager.cpp.o	cce57a66e15f4ccb
 34	664	7226151799563244	CMakeFiles/PlayerListManager.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	3f6ba8fa8b7cb205
+77	2326	7226487760662585	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	92c9a4c567199f20
+2328	3073	7226487767688022	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerListManager.so	c2128962e210744c
+7	1949	7226490519358644	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	92c9a4c567199f20
+1950	2191	7226490521509458	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86_64/libPlayerListManager.so	c2128962e210744c
