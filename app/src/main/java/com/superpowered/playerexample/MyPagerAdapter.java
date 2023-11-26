@@ -27,7 +27,7 @@ public class MyPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0:
-                return MainPlayerFragment.newInstance();
+                return Play_fragment.newInstance();
             case 1:
                 return SongListFragment.newInstance(); // Use your SongListFragment here
             case 2:

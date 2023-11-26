@@ -20,9 +20,6 @@ import com.superpowered.playerexample.MainActivity;
 import java.util.Locale;
 
 public class Play_fragment extends Fragment {
-    static {
-        System.loadLibrary("PlayerExample");
-    }
 
 
     private Button play_pause;
@@ -35,21 +32,21 @@ public class Play_fragment extends Fragment {
     private  TextView play_song_title;
     private ImageView song_album;
     private SeekBar player_controller;
-    private final int SEEK_DELAY = 150;
-    private final Handler seekHandler = new Handler();
+    private  int SEEK_DELAY;
+    private  Handler seekHandler;
     // Handler for updating ui
-    private  final Handler handler = new Handler();
+    private   Handler handler;
     // Update song progress every second
-    private final Runnable updateSongProgress = new Runnable() {
-        @Override
-        public void run() {
-            int currentPosition = getCurrentPosition();
-            int duration = getDuration();
+   // private final Runnable updateSongProgress = new Runnable() {
+   //     @Override
+   //     public void run() {
+     //       int currentPosition = getCurrentPosition();
+      //      int duration = getDuration();
             // Update your UI with the current position and duration
-            updateUI(currentPosition, duration);
-            handler.postDelayed(this, 1000); // Update every second
-        }
-    };
+      //      updateUI(currentPosition, duration);
+     //       handler.postDelayed(this, 1000); // Update every second
+     //   }
+ //   };
     public Play_fragment() {
         // Required empty public constructor
     }
@@ -64,21 +61,16 @@ public class Play_fragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        handler.postDelayed(updateSongProgress,0);
+       // handler.postDelayed(updateSongProgress,0);
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_play_fragment, container, false);
-    }
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        View view = inflater.inflate(R.layout.fragment_play_fragment, container, false);
         MainActivity mainActivity = new MainActivity();
         // all ui is initialized
         play_song_title = view.findViewById(R.id.song_name);
-        song_album = view.findViewById(R.id.album_image);
+        song_album = view.findViewById(R.id.player_album);
         play_pause = view.findViewById(R.id.play_pause);
         play_previous = view.findViewById(R.id.previous_song);
         play_next = view.findViewById(R.id.next_song);
@@ -88,6 +80,17 @@ public class Play_fragment extends Fragment {
         player_controller = view.findViewById(R.id.main_track_controller);
         play_start_time = view.findViewById(R.id.start_time);
         play_end_time = view.findViewById(R.id.ent_time);
+        SEEK_DELAY = 150;
+        seekHandler = new Handler();
+        handler = new Handler();
+
+        // Inflate the layout for this fragment
+        return view;
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
         // player seekbar seek handler
         player_controller.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override

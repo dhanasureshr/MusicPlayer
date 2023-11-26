@@ -1022,9 +1022,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btnNext
-id btnPlayPause
-id btnPrevious
+id button
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -1061,6 +1059,7 @@ id disableHome
 id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
+id display
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -1160,6 +1159,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id relativeLayout
 id reverseSawtooth
 id right
 id right_icon
@@ -1179,18 +1179,20 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
-id seekBar
+id seekBarSongProgress
 id seek_bar_divider
 id seekbar_layout
 id select_dialog_listview
 id sharedValueSet
 id sharedValueUnset
+id shon_album_layout
 id shortcut
 id showCustom
 id showHome
 id showTitle
 id sin
 id skipped
+id song_image
 id song_name
 id song_title
 id south
@@ -1213,6 +1215,7 @@ id start_time
 id staticLayout
 id staticPostLayout
 id stop
+id store
 id submenuarrow
 id submit_area
 id supportScrollUp
@@ -1234,8 +1237,6 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
-id textViewArtist
-id textViewSongTitle
 id time
 id title
 id titleDividerNoCustom
@@ -1315,7 +1316,6 @@ layout fragment_now_playing
 layout fragment_play_fragment
 layout fragment_recycler_fragment
 layout fragment_song_list
-layout main_music_controls
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big

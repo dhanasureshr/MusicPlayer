@@ -30,9 +30,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 public class MainActivity extends AppCompatActivity implements Recycle_adapter.OnItemClickListener{
-    public PlayerListManager playerListManager;  // Declare the PlayerListManager instance
+    public PlayerListManager playerListManager;
+
+    // Declare the PlayerListManager instance
     ActivityResultLauncher<String[]> mPermissionResultLanuncher;
     private boolean isStoragepermissiongranted = false;
+
+    private  boolean iswritepermissiongranted = false;
 
     private void handlePageSelection(int position) {
         // Get the fragment name based on the position
@@ -110,6 +114,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
 
 
 
+
         //check for the storage permission code begins
         mPermissionResultLanuncher = registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), new ActivityResultCallback<Map<String, Boolean>>() {
             @Override
@@ -124,12 +129,24 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
                     }else{
                         showPopupWindow(MainActivity.this.findViewById(R.id.main_page));
                     }
+
+                }
+
+                if(result.get(Manifest.permission.WRITE_EXTERNAL_STORAGE)!= null)
+                {
+                    iswritepermissiongranted = Boolean.TRUE.equals(result.get(Manifest.permission.WRITE_EXTERNAL_STORAGE));
+                    if(iswritepermissiongranted)
+                    {
+                       // load_songs_fragment();
+
+
+                    }
                 }
             }
         });
         requestpermisson();
         load_songs_fragment();
-
+      //  load_songs_list_fragment();
  //------------------------------------------end of permissions
 
         // Update UI every 40 ms until UI_update returns with false.
@@ -163,7 +180,8 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
 
     protected void onDestroy() {
         super.onDestroy();
-      playerListManager.closeapp();
+
+        playerListManager.closeapp();
 
     }
 
@@ -174,7 +192,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         Toast.makeText(this, "playing " +title, Toast.LENGTH_SHORT).show();
         playerListManager.OpenFileFromPath(path);
         playerListManager.toggle_playback();
-        load_play_fragment();
+     //   load_play_fragment();
 
     }
     public void load_play_fragment(){
@@ -194,21 +212,41 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
              //fragmentTransaction.replace(R.id.main_page, rf);
              fragmentTransaction.commit();
     }
-
+    public void load_songs_list_fragment(){
+        //adding songs recycler fragment to the main activity
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        Recycler_fragment rf = new Recycler_fragment();
+        //fragmentTransaction.replace(R.id.main_page, rf);
+        fragmentTransaction.commit();
+    }
     //request permission method
     private void requestpermisson()
     {
         isStoragepermissiongranted = ContextCompat.checkSelfPermission(
                 this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+        iswritepermissiongranted = ContextCompat.checkSelfPermission(
+                this,Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
         List<String> permissionRequest = new ArrayList<>();
+
         if(!isStoragepermissiongranted)
         {
             permissionRequest.add(Manifest.permission.READ_EXTERNAL_STORAGE);
         }
+
+        if(!iswritepermissiongranted)
+        {
+            permissionRequest.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        }
+
+
         if(!permissionRequest.isEmpty())
         {
             mPermissionResultLanuncher.launch(permissionRequest.toArray(new String[0]));
         }
+
+
+
     }
     private void openAppInfoSettings(Context context) {
         try {
