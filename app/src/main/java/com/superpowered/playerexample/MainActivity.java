@@ -39,17 +39,12 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     private  boolean iswritepermissiongranted = false;
 
     private void handlePageSelection(int position) {
-        // Get the fragment name based on the position
         String fragmentName = getFragmentName(position);
 
-        if(fragmentName =="Play_fragment" )
-        {
-           // load_songs_fragment();
-        }
-
-        // Display a toast message with the fragment name
         Toast.makeText(this, "Selected Fragment: " + fragmentName, Toast.LENGTH_SHORT).show();
     }
+
+
 
     private String getFragmentName(int position) {
         switch (position) {
@@ -68,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
         // code for viewpager begins
         ViewPager2 viewPager = findViewById(R.id.viewPager);
         MyPagerAdapter pagerAdapter = new MyPagerAdapter(this); // Pass the activity instance
@@ -75,12 +73,13 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
 
         FrameLayout mainPageContainer = findViewById(R.id.main_page);
 
-        // Set the initial fragment (e.g., MainFragment)
-        Fragment initialFragment = pagerAdapter.createFragment(viewPager.getCurrentItem());
-        getSupportFragmentManager().beginTransaction()
-                .replace(mainPageContainer.getId(), initialFragment)
-                .commit();
-
+        // Set the initial fragment for viewPager2
+       // Fragment initialFragmentViewPager = pagerAdapter.createFragment(viewPager.getCurrentItem());
+        if (getSupportFragmentManager().findFragmentById(mainPageContainer.getId()) == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(mainPageContainer.getId(), MainPlayerFragment.newInstance())
+                    .commit();
+        }
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {

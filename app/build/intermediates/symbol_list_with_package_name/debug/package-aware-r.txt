@@ -924,6 +924,7 @@ drawable notify_panel_notification_icon_bg
 drawable path
 drawable pause_conrol
 drawable previous_control
+drawable rounded_corners
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1188,7 +1189,7 @@ id seekbar_layout
 id select_dialog_listview
 id sharedValueSet
 id sharedValueUnset
-id shon_album_layout
+id shong_album_layout
 id shortcut
 id showCustom
 id showHome

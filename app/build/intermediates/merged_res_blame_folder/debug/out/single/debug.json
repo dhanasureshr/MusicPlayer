@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-24:\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-24:\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-24:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-24:\\mipmap-xhdpi_ic_launcher_round.png.flat",
@@ -56,10 +56,6 @@
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-24:\\layout_main_music_controls.xml.flat",
-        "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\layout\\main_music_controls.xml"
-    },
-    {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-24:\\layout_fragment_now_playing.xml.flat",
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\layout\\fragment_now_playing.xml"
     },
@@ -92,6 +88,10 @@
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-24:\\drawable_rounded_corners.xml.flat",
+        "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\drawable\\rounded_corners.xml"
+    },
+    {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-24:\\drawable_path.png.flat",
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\drawable\\path.png"
     },
@@ -100,12 +100,12 @@
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\layout\\fragment_main_player.xml"
     },
     {
-        "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-24:\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "com.superpowered.playerexample.app-merged_res-24:/drawable_rounded_corners.xml.flat",
+        "source": "com.superpowered.playerexample.app-main-26:/drawable/rounded_corners.xml"
     },
     {
-        "merged": "com.superpowered.playerexample.app-merged_res-24:/layout_activity_main.xml.flat",
-        "source": "com.superpowered.playerexample.app-main-26:/layout/activity_main.xml"
+        "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-24:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-26:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-24:\\drawable_ic_launcher_background.xml.flat",

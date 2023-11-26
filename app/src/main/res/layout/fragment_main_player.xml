@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
 
     tools:context=".MainPlayerFragment">
 
@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#B04CAF50"
-        android:padding="16dp">
+        android:background="#DD193329"
+        android:padding="3dp">
 
 
         <!-- Seek Bar for song progress -->
@@ -22,7 +22,7 @@
             android:layout_marginTop="2dp" />
 
         <LinearLayout
-            android:id="@+id/shon_album_layout"
+            android:id="@+id/shong_album_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -32,12 +32,14 @@
                 android:id="@+id/song_image"
                 android:layout_width="68dp"
                 android:layout_height="68dp"
-                android:src="@mipmap/ic_launcher" />
+
+                android:background="@drawable/rounded_corners"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginRight="@+id/shon_album_layout"
+                android:layout_marginRight="0dp"
 
                 android:orientation="horizontal">
 
@@ -59,22 +61,22 @@
 
                 <ImageView
                     android:id="@+id/play_previous"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:layout_marginLeft="19dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginLeft="56dp"
                     android:src="@drawable/previous_control" />
 
                 <ImageView
                     android:id="@+id/play_or_pause"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:layout_marginLeft="72dp"
                     android:src="@drawable/pause_conrol" />
 
                 <ImageView
                     android:id="@+id/play_next"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:layout_marginLeft="78dp"
                     android:src="@drawable/next_control"
                     />
@@ -88,4 +90,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</FrameLayout>
