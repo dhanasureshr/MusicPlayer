@@ -23,6 +23,13 @@
       "artifactName": "PlayerExample",
       "output": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\build\\intermediates\\cxx\\RelWithDebInfo\\616i4si1\\obj\\x86\\libPlayerExample.so",
       "runtimeFiles": []
+    },
+    "audio_engin::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "audio_engin",
+      "output": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\build\\intermediates\\cxx\\RelWithDebInfo\\616i4si1\\obj\\x86\\libaudio_engin.so",
+      "runtimeFiles": []
     }
   },
   "toolchains": {
