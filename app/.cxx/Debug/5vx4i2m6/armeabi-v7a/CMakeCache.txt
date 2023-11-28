@@ -253,6 +253,9 @@ Project_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app
 
+//Dependencies for the target
+audio_engin_LIB_DEPENDS:STATIC=general;log;general;android;general;OpenSLES;general;F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/../../../Superpowered/libSuperpoweredAndroidarmeabi-v7a.a;
+
 
 ########################
 # INTERNAL cache entries

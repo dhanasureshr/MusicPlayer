@@ -8,12 +8,12 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 public class Recycle_adapter extends RecyclerView.Adapter<MyViewHolder> {
     Context context;
-    ArrayList<audio_data> audio_tracks_list;
+    ArrayList<Raw_audio_tracks> audio_tracks_list;
     private OnItemClickListener onItemClickListener;
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.onItemClickListener = listener;
     }
-    public Recycle_adapter(Context context, ArrayList<audio_data> audio_tracks_list) {
+    public Recycle_adapter(Context context, ArrayList<Raw_audio_tracks> audio_tracks_list) {
         this.context = context;
         this.audio_tracks_list = audio_tracks_list;
     }
@@ -25,7 +25,7 @@ public class Recycle_adapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.song_name.setText(audio_tracks_list.get(position).title);
-        audio_data currentItem = audio_tracks_list.get(position);
+        Raw_audio_tracks currentItem = audio_tracks_list.get(position);
         Picasso.get().load(currentItem.getAlbumArtURI()).into(holder.Audio_album);
         holder.itemView.setOnClickListener(view -> {
             //send this path to the audio player to load and play the song

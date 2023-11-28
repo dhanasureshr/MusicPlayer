@@ -14,14 +14,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,7 +29,7 @@ import java.util.List;
 public class Recycler_fragment extends Fragment {
 
 
-    public ArrayList<audio_data> audio_list = new ArrayList<>();
+    public ArrayList<Raw_audio_tracks> audio_list = new ArrayList<>();
     public RecyclerView recyclerView;
     public Recycle_adapter recycleAdpter;
     public Recycler_fragment() {
@@ -104,7 +102,7 @@ public class Recycler_fragment extends Fragment {
             recyclerView.setAdapter(recycleAdpter);
         }
     }
-    private ArrayList<audio_data> getAudio_file() {
+    private ArrayList<Raw_audio_tracks> getAudio_file() {
         ContentResolver contentResolver = getContext().getContentResolver();
         String[] projection = {MediaStore.Audio.Media._ID,
                 MediaStore.Audio.Media.TITLE,
@@ -140,7 +138,7 @@ public class Recycler_fragment extends Fragment {
                    String albumArtist = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ARTIST));
                    long albumId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ID));
                    String albumArtUri = getAlbumArtUri(albumId);
-                   audio_data audioData = new audio_data(id, title, artist, album, Data, duration, size, mimeType, trackNumber, year, genre, composer, albumArtist, albumArtUri);
+                   Raw_audio_tracks audioData = new Raw_audio_tracks(id, title, artist, album, Data, duration, size, mimeType, trackNumber, year, genre, composer, albumArtist, albumArtUri);
                    audio_list.add(audioData);
                }
            }

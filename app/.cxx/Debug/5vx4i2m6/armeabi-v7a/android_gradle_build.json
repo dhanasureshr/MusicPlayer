@@ -24,11 +24,11 @@
       "output": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\build\\intermediates\\cxx\\Debug\\5vx4i2m6\\obj\\armeabi-v7a\\libPlayerExample.so",
       "runtimeFiles": []
     },
-    "PlayerListManager::@6890427a1f51a3e7e1df": {
+    "audio_engin::@6890427a1f51a3e7e1df": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
-      "artifactName": "PlayerListManager",
-      "output": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\build\\intermediates\\cxx\\Debug\\5vx4i2m6\\obj\\armeabi-v7a\\libPlayerListManager.so",
+      "artifactName": "audio_engin",
+      "output": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\build\\intermediates\\cxx\\Debug\\5vx4i2m6\\obj\\armeabi-v7a\\libaudio_engin.so",
       "runtimeFiles": []
     }
   },

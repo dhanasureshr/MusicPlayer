@@ -86,49 +86,49 @@ build ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlay
   TARGET_PDB = PlayerExample.so.dbg
 
 # =============================================================================
-# Object build statements for SHARED_LIBRARY target PlayerListManager
+# Object build statements for SHARED_LIBRARY target audio_engin
 
 
 #############################################
-# Order-only phony target for PlayerListManager
+# Order-only phony target for audio_engin
 
-build cmake_object_order_depends_target_PlayerListManager: phony || CMakeFiles/PlayerListManager.dir
+build cmake_object_order_depends_target_audio_engin: phony || CMakeFiles/audio_engin.dir
 
-build CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o: CXX_COMPILER__PlayerListManager_Debug F$:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/src/main/cpp/PlayerListManager.cpp || cmake_object_order_depends_target_PlayerListManager
-  DEFINES = -DPlayerListManager_EXPORTS
-  DEP_FILE = CMakeFiles\PlayerListManager.dir\src\main\cpp\PlayerListManager.cpp.o.d
+build CMakeFiles/audio_engin.dir/src/main/cpp/AudioEngin.cpp.o: CXX_COMPILER__audio_engin_Debug F$:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/src/main/cpp/AudioEngin.cpp || cmake_object_order_depends_target_audio_engin
+  DEFINES = -Daudio_engin_EXPORTS
+  DEP_FILE = CMakeFiles\audio_engin.dir\src\main\cpp\AudioEngin.cpp.o.d
   FLAGS = -fsigned-char -IF:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\..\..\..\Superpowered -g  -fno-limit-debug-info -fPIC
   INCLUDES = -IF:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/src/main/cpp -IF:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app
-  OBJECT_DIR = CMakeFiles\PlayerListManager.dir
-  OBJECT_FILE_DIR = CMakeFiles\PlayerListManager.dir\src\main\cpp
+  OBJECT_DIR = CMakeFiles\audio_engin.dir
+  OBJECT_FILE_DIR = CMakeFiles\audio_engin.dir\src\main\cpp
 
-build CMakeFiles/PlayerListManager.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o: CXX_COMPILER__PlayerListManager_Debug F$:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp || cmake_object_order_depends_target_PlayerListManager
-  DEFINES = -DPlayerListManager_EXPORTS
-  DEP_FILE = CMakeFiles\PlayerListManager.dir\F_\audioapi\SuperpoweredSDK\SuperpoweredSDK\Superpowered\OpenSource\SuperpoweredAndroidAudioIO.cpp.o.d
+build CMakeFiles/audio_engin.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o: CXX_COMPILER__audio_engin_Debug F$:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp || cmake_object_order_depends_target_audio_engin
+  DEFINES = -Daudio_engin_EXPORTS
+  DEP_FILE = CMakeFiles\audio_engin.dir\F_\audioapi\SuperpoweredSDK\SuperpoweredSDK\Superpowered\OpenSource\SuperpoweredAndroidAudioIO.cpp.o.d
   FLAGS = -fsigned-char -IF:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\..\..\..\Superpowered -g  -fno-limit-debug-info -fPIC
   INCLUDES = -IF:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/src/main/cpp -IF:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app
-  OBJECT_DIR = CMakeFiles\PlayerListManager.dir
-  OBJECT_FILE_DIR = CMakeFiles\PlayerListManager.dir\F_\audioapi\SuperpoweredSDK\SuperpoweredSDK\Superpowered\OpenSource
+  OBJECT_DIR = CMakeFiles\audio_engin.dir
+  OBJECT_FILE_DIR = CMakeFiles\audio_engin.dir\F_\audioapi\SuperpoweredSDK\SuperpoweredSDK\Superpowered\OpenSource
 
 
 # =============================================================================
-# Link build statements for SHARED_LIBRARY target PlayerListManager
+# Link build statements for SHARED_LIBRARY target audio_engin
 
 
 #############################################
-# Link the shared library ..\..\..\..\build\intermediates\cxx\Debug\5vx4i2m6\obj\armeabi-v7a\libPlayerListManager.so
+# Link the shared library ..\..\..\..\build\intermediates\cxx\Debug\5vx4i2m6\obj\armeabi-v7a\libaudio_engin.so
 
-build ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlayerListManager.so: CXX_SHARED_LIBRARY_LINKER__PlayerListManager_Debug CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o CMakeFiles/PlayerListManager.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o | ../../../../../../../Superpowered/libSuperpoweredAndroidarmeabi-v7a.a
+build ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libaudio_engin.so: CXX_SHARED_LIBRARY_LINKER__audio_engin_Debug CMakeFiles/audio_engin.dir/src/main/cpp/AudioEngin.cpp.o CMakeFiles/audio_engin.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o | ../../../../../../../Superpowered/libSuperpoweredAndroidarmeabi-v7a.a
   LANGUAGE_COMPILE_FLAGS = -fsigned-char -IF:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\..\..\..\Superpowered -g  -fno-limit-debug-info
   LINK_FLAGS = -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined
   LINK_LIBRARIES = -llog  -landroid  -lOpenSLES  ../../../../../../../Superpowered/libSuperpoweredAndroidarmeabi-v7a.a   -static-libstdc++ -latomic -lm
-  OBJECT_DIR = CMakeFiles\PlayerListManager.dir
+  OBJECT_DIR = CMakeFiles\audio_engin.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  SONAME = libPlayerListManager.so
+  SONAME = libaudio_engin.so
   SONAME_FLAG = -Wl,-soname,
-  TARGET_FILE = ..\..\..\..\build\intermediates\cxx\Debug\5vx4i2m6\obj\armeabi-v7a\libPlayerListManager.so
-  TARGET_PDB = PlayerListManager.so.dbg
+  TARGET_FILE = ..\..\..\..\build\intermediates\cxx\Debug\5vx4i2m6\obj\armeabi-v7a\libaudio_engin.so
+  TARGET_PDB = audio_engin.so.dbg
 
 
 #############################################
@@ -158,11 +158,11 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build PlayerExample: phony ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlayerExample.so
 
-build PlayerListManager: phony ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlayerListManager.so
+build audio_engin: phony ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libaudio_engin.so
 
 build libPlayerExample.so: phony ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlayerExample.so
 
-build libPlayerListManager.so: phony ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlayerListManager.so
+build libaudio_engin.so: phony ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libaudio_engin.so
 
 # =============================================================================
 # Folder targets.
@@ -172,7 +172,7 @@ build libPlayerListManager.so: phony ../../../../build/intermediates/cxx/Debug/5
 #############################################
 # Folder: F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/.cxx/Debug/5vx4i2m6/armeabi-v7a
 
-build all: phony ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlayerExample.so ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlayerListManager.so
+build all: phony ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlayerExample.so ../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libaudio_engin.so
 
 # =============================================================================
 # Built-in targets

@@ -1,11 +1,10 @@
 # ninja log v5
+2833	3596	7228196189045595	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerListManager.so	902eebc293d3a909
 35	615	7226366782157663	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	f225ce9dfca5645a
 55	622	7226366782157663	CMakeFiles/PlayerListManager.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	6edf6d2c40a5be3f
+30	2832	7228196181732958	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	69894cfb9d428f32
 2	1210	7226366788110319	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	374bc1d8590bcf94
 1212	2238	7226366797711112	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerExample.so	39aba2ee745bdc9b
-19	2372	7226366799574928	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	69894cfb9d428f32
-2373	2889	7226366803752900	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerListManager.so	902eebc293d3a909
-11	2792	7226487658485226	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	69894cfb9d428f32
-2793	3617	7226487666009362	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerListManager.so	902eebc293d3a909
-8	3328	7226490442714121	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	69894cfb9d428f32
-3329	3700	7226490446199974	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libPlayerListManager.so	902eebc293d3a909
+16	580	7228199125556554	CMakeFiles/audio_engin.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	14152b25f8986b2
+6	2753	7228199147207570	CMakeFiles/audio_engin.dir/src/main/cpp/AudioEngin.cpp.o	63649b582e5282e9
+2753	3756	7228199156551309	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/arm64-v8a/libaudio_engin.so	6046cb2b8337837

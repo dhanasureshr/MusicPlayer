@@ -16,12 +16,7 @@ import android.widget.TextView;
 
 public class MainPlayerFragment extends Fragment {
 
-    SeekBar Player_control_seekbar;
-    ImageView Song_album_image;
-    TextView Song_name;
-    ImageView Play_previous_song;
-    ImageView Play_or_pause;
-    ImageView Play_next_song;
+  //  SeekBar Player_control_seekbar;
 
 
 
@@ -46,12 +41,8 @@ public class MainPlayerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main_player, container, false);
-        Player_control_seekbar = view.findViewById(R.id.seekBarSongProgress);
-        Song_album_image = view.findViewById(R.id.song_image);
-        Song_name = view.findViewById(R.id.song_name);
-        Play_previous_song = view.findViewById(R.id.play_previous);
-        Play_or_pause = view.findViewById(R.id.play_or_pause);
-        Play_next_song = view.findViewById(R.id.play_next);
+       // Player_control_seekbar = view.findViewById(R.id.seekBarSongProgress);
+
         // Inflate the layout for this fragment
         return view;
     }

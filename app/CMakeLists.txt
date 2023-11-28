@@ -24,9 +24,9 @@ add_library(superpoweredplayer
         )
 ]]
 
-add_library(PlayerListManager SHARED
+add_library(audio_engin SHARED
 
-        src/main/cpp/PlayerListManager.cpp
+        src/main/cpp/AudioEngin.cpp
         ${PATH_TO_SUPERPOWERED}/OpenSource/SuperpoweredAndroidAudioIO.cpp
         )
 
@@ -40,7 +40,7 @@ target_link_libraries(
 )
 # link the native library against the following libraries
 target_link_libraries(
-        PlayerListManager
+        audio_engin
         log
         android
         OpenSLES

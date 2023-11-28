@@ -1,12 +1,7 @@
 # ninja log v5
-10	607	7226151761555399	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	96752de240e215c1
-87	1288	7226360943682893	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	e882eb910022d739
-106	2389	7226360954521043	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	c08c280771667f16
-1290	1737	7226360947902930	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86/libPlayerExample.so	d143b48aeb7f2435
-10	2125	7226103530847271	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerListManager.cpp.o	4e8c1d54779f9d2b
-62	637	7226151761887663	CMakeFiles/PlayerListManager.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	fe386cbf68389178
-2389	2808	7226360958489768	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86/libPlayerListManager.so	62e0fd2fc3a61bcb
-10	2332	7226487727056850	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	c08c280771667f16
-2333	2931	7226487732809399	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86/libPlayerListManager.so	62e0fd2fc3a61bcb
-7	2056	7226490496084355	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	c08c280771667f16
-2057	2298	7226490498428970	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86/libPlayerListManager.so	62e0fd2fc3a61bcb
+19	683	7228201681984659	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	96752de240e215c1
+118	692	7228201681984659	CMakeFiles/audio_engin.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	575a6c2d2dddf2e
+2	1411	7228201688400016	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	e882eb910022d739
+1412	1916	7228201693873425	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86/libPlayerExample.so	d143b48aeb7f2435
+107	2533	7228201700295285	CMakeFiles/audio_engin.dir/src/main/cpp/AudioEngin.cpp.o	b9cb50b9f3805739
+2534	3070	7228201705462561	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/x86/libaudio_engin.so	3451fdcb2b760e41

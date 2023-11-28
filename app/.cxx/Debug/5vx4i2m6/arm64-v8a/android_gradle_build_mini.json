@@ -17,10 +17,10 @@
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
-    "PlayerListManager::@6890427a1f51a3e7e1df": {
-      "artifactName": "PlayerListManager",
+    "audio_engin::@6890427a1f51a3e7e1df": {
+      "artifactName": "audio_engin",
       "abi": "arm64-v8a",
-      "output": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\build\\intermediates\\cxx\\Debug\\5vx4i2m6\\obj\\arm64-v8a\\libPlayerListManager.so",
+      "output": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\build\\intermediates\\cxx\\Debug\\5vx4i2m6\\obj\\arm64-v8a\\libaudio_engin.so",
       "runtimeFiles": []
     },
     "PlayerExample::@6890427a1f51a3e7e1df": {

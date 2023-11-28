@@ -226,8 +226,8 @@ CMAKE_SYSTEM_NAME:UNINITIALIZED=Android
 //No help, variable specified on the command line.
 CMAKE_SYSTEM_VERSION:UNINITIALIZED=24
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=C:\Users\dhana suresh\AppData\Local\Android\Sdk\ndk\23.1.7779620\build\cmake\android.toolchain.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/Users/dhana suresh/AppData/Local/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -241,9 +241,6 @@ PATH_TO_SUPERPOWERED:STRING=F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples
 //Dependencies for the target
 PlayerExample_LIB_DEPENDS:STATIC=general;log;general;android;general;OpenSLES;general;F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/../../../Superpowered/libSuperpoweredAndroidx86.a;
 
-//Dependencies for the target
-PlayerListManager_LIB_DEPENDS:STATIC=general;log;general;android;general;OpenSLES;general;F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/../../../Superpowered/libSuperpoweredAndroidx86.a;
-
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/.cxx/Debug/5vx4i2m6/x86
 
@@ -252,6 +249,9 @@ Project_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app
+
+//Dependencies for the target
+audio_engin_LIB_DEPENDS:STATIC=general;log;general;android;general;OpenSLES;general;F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/../../../Superpowered/libSuperpoweredAndroidx86.a;
 
 
 ########################

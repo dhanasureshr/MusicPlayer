@@ -1,13 +1,12 @@
 # ninja log v5
-10	661	7226151726982079	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	67810bb7b72faa93
 1208	1682	7226360907816060	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlayerExample.so	7969eba0904701e4
-9	2497	7222670373794849	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	654152c121a7a853
+10	661	7226151726982079	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	67810bb7b72faa93
+11	2112	7226490469902734	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	b9048b8278d9db85
 15	1207	7226360903580984	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	8a1a5a477a87ddff
-32	2278	7226360914069434	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	b9048b8278d9db85
+9	2497	7222670373794849	CMakeFiles/PlayerExample.dir/src/main/cpp/play.cpp.o	654152c121a7a853
 7	2343	7226103501067172	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerListManager.cpp.o	deccaa37403e7e78
 61	658	7226151726982079	CMakeFiles/PlayerListManager.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	743510a6fed8e88a
-2279	2631	7226360917337930	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlayerListManager.so	2b6a2ecd401d1e36
-16	2302	7226487693656930	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	b9048b8278d9db85
-2303	2884	7226487699057343	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlayerListManager.so	2b6a2ecd401d1e36
-11	2112	7226490469902734	CMakeFiles/PlayerListManager.dir/src/main/cpp/PlayerListManager.cpp.o	b9048b8278d9db85
 2113	2471	7226490473300712	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libPlayerListManager.so	2b6a2ecd401d1e36
+10	1081	7228201648896794	CMakeFiles/audio_engin.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	f901e85189411387
+25	2823	7228201666225138	CMakeFiles/audio_engin.dir/src/main/cpp/AudioEngin.cpp.o	5479f5d97770a954
+2824	3451	7228201672320294	../../../../build/intermediates/cxx/Debug/5vx4i2m6/obj/armeabi-v7a/libaudio_engin.so	6cb0be72c65da161
