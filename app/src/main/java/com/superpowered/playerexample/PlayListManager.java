@@ -10,16 +10,10 @@ public class PlayListManager {
     private Map<String, ArrayList<SongData>> playlists;
 
 
-    // Database instance
-    private database database;
-
-    public PlayListManager(Map<String, ArrayList<SongData>> playlists, database database) {
+    public PlayListManager(Map<String, ArrayList<SongData>> playlists) {
         this.playlists = playlists;
 
-        this.database = database;
 
-        // Load playlists from the database on initialization
-        loadPlaylistsFromDatabase();
     }
 
     // Create a new playlist
@@ -98,62 +92,4 @@ public class PlayListManager {
 
     }
 
-    public void savePlaylistsToDatabase() {
-        // Implementation to save playlists to a database
-        ArrayList<String> playlistNames = new ArrayList<>(playlists.keySet());
-
-        for (String playlistName : playlistNames) {
-            ArrayList<SongData> playlist = playlists.get(playlistName);
-            ArrayList<String> filePaths = new ArrayList<>();
-
-            // Extract file paths from SongData objects
-            for (SongData song : playlist) {
-                filePaths.add(song.getSong_path());
-            }
-
-            // Store file paths in the database
-            database.storeFilePaths(filePaths,playlistNames);
-        }
-    }
-
-    public ArrayList<SongData> loadPlaylistsFromDatabase() {
-        // Implementation to load playlists from a database
-        // Retrieve stored file paths from the database
-
-        Map<String, ArrayList<String>> playlistsData = database.retrievePlaylists();
-
-        // Create playlists based on retrieved file paths and playlist names
-        for (String playlistName : playlistsData.keySet()) {
-            ArrayList<String> filePaths = playlistsData.get(playlistName);
-            ArrayList<SongData> songs = new ArrayList<>();
-
-            // Create SongData objects from file paths
-            for (String filePath : filePaths) {
-                songs.add(createSongDataFromFilePath(filePath));
-            }
-
-            // Add songs to the playlist
-            playlists.put(playlistName, songs);
-    }
-
-    // Get the list of songs in a playlist
-    public ArrayList<SongData> getPlaylist(String playlistName) {
-        ArrayList<SongData> playlist = playlists.get(playlistName);
-        return  new ArrayList<>(playlist != null ? playlist : new ArrayList<>());
-    }
-
-
-
-}
-
-    private SongData createSongDataFromFilePath(String filePath) {
-        String[] parts = filePath.split("/");
-        String songNameWithExtension = parts[parts.length - 1];
-
-        // Split the song name to separate the name and extension
-        String[] nameAndExtension = songNameWithExtension.split("\\.");
-
-        // Create a new SongData object
-        return new SongData(nameAndExtension[0], filePath);
-    }
 }

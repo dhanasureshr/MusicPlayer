@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     private Handler handler;
 
     private PlayListManager playListManager;
-    private database database;
+
 
 
     @Override
@@ -48,14 +48,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize the database
-        database = new database(this);
 
-        // Initialize the PlayListManager and pass the database instance
-        playListManager = new PlayListManager(new HashMap<>(), database);
-
-        // Load playlists from the database (this is also done in the PlayListManager constructor)
-        playListManager.loadPlaylistsFromDatabase();
 
 
 
@@ -188,9 +181,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
 
     protected void onDestroy() {
         super.onDestroy();
-        playListManager.savePlaylistsToDatabase();
-        // Close the database connection
-        database.close();
+
         audioEnginBridge.closeapp();
 
     }

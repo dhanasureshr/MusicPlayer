@@ -2953,6 +2953,8 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_action_item_choose
+drawable ic_action_nvaigation
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
@@ -3177,6 +3179,7 @@ id constraint
 id container
 id content
 id contentPanel
+id contents_count
 id contiguous
 id continuousVelocity
 id coordinator
@@ -3408,8 +3411,11 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id play_list_album_image
 id play_pause
 id player_album
+id playlist_chooser
+id playlist_name
 id pooling_container_listener_holder_tag
 id position
 id postLayout
@@ -3420,6 +3426,8 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerViewSongs
+id recyclerview_playlist
 id relativeLayout
 id report_drawn
 id reverseSawtooth
@@ -3468,7 +3476,9 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id song_action_image
 id song_name
+id song_select_Image
 id song_title
 id south
 id spacer
@@ -3701,9 +3711,11 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_main_player
 layout fragment_now_playing
+layout fragment_play__list_
 layout fragment_play_fragment
 layout fragment_recycler_fragment
 layout fragment_song_list
+layout fragment_songs
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3761,9 +3773,11 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout playlist_holder
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout songlist_holder
 layout storagage_permission_popup
 layout support_simple_spinner_dropdown_item
 layout track_holder
