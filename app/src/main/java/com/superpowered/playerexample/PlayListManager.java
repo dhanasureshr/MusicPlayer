@@ -1,6 +1,7 @@
 package com.superpowered.playerexample;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Map;
 
 public class PlayListManager {
@@ -91,5 +92,22 @@ public class PlayListManager {
         }
 
     }
+
+    public void savePlaylistsToDatabase() {
+        // Implementation to save playlists to a database
+    }
+
+    public void loadPlaylistsFromDatabase() {
+        // Implementation to load playlists from a database
+    }
+
+
+    // Get the list of songs in a playlist
+    public ArrayList<SongData> getPlaylist(String playlistName) {
+        ArrayList<SongData> playlist = playlists.get(playlistName);
+        return (ArrayList<SongData>) Collections.unmodifiableList(playlist != null ? playlist : new ArrayList<SongData>());
+    }
+
+
 
 }
