@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
                 int totalScrollRange = appBarLayout.getTotalScrollRange();
                 float percentage = (float) Math.abs(verticalOffset) / (float) totalScrollRange;
 
-                appBarLayout.setAlpha(1 - percentage);
+                //appBarLayout.setAlpha(1 - percentage);
 
                 if (percentage == 0 && isExpanded) {
                     collapstextview.setText("Your Expanded Title");
