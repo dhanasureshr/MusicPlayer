@@ -27,9 +27,9 @@ public class MyPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0:
-                return Play_fragment.newInstance();
+                return Recycler_fragment.newInstance(); //
             case 1:
-                return Recycler_fragment.newInstance();
+                return Play_fragment.newInstance();
             default:
                 return new Fragment(); // Return a default Fragment or handle the case
 
@@ -42,6 +42,20 @@ public class MyPagerAdapter extends FragmentStateAdapter {
     public int getItemCount() {
         return NUM_PAGES;
     }
+
+    public String getTabTitle(int position)
+    {
+        switch (position){
+            case 0:
+                return "songs";
+            case 1:
+                return "playlist";
+            default:
+                return "new tab";
+        }
+
+    }
+
 
     public Fragment getFragment(int position) {
         return createFragment(position);

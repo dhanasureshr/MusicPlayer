@@ -7,7 +7,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
-
+import com.google.android.material.appbar.AppBarLayout;
 import android.Manifest;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -23,7 +23,12 @@ import android.view.View;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     private boolean playing = false;
 
     private Handler handler;
+
+    AppBarLayout appBarLayout;
 
     private PlayListManager playListManager;
 
@@ -103,8 +110,20 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
 
         // code for viewpager begins
         ViewPager2 viewPager = findViewById(R.id.viewPager);
+        //tabLayout initialization
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
+        //appbar layout initialization
+        appBarLayout = findViewById(R.id.appBarLayout);
+        // Obtain a reference to the CollapsingToolbarLayout for further customization
+        CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsingToolbarLayout);
+        TextView collapstextview = findViewById(R.id.collapseTextView);
+
+
         MyPagerAdapter pagerAdapter = new MyPagerAdapter(this); // Pass the activity instance
         viewPager.setAdapter(pagerAdapter);
+
+        new TabLayoutMediator(tabLayout,viewPager,(tab,position)->tab.setText(pagerAdapter.getTabTitle(position))
+        ).attach();
 
         //this is the call back
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
@@ -115,13 +134,58 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
             }
         });
 
+        // Add an offset change listener to handle collapsing/expanding the app bar
+        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener()
+        {
+            boolean isExpanded = true;
+
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout1, int verticalOffset) {
+                int totalScrollRange = appBarLayout.getTotalScrollRange();
+                float percentage = (float) Math.abs(verticalOffset) / (float) totalScrollRange;
+
+                appBarLayout1.setAlpha(1 - percentage);
+
+                if (percentage == 0 && isExpanded) {
+                    collapstextview.setText("Your Expanded Title");
+
+                    // Collapsed state
+                    isExpanded = true;
+                } else if(percentage == 1 && !isExpanded){
+                   // collapsingToolbarLayout.setTitle("your Collapsed Title");
+                    collapstextview.setText("collapsed Title");
+                    // Expanded state or somewhere in between
+                    isExpanded = false;
+
+                }else {
+                   // collapsingToolbarLayout.setTitle("In-between");
+
+                    if (verticalOffset < 0) {
+                        // Vertical offset is negative when scrolling down
+                       // collapsingToolbarLayout.setTitle("Your Custom Title While Scrolling Down");
+                       // collapstextview.setText("in between");
+                    }
+
+                }
+            }
+        });
+
+
+
 
     }
 
     private void handlePageSelection(int position) {
-        String fragmentName = getFragmentName(position);
 
-        Toast.makeText(this, "Selected Fragment: " + fragmentName, Toast.LENGTH_SHORT).show();
+        if(position == 0)
+        {
+            appBarLayout.setExpanded(true,true);
+        }
+        else{
+            appBarLayout.setExpanded(false,true);// appBarLayout.setExpanded(false,true);
+        }
+        //String fragmentName = getFragmentName(position);
+       // Toast.makeText(this, "Selected Fragment: " + fragmentName, Toast.LENGTH_SHORT).show();
     }
 
     private String getFragmentName(int position) {
