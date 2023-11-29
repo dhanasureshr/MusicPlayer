@@ -9,6 +9,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.TooltipCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +22,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,6 +35,11 @@ public class Recycler_fragment extends Fragment {
     public ArrayList<Raw_audio_tracks> audio_list = new ArrayList<>();
     public RecyclerView recyclerView;
     public Recycle_adapter recycleAdpter;
+    //search code
+    SearchView searchview;
+
+    public FineLocalSongs fineLocalSongs;
+
     public Recycler_fragment() {
         // Required empty public constructor
     }
@@ -81,6 +89,7 @@ public class Recycler_fragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        fineLocalSongs = new FineLocalSongs();
 
     }
     @Override
@@ -94,62 +103,48 @@ public class Recycler_fragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         if(audio_list.isEmpty())
         {
-            audio_list = getAudio_file();
+            audio_list = fineLocalSongs.getAudio_file(this.getContext());
+            //search code
+            searchview = view.findViewById(R.id.searchview);
+            searchview.setQueryHint("Enter song name, artist, or album");
             recyclerView = view.findViewById(R.id.frag_recycler);
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
             recycleAdpter = new Recycle_adapter(getContext(), audio_list);
-            recycleAdpter.setOnItemClickListener((Recycle_adapter.OnItemClickListener) getContext()); // Set the listener
             recyclerView.setAdapter(recycleAdpter);
+
+            // setup for search functionality
+            searchview.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String newText) {
+                    ArrayList<Raw_audio_tracks> filteredList = filtersongs(newText);
+                    recycleAdpter.setSongs(filteredList);
+                    return true;
+                }
+
+                private ArrayList<Raw_audio_tracks> filtersongs(String query) {
+                    query = query.toLowerCase(Locale.getDefault());
+                    ArrayList<Raw_audio_tracks> filteredList  = new ArrayList<>();
+
+                    for(Raw_audio_tracks song : audio_list){
+                        if(song.getTitle().toLowerCase(Locale.getDefault()).contains(query)||
+                        song.getArtist().toLowerCase(Locale.getDefault()).contains(query)||
+                        song.getAlbum().toLowerCase(Locale.getDefault()).contains(query)){
+
+                            filteredList.add(song);
+                        }
+                    }
+                    return filteredList;
+                }
+            });
+
+            recycleAdpter.setOnItemClickListener((Recycle_adapter.OnItemClickListener) getContext()); // Set the listener
+
         }
     }
-    private ArrayList<Raw_audio_tracks> getAudio_file() {
-        ContentResolver contentResolver = getContext().getContentResolver();
-        String[] projection = {MediaStore.Audio.Media._ID,
-                MediaStore.Audio.Media.TITLE,
-                MediaStore.Audio.Media.ARTIST,
-                MediaStore.Audio.Media.ALBUM,
-                MediaStore.Audio.Media.DATA,
-                MediaStore.Audio.Media.DURATION,
-                MediaStore.Audio.Media.SIZE,
-                MediaStore.Audio.Media.MIME_TYPE,
-                MediaStore.Audio.Media.TRACK,
-                MediaStore.Audio.Media.YEAR,
-                MediaStore.Audio.Media.GENRE,
-                MediaStore.Audio.Media.COMPOSER,
-                MediaStore.Audio.Media.ALBUM_ARTIST,
-                MediaStore.Audio.Media.ALBUM_ID};
-        Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
-        String selection = MediaStore.Audio.Media.IS_MUSIC + "!= 0";
-       try(Cursor cursor = contentResolver.query(uri, projection, selection, null,null)) {
-           if (cursor != null) {
-               while (cursor.moveToNext()) {
-                   long id = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media._ID));
-                   String title = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
-                   String artist = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST));
-                   String album = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM));
-                   String Data = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA));
-                   int duration = cursor.getInt(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DURATION));
-                   long size = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.SIZE));
-                   String mimeType = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.MIME_TYPE));
-                   int trackNumber = cursor.getInt(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TRACK));
-                   int year = cursor.getInt(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.YEAR));
-                   String genre = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.GENRE));
-                   String composer = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.COMPOSER));
-                   String albumArtist = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ARTIST));
-                   long albumId = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ID));
-                   String albumArtUri = getAlbumArtUri(albumId);
-                   Raw_audio_tracks audioData = new Raw_audio_tracks(id, title, artist, album, Data, duration, size, mimeType, trackNumber, year, genre, composer, albumArtist, albumArtUri);
-                   audio_list.add(audioData);
-               }
-           }
-       } catch (Exception e)
-       {
-           Toast.makeText(getContext(), "AudioContentResolver error retriving " +e.getMessage(), Toast.LENGTH_SHORT).show();
-       }
-        return audio_list;
-    }
-    private String getAlbumArtUri(long albumId) {
-        Uri albumArtUri = Uri.parse("content://media/external/audio/albumart/" + albumId);
-        return albumArtUri.toString();
-    }
+
 }

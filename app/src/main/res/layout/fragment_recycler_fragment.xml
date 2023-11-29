@@ -6,9 +6,18 @@
 
     tools:context=".Recycler_fragment">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/frag_recycler"
         android:layout_width="match_parent"
+        android:layout_marginTop="42dp"
         android:layout_height="match_parent"
         tools:listitem="@layout/track_holder" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
 </FrameLayout>

@@ -5,8 +5,10 @@ INJECTED from F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\Super
 INJECTED from F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\src\main\AndroidManifest.xml:2:1-26:12
 INJECTED from F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5a17fecd6844736e0e7c65155b39080f\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:17:1-51:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dhana suresh\.gradle\caches\transforms-3\6c63bafc2a4237618f85a073f48b9cda\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\94aa25937f831ab541a551571f71ce70\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\0f19ad9a579af06ab23a7235144ff3cb\transformed\preference-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\636fe5f1319118333643bf6dca29e378\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\dhana suresh\.gradle\caches\transforms-3\fd0e13a4cc747f990dbd9cf9a87b3b3f\transformed\jetified-viewpager2-1.1.0-beta02\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\dhana suresh\.gradle\caches\transforms-3\87faa02a339d5c7efb8f176b129d0f4c\transformed\recyclerview-1.3.2\AndroidManifest.xml:17:1-22:12
@@ -70,6 +72,8 @@ ADDED from F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\Superpow
 INJECTED from F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\src\main\AndroidManifest.xml:7:5-24:19
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5a17fecd6844736e0e7c65155b39080f\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5a17fecd6844736e0e7c65155b39080f\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:36:5-49:19
+MERGED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:36:5-49:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dhana suresh\.gradle\caches\transforms-3\6c63bafc2a4237618f85a073f48b9cda\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dhana suresh\.gradle\caches\transforms-3\6c63bafc2a4237618f85a073f48b9cda\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\dhana suresh\.gradle\caches\transforms-3\30131fc44614029d067f27bd84cb5f30\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
@@ -126,10 +130,14 @@ INJECTED from F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\Super
 INJECTED from F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\src\main\AndroidManifest.xml
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5a17fecd6844736e0e7c65155b39080f\transformed\material-1.10.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5a17fecd6844736e0e7c65155b39080f\transformed\material-1.10.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:21:5-44
+MERGED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:21:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dhana suresh\.gradle\caches\transforms-3\6c63bafc2a4237618f85a073f48b9cda\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\dhana suresh\.gradle\caches\transforms-3\6c63bafc2a4237618f85a073f48b9cda\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\94aa25937f831ab541a551571f71ce70\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\94aa25937f831ab541a551571f71ce70\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\0f19ad9a579af06ab23a7235144ff3cb\transformed\preference-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\0f19ad9a579af06ab23a7235144ff3cb\transformed\preference-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\636fe5f1319118333643bf6dca29e378\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\636fe5f1319118333643bf6dca29e378\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\dhana suresh\.gradle\caches\transforms-3\fd0e13a4cc747f990dbd9cf9a87b3b3f\transformed\jetified-viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
@@ -218,6 +226,46 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\dhana s
 		INJECTED from F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\src\main\AndroidManifest.xml
+queries
+ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:23:5-34:15
+intent#action:name:android.view.InputMethod
+ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:26:9-28:18
+action#android.view.InputMethod
+ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:27:13-63
+	android:name
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:27:21-60
+provider#com.android.car.ui.plugin.PluginNameProvider
+ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:30:9-33:67
+	android:authorities
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:32:13-60
+	tools:ignore
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:33:13-64
+	android:name
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:31:13-72
+provider#com.android.car.ui.core.CarUiInstaller
+ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:37:9-42:71
+	android:process
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:42:13-68
+	android:authorities
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:39:13-66
+	android:exported
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:41:13-37
+	android:directBootAware
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:40:13-43
+	android:name
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:38:13-66
+provider#com.android.car.ui.core.SearchResultsProvider
+ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:43:9-48:79
+	android:readPermission
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:48:13-76
+	android:process
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:47:13-68
+	android:authorities
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:45:13-73
+	android:exported
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:46:13-36
+	android:name
+		ADDED from [com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:44:13-73
 provider#com.squareup.picasso.PicassoProvider
 ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\dhana suresh\.gradle\caches\transforms-3\30131fc44614029d067f27bd84cb5f30\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 	android:authorities

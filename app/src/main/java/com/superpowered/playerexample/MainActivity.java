@@ -43,8 +43,9 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     private boolean playing = false;
 
     private Handler handler;
-
+    MyPagerAdapter pagerAdapter;
     AppBarLayout appBarLayout;
+    CollapsingToolbarLayout collapsingToolbarLayout;
 
     private PlayListManager playListManager;
 
@@ -115,11 +116,11 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         //appbar layout initialization
         appBarLayout = findViewById(R.id.appBarLayout);
         // Obtain a reference to the CollapsingToolbarLayout for further customization
-        CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsingToolbarLayout);
+        collapsingToolbarLayout = findViewById(R.id.collapsingToolbarLayout);
         TextView collapstextview = findViewById(R.id.collapseTextView);
 
 
-        MyPagerAdapter pagerAdapter = new MyPagerAdapter(this); // Pass the activity instance
+        pagerAdapter = new MyPagerAdapter(this); // Pass the activity instance
         viewPager.setAdapter(pagerAdapter);
 
         new TabLayoutMediator(tabLayout,viewPager,(tab,position)->tab.setText(pagerAdapter.getTabTitle(position))
@@ -144,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
                 int totalScrollRange = appBarLayout.getTotalScrollRange();
                 float percentage = (float) Math.abs(verticalOffset) / (float) totalScrollRange;
 
-                appBarLayout1.setAlpha(1 - percentage);
+                appBarLayout.setAlpha(1 - percentage);
 
                 if (percentage == 0 && isExpanded) {
                     collapstextview.setText("Your Expanded Title");
@@ -184,6 +185,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         else{
             appBarLayout.setExpanded(false,true);// appBarLayout.setExpanded(false,true);
         }
+        collapsingToolbarLayout.setTitle(pagerAdapter.getTabTitle(position));
         //String fragmentName = getFragmentName(position);
        // Toast.makeText(this, "Selected Fragment: " + fragmentName, Toast.LENGTH_SHORT).show();
     }

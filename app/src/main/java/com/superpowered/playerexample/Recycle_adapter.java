@@ -17,6 +17,11 @@ public class Recycle_adapter extends RecyclerView.Adapter<MyViewHolder> {
         this.context = context;
         this.audio_tracks_list = audio_tracks_list;
     }
+
+    public void setSongs(ArrayList<Raw_audio_tracks> audio_tracks_list){
+        this.audio_tracks_list = audio_tracks_list;
+        notifyDataSetChanged();
+    }
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
