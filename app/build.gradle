@@ -7,7 +7,7 @@ android { // main settings for your application
 
     defaultConfig {
         applicationId "com.superpowered.playerexample"
-        minSdkVersion 28
+        minSdkVersion 30
         targetSdk 34
         versionCode 1
         versionName "1.0"

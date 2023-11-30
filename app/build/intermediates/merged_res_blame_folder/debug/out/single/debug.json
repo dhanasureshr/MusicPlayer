@@ -8,10 +8,6 @@
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-36:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.superpowered.playerexample.app-merged_res-34:/layout_track_holder.xml.flat",
-        "source": "com.superpowered.playerexample.app-main-36:/layout/track_holder.xml"
-    },
-    {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-34:\\layout_fragment_now_playing.xml.flat",
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-36:\\layout\\fragment_now_playing.xml"
     },
@@ -88,6 +84,10 @@
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-36:\\drawable-anydpi\\ic_action_nvaigation.xml"
     },
     {
+        "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-34:\\layout_album_holder.xml.flat",
+        "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-36:\\layout\\album_holder.xml"
+    },
+    {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-34:\\drawable-anydpi_ic_action_item_choose.xml.flat",
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-36:\\drawable-anydpi\\ic_action_item_choose.xml"
     },
@@ -146,6 +146,10 @@
     {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-34:\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-36:\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-34:\\layout_fragment_album_view.xml.flat",
+        "source": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-main-36:\\layout\\fragment_album_view.xml"
     },
     {
         "merged": "C:\\Users\\dhana suresh\\.gradle\\daemon\\8.0\\com.superpowered.playerexample.app-merged_res-34:\\layout_storagage_permission_popup.xml.flat",
