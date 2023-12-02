@@ -12,6 +12,7 @@
 #include <malloc.h>
 #include <SLES/OpenSLES_AndroidConfiguration.h>
 #include <SLES/OpenSLES.h>
+#include "SuperpoweredReverb.h"
 #include <vector>
 #include <algorithm>
 #include <random>
@@ -22,6 +23,9 @@
 #include <android/log.h>
 #include <OpenSource/SuperpoweredAndroidAudioIO.h>
 #define log_print __android_log_print
+
+static Superpowered::Reverb *reverb;
+
 static SuperpoweredAndroidAudioIO *audioIO;
 static Superpowered::AdvancedAudioPlayer *player;
 static std::vector<std::string> playlist;
@@ -35,11 +39,18 @@ static bool audioProcessing(
         int samplerate              // current sample rate in Hz
 ) {
     player->outputSamplerate = (unsigned int) samplerate;
+    reverb->samplerate = (unsigned int) samplerate;
+    float floatBuffer[numberOfFrames * 2];
+
     float playerOutput[numberOfFrames * 2];
-    if (player->processStereo(playerOutput, false, (unsigned int) numberOfFrames)) {
+    if (player->processStereo(playerOutput, false, (unsigned int) numberOfFrames) &&
+                reverb->process(playerOutput, playerOutput, (unsigned int)numberOfFrames //reverb setting
+                )) {
         Superpowered::FloatToShortInt(playerOutput, audio, (unsigned int) numberOfFrames);
         return true;
     } else return false;
+
+
 }
 class SuperpoweredPlayer {
 private:
@@ -56,6 +67,18 @@ public:
         */
         // creating the player
         player = new Superpowered::AdvancedAudioPlayer((unsigned int) sampleRate, 0);
+      //reverb settings
+        reverb = new Superpowered::Reverb(sampleRate);
+        reverb->enabled = true;
+        reverb->dry =0.687;
+        reverb->wet = 0.487;
+        reverb->mix = 0.3;
+        reverb->width = 0.7;
+        reverb->damp = 0.5;
+        reverb->roomSize = 0.8;
+        reverb->predelayMs = 0;
+        reverb->lowCutHz = 0;
+
 
         audioIO = new SuperpoweredAndroidAudioIO(
                 sampleRate,                     // device native sampling rate
@@ -161,12 +184,14 @@ public:
 
     void cleanResourses()
     {
+        delete reverb;
         delete player;
         delete audioIO;
     }
 
     void toggle_play()
     {
+
         player->togglePlayback();
         Superpowered::CPU::setSustainedPerformanceMode(player->isPlaying());
     }
