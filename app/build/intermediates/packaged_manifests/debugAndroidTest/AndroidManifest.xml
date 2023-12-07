@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.superpowered.playerexample.test" >
+    package="com.dhana.musicplayer.test" >
 
     <uses-sdk
-        android:minSdkVersion="24"
-        android:targetSdkVersion="33" />
+        android:minSdkVersion="30"
+        android:targetSdkVersion="34" />
 
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
-        android:label="Tests for com.superpowered.playerexample"
-        android:targetPackage="com.superpowered.playerexample" />
+        android:label="Tests for com.dhana.musicplayer"
+        android:targetPackage="com.dhana.musicplayer" />
 
     <application
         android:debuggable="true"

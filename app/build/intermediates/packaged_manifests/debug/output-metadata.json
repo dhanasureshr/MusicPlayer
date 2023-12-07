@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.superpowered.playerexample",
+  "applicationId": "com.dhana.musicplayer",
   "variantName": "debug",
   "elements": [
     {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.superpowered.playerexample"
+    package="com.dhana.musicplayer"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -24,10 +24,10 @@
     </queries>
 
     <permission
-        android:name="com.superpowered.playerexample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.dhana.musicplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.superpowered.playerexample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.dhana.musicplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -53,23 +53,23 @@
 
         <provider
             android:name="com.android.car.ui.core.CarUiInstaller"
-            android:authorities="com.superpowered.playerexample.CarUiInstaller"
+            android:authorities="com.dhana.musicplayer.CarUiInstaller"
             android:directBootAware="true"
             android:exported="false"
             android:process="@string/car_ui_installer_process_name" />
         <provider
             android:name="com.android.car.ui.core.SearchResultsProvider"
-            android:authorities="com.superpowered.playerexample.SearchResultsProvider"
+            android:authorities="com.dhana.musicplayer.SearchResultsProvider"
             android:exported="true"
             android:process="@string/car_ui_installer_process_name"
             android:readPermission="com.android.car.ui.READ_SEARCH_RESULTS" />
         <provider
             android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="com.superpowered.playerexample.com.squareup.picasso"
+            android:authorities="com.dhana.musicplayer.com.squareup.picasso"
             android:exported="false" />
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.superpowered.playerexample.androidx-startup"
+            android:authorities="com.dhana.musicplayer.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

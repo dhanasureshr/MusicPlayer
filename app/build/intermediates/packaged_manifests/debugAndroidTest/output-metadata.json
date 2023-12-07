@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.superpowered.playerexample.test",
+  "applicationId": "com.dhana.musicplayer.test",
   "variantName": "debugAndroidTest",
   "elements": [
     {

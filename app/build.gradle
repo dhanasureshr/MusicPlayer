@@ -6,7 +6,7 @@ android { // main settings for your application
     compileSdkVersion = 34
 
     defaultConfig {
-        applicationId "com.superpowered.playerexample"
+        applicationId 'com.dhana.musicplayer'
         minSdkVersion 30
         targetSdk 34
         versionCode 1
