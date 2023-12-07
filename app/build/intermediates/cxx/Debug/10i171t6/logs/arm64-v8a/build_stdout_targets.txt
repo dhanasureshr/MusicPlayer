@@ -1,0 +1,3 @@
+ninja: Entering directory `F:\audioapi\SuperpoweredSDK\SuperpoweredSDK\Examples_Android\SuperpoweredPlayer\app\.cxx\Debug\10i171t6\arm64-v8a'
+[1/2] Building CXX object CMakeFiles/audio_engin.dir/src/main/cpp/AudioEngin.cpp.o
+[2/2] Linking CXX shared library ..\..\..\..\build\intermediates\cxx\Debug\10i171t6\obj\arm64-v8a\libaudio_engin.so

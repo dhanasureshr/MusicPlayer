@@ -1,0 +1,33 @@
+{
+  "buildFiles": [
+    "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\dhana suresh\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\.cxx\\Debug\\3i5f3t43\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\dhana suresh\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\.cxx\\Debug\\3i5f3t43\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "audio_engin::@6890427a1f51a3e7e1df": {
+      "artifactName": "audio_engin",
+      "abi": "x86",
+      "output": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\build\\intermediates\\cxx\\Debug\\3i5f3t43\\obj\\x86\\libaudio_engin.so",
+      "runtimeFiles": []
+    },
+    "PlayerExample::@6890427a1f51a3e7e1df": {
+      "artifactName": "PlayerExample",
+      "abi": "x86",
+      "output": "F:\\audioapi\\SuperpoweredSDK\\SuperpoweredSDK\\Examples_Android\\SuperpoweredPlayer\\app\\build\\intermediates\\cxx\\Debug\\3i5f3t43\\obj\\x86\\libPlayerExample.so",
+      "runtimeFiles": []
+    }
+  }
+}

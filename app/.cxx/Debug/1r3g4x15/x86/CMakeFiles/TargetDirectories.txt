@@ -1,0 +1,4 @@
+F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/.cxx/Debug/1r3g4x15/x86/CMakeFiles/PlayerExample.dir
+F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/.cxx/Debug/1r3g4x15/x86/CMakeFiles/audio_engin.dir
+F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/.cxx/Debug/1r3g4x15/x86/CMakeFiles/edit_cache.dir
+F:/audioapi/SuperpoweredSDK/SuperpoweredSDK/Examples_Android/SuperpoweredPlayer/app/.cxx/Debug/1r3g4x15/x86/CMakeFiles/rebuild_cache.dir

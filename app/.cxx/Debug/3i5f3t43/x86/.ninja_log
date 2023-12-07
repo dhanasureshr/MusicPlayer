@@ -1,0 +1,7 @@
+# ninja log v5
+1	645	7229975109600808	CMakeFiles/PlayerExample.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	96752de240e215c1
+45	652	7229975109600808	CMakeFiles/audio_engin.dir/F_/audioapi/SuperpoweredSDK/SuperpoweredSDK/Superpowered/OpenSource/SuperpoweredAndroidAudioIO.cpp.o	575a6c2d2dddf2e
+17	1338	7229975116621343	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	e882eb910022d739
+1340	1764	7229975120409933	../../../../build/intermediates/cxx/Debug/3i5f3t43/obj/x86/libPlayerExample.so	97dbad12c6527be7
+32	2577	7229975128778001	CMakeFiles/audio_engin.dir/src/main/cpp/AudioEngin.cpp.o	b9cb50b9f3805739
+2578	2940	7229975132217031	../../../../build/intermediates/cxx/Debug/3i5f3t43/obj/x86/libaudio_engin.so	d2a5a7ff3a9e087
