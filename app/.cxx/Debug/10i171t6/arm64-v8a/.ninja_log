@@ -35,3 +35,7 @@
 2069	2320	7232275186446911	../../../../build/intermediates/cxx/Debug/10i171t6/obj/arm64-v8a/libaudio_engin.so	fecd4d32759a4701
 8	3029	7232276127795614	CMakeFiles/audio_engin.dir/src/main/cpp/AudioEngin.cpp.o	63649b582e5282e9
 3030	3375	7232276131108661	../../../../build/intermediates/cxx/Debug/10i171t6/obj/arm64-v8a/libaudio_engin.so	fecd4d32759a4701
+18	2028	7236788666794941	CMakeFiles/PlayerExample.dir/src/main/cpp/PlayerExample.cpp.o	374bc1d8590bcf94
+2030	2768	7236788673984799	../../../../build/intermediates/cxx/Debug/10i171t6/obj/arm64-v8a/libPlayerExample.so	27f91821b5b83359
+53	3141	7236788678048625	CMakeFiles/audio_engin.dir/src/main/cpp/AudioEngin.cpp.o	63649b582e5282e9
+3141	3444	7236788680862087	../../../../build/intermediates/cxx/Debug/10i171t6/obj/arm64-v8a/libaudio_engin.so	fecd4d32759a4701
