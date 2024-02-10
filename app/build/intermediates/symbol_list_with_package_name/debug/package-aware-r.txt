@@ -1517,7 +1517,6 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
-color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -2267,7 +2266,6 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
-color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -3555,9 +3553,7 @@ id action_widget_container
 id actions
 id activity_chooser_view_content
 id add
-id album_cardView
 id album_image
-id album_name
 id alertTitle
 id aligned
 id all
@@ -4273,7 +4269,6 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
-layout album_holder
 layout car_ui_alert_dialog_edit_text
 layout car_ui_alert_dialog_list
 layout car_ui_alert_dialog_title_with_subtitle

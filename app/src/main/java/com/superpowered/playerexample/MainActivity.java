@@ -3,7 +3,6 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -178,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
     }
 
     private void handlePageSelection(int position) {
-/*
+
         if(position == 0)
         {
             appBarLayout.setExpanded(true,true);
@@ -186,7 +185,6 @@ public class MainActivity extends AppCompatActivity implements Recycle_adapter.O
         else{
             appBarLayout.setExpanded(false,true);// appBarLayout.setExpanded(false,true);
         }
-        */
         collapsingToolbarLayout.setTitle(pagerAdapter.getTabTitle(position));
         //String fragmentName = getFragmentName(position);
        // Toast.makeText(this, "Selected Fragment: " + fragmentName, Toast.LENGTH_SHORT).show();
