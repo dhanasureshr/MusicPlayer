@@ -29,7 +29,7 @@ public class MyPagerAdapter extends FragmentStateAdapter {
             case 0:
                 return Recycler_fragment.newInstance(); //
             case 1:
-                return NowPlayingFragment.newInstance();
+                return Play_fragment.newInstance();
             default:
                 return new Fragment(); // Return a default Fragment or handle the case
 

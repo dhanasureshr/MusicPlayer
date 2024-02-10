@@ -308,7 +308,7 @@ ADDED from [androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\trans
 		ADDED from [androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-permission#com.superpowered.playerexample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.dhana.musicplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
@@ -318,7 +318,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-uses-permission#com.superpowered.playerexample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.dhana.musicplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:26:22-94

@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.superpowered.playerexample"
+3    package="com.dhana.musicplayer"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -36,12 +36,12 @@
 25
 26    <permission
 26-->[androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-27        android:name="com.superpowered.playerexample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+27        android:name="com.dhana.musicplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
 27-->[androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 28        android:protectionLevel="signature" />
 28-->[androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 29
-30    <uses-permission android:name="com.superpowered.playerexample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+30    <uses-permission android:name="com.dhana.musicplayer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 30-->[androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
 30-->[androidx.core:core:1.9.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\5bed316c9c43a8bc7d9832f0735edfcf\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 31
@@ -88,7 +88,7 @@
 54-->[com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:37:9-42:71
 55            android:name="com.android.car.ui.core.CarUiInstaller"
 55-->[com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:38:13-66
-56            android:authorities="com.superpowered.playerexample.CarUiInstaller"
+56            android:authorities="com.dhana.musicplayer.CarUiInstaller"
 56-->[com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:39:13-66
 57            android:directBootAware="true"
 57-->[com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:40:13-43
@@ -100,7 +100,7 @@
 60-->[com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:43:9-48:79
 61            android:name="com.android.car.ui.core.SearchResultsProvider"
 61-->[com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:44:13-73
-62            android:authorities="com.superpowered.playerexample.SearchResultsProvider"
+62            android:authorities="com.dhana.musicplayer.SearchResultsProvider"
 62-->[com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:45:13-73
 63            android:exported="true"
 63-->[com.android.car.ui:car-ui-lib:2.5.1] C:\Users\dhana suresh\.gradle\caches\transforms-3\b234738859c8f05e1cfefb20b8fa9438\transformed\jetified-car-ui-lib-2.5.1\AndroidManifest.xml:46:13-36
@@ -112,7 +112,7 @@
 66-->[com.squareup.picasso:picasso:2.71828] C:\Users\dhana suresh\.gradle\caches\transforms-3\30131fc44614029d067f27bd84cb5f30\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 67            android:name="com.squareup.picasso.PicassoProvider"
 67-->[com.squareup.picasso:picasso:2.71828] C:\Users\dhana suresh\.gradle\caches\transforms-3\30131fc44614029d067f27bd84cb5f30\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-68            android:authorities="com.superpowered.playerexample.com.squareup.picasso"
+68            android:authorities="com.dhana.musicplayer.com.squareup.picasso"
 68-->[com.squareup.picasso:picasso:2.71828] C:\Users\dhana suresh\.gradle\caches\transforms-3\30131fc44614029d067f27bd84cb5f30\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
 69            android:exported="false" />
 69-->[com.squareup.picasso:picasso:2.71828] C:\Users\dhana suresh\.gradle\caches\transforms-3\30131fc44614029d067f27bd84cb5f30\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
@@ -120,7 +120,7 @@
 70-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\7a68a716661406a29647e354a1cc8e67\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 71            android:name="androidx.startup.InitializationProvider"
 71-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\7a68a716661406a29647e354a1cc8e67\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-72            android:authorities="com.superpowered.playerexample.androidx-startup"
+72            android:authorities="com.dhana.musicplayer.androidx-startup"
 72-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\7a68a716661406a29647e354a1cc8e67\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
 73            android:exported="false" >
 73-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhana suresh\.gradle\caches\transforms-3\7a68a716661406a29647e354a1cc8e67\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
